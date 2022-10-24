@@ -1,0 +1,649 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="wicsp">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="爬取 TapTap 网站上的游戏排行榜信息12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TapTap Spider">
+<meta property="og:url" content="https://wicsp.xyz/TapTap-Spider/index.html">
+<meta property="og:site_name" content="wicsp&#39;s blog">
+<meta property="og:description" content="爬取 TapTap 网站上的游戏排行榜信息12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-07T21:35:28.000Z">
+<meta property="article:modified_time" content="2022-10-24T07:25:24.697Z">
+<meta property="article:author" content="wicsp">
+<meta property="article:tag" content="spider">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>TapTap Spider - wicsp&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"wicsp.xyz","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>wicsp&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="TapTap Spider"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-09-08 05:35" pubdate>
+          2020年9月8日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          42 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">TapTap Spider</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="爬取-TapTap-网站上的游戏排行榜信息"><a href="#爬取-TapTap-网站上的游戏排行榜信息" class="headerlink" title="爬取 TapTap 网站上的游戏排行榜信息"></a>爬取 TapTap 网站上的游戏排行榜信息</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">from</span> lxml <span class="hljs-keyword">import</span> etree<br><span class="hljs-keyword">import</span> json<br><span class="hljs-keyword">import</span> pickle<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Tapspider</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>            self.responses = <span class="hljs-built_in">list</span>()      <br>            self.datas = <span class="hljs-built_in">list</span>()<br>        <br>            self.get_page()<br>            self.get_game_info()<br>            self.save_data(self.datas, <span class="hljs-string">&#x27;DownloadList&#x27;</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_datas</span>(<span class="hljs-params">self, code</span>):<br>        base_url = <span class="hljs-string">&#x27;http://www.taptap.com/app/&#x27;</span><br>        url = base_url+code<br>        html = self.get_game_page(url)<br>        result = etree.HTML(html)<br>        test = -<span class="hljs-number">1</span> <br>        free = -<span class="hljs-number">1</span><br><br>        installs = -<span class="hljs-number">1</span><br>        pre_reg = -<span class="hljs-number">1</span><br>        purchases = -<span class="hljs-number">1</span><br><br>        game_info = result.xpath(<span class="hljs-string">&quot;//div[@class=&#x27;app-data-wrap&#x27;]/p/span/text()&quot;</span>)<br>        <span class="hljs-comment"># print(node)</span><br>        <span class="hljs-comment"># print(type(node))</span><br>        <span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(game_info))<br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(game_info) == <span class="hljs-number">1</span>:<br>            test = <span class="hljs-number">1</span><br>            installs = -<span class="hljs-number">1</span><br>            pre_reg = -<span class="hljs-number">1</span><br>            purchases = -<span class="hljs-number">1</span><br>            followers = <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]).replace(<span class="hljs-string">&#x27; 人关注&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>)<br>        <span class="hljs-keyword">else</span>:<br>            <span class="hljs-built_in">print</span>(game_info[<span class="hljs-number">0</span>])<br>            <span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(game_info[<span class="hljs-number">0</span>]))<br><br>            <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;购买&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]):<br>                purchases = <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]).replace(<span class="hljs-string">&#x27; 人购买&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)<br>            <span class="hljs-keyword">elif</span> <span class="hljs-string">&#x27;安装&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]):<br>                installs = <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]).replace(<span class="hljs-string">&#x27; 人安装&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)<br>                free = <span class="hljs-number">1</span><br>            <span class="hljs-keyword">elif</span> <span class="hljs-string">&#x27;预约&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]):<br>                pre_reg = <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">0</span>]).replace(<span class="hljs-string">&#x27; 人预约&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)<br>            followers = <span class="hljs-built_in">str</span>(game_info[<span class="hljs-number">1</span>]).replace(<span class="hljs-string">&#x27; 人关注&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>)<br>        <span class="hljs-keyword">return</span> test, free, installs, pre_reg, purchases ,followers<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_game_info</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">for</span> response <span class="hljs-keyword">in</span> self.responses:<br>            html = json.loads(response)[<span class="hljs-string">&#x27;data&#x27;</span>][<span class="hljs-string">&#x27;html&#x27;</span>]<br>            results = etree.HTML(html)<br>            game_list = results.xpath(<br>                <span class="hljs-string">&quot;//div[@class=&#x27;taptap-top-card&#x27;]&quot;</span>)<br>            <span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(game_list))<br>            response_num = self.responses.index(response)<br>            <span class="hljs-keyword">for</span> game <span class="hljs-keyword">in</span> game_list:<br>                game_num = game_list.index(game)<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;正在获取第%d个游戏的信息&#x27;</span> % (response_num*<span class="hljs-number">30</span>+game_num+<span class="hljs-number">1</span>))<br>                order = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./span[@class =&#x27;top-card-order-text orange &#x27;]/text() | ./span[@class = &#x27;top-card-order-text  &#x27;]/text() | ./span[@class=&#x27;top-card-order-text  small-font&#x27;]/text()&quot;</span>)[<span class="hljs-number">0</span>])<br>                name = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/a[@class=&#x27;card-middle-title &#x27;]/h4/text()&quot;</span>)[<span class="hljs-number">0</span>]).strip().strip(<span class="hljs-string">&#x27;\n&#x27;</span>)<br>                developer = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/p[@class=&#x27;card-middle-author&#x27;]/a/text()&quot;</span>)[<span class="hljs-number">0</span>]).strip(<span class="hljs-string">&#x27;厂商:\xa0&#x27;</span>)<br>                score = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-middle-score&#x27;]/p/span/text()&quot;</span>)[<span class="hljs-number">0</span>])<br>                description = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/p[@class=&#x27;card-middle-description&#x27;]/text()&quot;</span>)[<span class="hljs-number">0</span>]).strip().strip(<span class="hljs-string">&#x27;\n&#x27;</span>)<br>                tags = game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-tags&#x27;]/a/text()&quot;</span>)<br>                <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(tags)):<br>                    tags[i] = <span class="hljs-built_in">str</span>(tags[i])<br>                category = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-middle-category&#x27;]/a/text()&quot;</span>)[<span class="hljs-number">0</span>])<br>                game_code = <span class="hljs-built_in">str</span>(game.xpath(<br>                    <span class="hljs-string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/a[@class=&#x27;card-middle-title &#x27;]/@href&quot;</span>)[<span class="hljs-number">0</span>]).replace(<span class="hljs-string">&#x27;https://www.taptap.com/app/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)<br>                <br>                test, free, installs, pre_reg, purchases ,followers = self.get_datas(game_code)<br><br>                data = &#123;<br>                    <span class="hljs-string">&#x27;order&#x27;</span>: order,<br>                    <span class="hljs-string">&#x27;code&#x27;</span>: game_code,<br>                    <span class="hljs-string">&#x27;name&#x27;</span>: name,<br>                    <span class="hljs-string">&#x27;developer&#x27;</span>: developer,<br>                    <span class="hljs-string">&#x27;score&#x27;</span>: score,<br>                    <span class="hljs-string">&#x27;description&#x27;</span>: description,<br>                    <span class="hljs-string">&#x27;tags&#x27;</span>: tags,<br>                    <span class="hljs-string">&#x27;category&#x27;</span>: category,<br>                    <span class="hljs-string">&#x27;free&#x27;</span>: free,<br>                    <span class="hljs-string">&#x27;test&#x27;</span>: test,<br>                    <span class="hljs-string">&#x27;followers&#x27;</span>: followers,<br>                    <span class="hljs-string">&#x27;installs&#x27;</span>: installs,<br>                    <span class="hljs-string">&#x27;purchases&#x27;</span>: purchases,<br>                    <span class="hljs-string">&#x27;pre_reg&#x27;</span>: pre_reg<br>                &#125;<br>                <span class="hljs-built_in">print</span>(data)<br>                self.datas.append(data)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;共有%d个游戏&#x27;</span> % <span class="hljs-built_in">len</span>(self.datas))<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_page</span>(<span class="hljs-params">self</span>):<br>        base_url = <span class="hljs-string">&quot;http://www.taptap.com/ajax/top/download?&quot;</span><br>        <span class="hljs-comment"># 1:30, 2:30, 3:90</span><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>):<br>            page = <span class="hljs-built_in">str</span>(i+<span class="hljs-number">1</span>)<br>            total = <span class="hljs-built_in">str</span>((i)*<span class="hljs-number">30</span>)<br>            params = &#123;<br>                <span class="hljs-string">&#x27;page&#x27;</span>: page,<br>                <span class="hljs-string">&#x27;total&#x27;</span>: total<br>            &#125;<br>            headers = &#123;<br>                <span class="hljs-string">&#x27;Usr-Agent&#x27;</span>: <span class="hljs-string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3100.0 Safari/537.36&#x27;</span>&#125;<br>            response = requests.get(<br>                base_url, params=params, headers=headers)<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;正在获取页面内容...&#x27;</span>)<br><br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Page:&#x27;</span>, response.url, <span class="hljs-string">&#x27;\tstatus code:&#x27;</span>,<br>                  response.status_code, <span class="hljs-string">&#x27;\tlength:&#x27;</span>, <span class="hljs-built_in">len</span>(response.text))<br>            self.responses.append(response.text)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;-------------------------------------------------&#x27;</span>)<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">get_game_page</span>(<span class="hljs-params">self, url</span>):<br>        headers = &#123;<br>            <span class="hljs-string">&#x27;Usr-Agent&#x27;</span>: <span class="hljs-string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3100.0 Safari/537.36&#x27;</span>&#125;<br>        response = requests.get(<br>            url,  headers=headers)<br>        <span class="hljs-keyword">return</span> response.text<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">save_data</span>(<span class="hljs-params">self,datas, list_type</span>):<br>        date = time.strftime(<span class="hljs-string">&quot;%Y-%m-%d&quot;</span>, time.localtime()) <br>        filename = list_type +date +<span class="hljs-string">&#x27;.pkl&#x27;</span><br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;./&#x27;</span>+filename,<span class="hljs-string">&#x27;wb&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>            pickle.dump(datas,f)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    start = time.time()<br>    spider = Tapspider()<br>    end = time.time()<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;用时：&#x27;</span>, end-start)<br><br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Programming/" class="category-chain-item">Programming</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/spider/">#spider</a>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>TapTap Spider</div>
+      <div>https://wicsp.xyz/TapTap-Spider/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>wicsp</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年9月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux/" title="Enable Tapping to Click With Libinput on Linux">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Enable Tapping to Click With Libinput on Linux</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/Hugo-Mathjax-Support/" title="Hugo Mathjax Support">
+                        <span class="hidden-mobile">Hugo Mathjax Support</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

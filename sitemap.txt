@@ -1,3 +1,4 @@
+https://wicsp.top/2024/07/20/Hexo-issues-#1/
 https://wicsp.top/2020/02/10/An-Arctic-North-Bluish-Color-Palette/
 https://wicsp.top/2020/01/21/Add-Sudo-Quickly/
 https://wicsp.top/tags/index.html
@@ -44,6 +45,7 @@ https://wicsp.top/tags/Python/
 https://wicsp.top/tags/i3WM/
 https://wicsp.top/tags/Tools/
 https://wicsp.top/tags/Vim/
+https://wicsp.top/tags/Blog/
 https://wicsp.top/categories/Tools/
 https://wicsp.top/categories/Penetration/
 https://wicsp.top/categories/Machine-Learning/

@@ -21,28 +21,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wicsp.top","root":"/","images":"/images","scheme":"Mist","darkmode":"auto","version":"8.20.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="0x00 确定删除文件所在分区$ df &lt;被删除文件所在文件夹&gt;">
+    <meta name="description" content="因为我使用 ArchLinux ，使用 Pacman 更新时常常遇到需要在命令前加 sudo 的情况，每次都需要把光标移到命令首部加 sudo ，经查找可以使用 sudo !! 获取前一条命令并加上 sudo 。 如运行 pacman -Syu 报错，使用 sudo !! 生成 sudo pacman -Syu 回车即可。 或者使用 thefuck ，不仅可以补全 sudo ，也可以更正输入错误的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Recover Removed Files on Linux">
-<meta property="og:url" content="https://wicsp.top/Recover-Removed-Files-on-Linux/index.html">
+<meta property="og:title" content="Add Sudo Quickly">
+<meta property="og:url" content="https://wicsp.top/Add-Sudo-Quickly.html">
 <meta property="og:site_name" content="WICSP&#39;s Blog">
-<meta property="og:description" content="0x00 确定删除文件所在分区$ df &lt;被删除文件所在文件夹&gt;">
+<meta property="og:description" content="因为我使用 ArchLinux ，使用 Pacman 更新时常常遇到需要在命令前加 sudo 的情况，每次都需要把光标移到命令首部加 sudo ，经查找可以使用 sudo !! 获取前一条命令并加上 sudo 。 如运行 pacman -Syu 报错，使用 sudo !! 生成 sudo pacman -Syu 回车即可。 或者使用 thefuck ，不仅可以补全 sudo ，也可以更正输入错误的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-22T06:01:47.000Z">
-<meta property="article:modified_time" content="2024-07-19T15:48:02.883Z">
+<meta property="article:published_time" content="2020-01-21T04:21:44.000Z">
+<meta property="article:modified_time" content="2024-07-19T17:10:54.160Z">
 <meta property="article:author" content="wicsp">
 <meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Tips">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wicsp.top/Recover-Removed-Files-on-Linux/">
+<link rel="canonical" href="https://wicsp.top/Add-Sudo-Quickly.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wicsp.top/Recover-Removed-Files-on-Linux/","path":"Recover-Removed-Files-on-Linux/","title":"Recover Removed Files on Linux"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wicsp.top/Add-Sudo-Quickly.html","path":"Add-Sudo-Quickly.html","title":"Add Sudo Quickly"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Recover Removed Files on Linux | WICSP's Blog</title>
+<title>Add Sudo Quickly | WICSP's Blog</title>
   
 
 
@@ -101,7 +102,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -114,7 +115,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-%E7%A1%AE%E5%AE%9A%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%89%80%E5%9C%A8%E5%88%86%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">0x00 确定删除文件所在分区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-%E8%BF%9B%E5%85%A5-debugfs-%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">0x01 进入 debugfs 工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-%E5%9C%A8-debugfs-%E5%B7%A5%E5%85%B7%E4%B8%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%88%86%E5%8C%BA%E5%B9%B6%E5%88%97%E5%87%BA%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">0x02 在 debugfs 工具中打开文件分区并列出删除文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-%E6%89%BE%E5%88%B0%E8%A2%AB%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%89%80%E5%9C%A8%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">0x03 找到被删除文件所在的位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-%E6%81%A2%E5%A4%8D%E6%96%87%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">0x04 恢复文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E7%BB%AD"><span class="nav-number">6.</span> <span class="nav-text">后续</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -195,7 +195,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Recover-Removed-Files-on-Linux/">
+    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Add-Sudo-Quickly.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.JPG">
@@ -208,12 +208,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Recover Removed Files on Linux | WICSP's Blog">
+      <meta itemprop="name" content="Add Sudo Quickly | WICSP's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Recover Removed Files on Linux
+          Add Sudo Quickly
         </h1>
 
         <div class="post-meta-container">
@@ -224,14 +224,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-01-22 14:01:47" itemprop="dateCreated datePublished" datetime="2020-01-22T14:01:47+08:00">2020-01-22</time>
+      <time title="创建时间：2020-01-21 12:21:44" itemprop="dateCreated datePublished" datetime="2020-01-21T12:21:44+08:00">2020-01-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-19 23:48:02" itemprop="dateModified" datetime="2024-07-19T23:48:02+08:00">2024-07-19</time>
+      <time title="修改时间：2024-07-20 01:10:54" itemprop="dateModified" datetime="2024-07-20T01:10:54+08:00">2024-07-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -259,8 +259,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/Recover-Removed-Files-on-Linux/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/Recover-Removed-Files-on-Linux/" itemprop="commentCount"></span>
+    <a title="waline" href="/Add-Sudo-Quickly.html#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/Add-Sudo-Quickly.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -273,23 +273,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="0x00-确定删除文件所在分区"><a href="#0x00-确定删除文件所在分区" class="headerlink" title="0x00 确定删除文件所在分区"></a>0x00 确定删除文件所在分区</h1><p><code>$ df &lt;被删除文件所在文件夹&gt;</code></p>
-<span id="more"></span>
-
-<h1 id="0x01-进入-debugfs-工具"><a href="#0x01-进入-debugfs-工具" class="headerlink" title="0x01 进入 debugfs 工具"></a>0x01 进入 debugfs 工具</h1><p><code>$ debugfs</code><br>(如果是不是 root 用户需要在命令前加 sudo)</p>
-<h1 id="0x02-在-debugfs-工具中打开文件分区并列出删除文件"><a href="#0x02-在-debugfs-工具中打开文件分区并列出删除文件" class="headerlink" title="0x02 在 debugfs 工具中打开文件分区并列出删除文件"></a>0x02 在 debugfs 工具中打开文件分区并列出删除文件</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">debugfs: open &lt;0x00 中返回的分区如 /dev/sda1&gt;</span><br><span class="line">debugfs: ls -d &lt;被删除文件所在目录&gt;</span><br></pre></td></tr></table></figure>
-
-<p>返回类似 “&lt;12345678&gt; (20) filename”</p>
-<h1 id="0x03-找到被删除文件所在的位置"><a href="#0x03-找到被删除文件所在的位置" class="headerlink" title="0x03 找到被删除文件所在的位置"></a>0x03 找到被删除文件所在的位置</h1><p><code>debugfs: logdump –i  &lt;12345678&gt;</code></p>
-<p>返回内容类似</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Inode 12345678 is at group 1040, block 34078863, offset 1664</span><br><span class="line">Journal starts at block 65638, transaction 1209216</span><br><span class="line">Found sequence 1200142 (not 1209605) at block 72380: end of journal.</span><br></pre></td></tr></table></figure>
-
-<p>记住 block 和 offset 的值</p>
-<h1 id="0x04-恢复文件"><a href="#0x04-恢复文件" class="headerlink" title="0x04 恢复文件"></a>0x04 恢复文件</h1><p><code>$ sudo dd if=&lt;文件所在分区&gt; of=&lt;文件所在文件夹&gt; bs=&lt;offset 的值&gt; count=1 skip=&lt;block 的值&gt;</code></p>
-<h1 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h1><p>这种方法的优点是不需要安装额外的软件，虽然比较繁琐但只需要恢复少量文件的话还是可以接受的。用这种方法不能否还原目录，下次有需要再尝试。</p>
-<blockquote>
-<p>参考自<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiftle/p/10966636.html">本博文</a></p>
-</blockquote>
+    <div class="post-body" itemprop="articleBody"><p>因为我使用 ArchLinux ，使用 Pacman 更新时常常遇到需要在命令前加 sudo 的情况，每次都需要把光标移到命令首部加 sudo ，经查找可以使用 <code>sudo !!</code> 获取前一条命令并加上 sudo 。</p>
+<p>如运行 <code>pacman -Syu</code> 报错，使用 <code>sudo !!</code> 生成 <code>sudo pacman -Syu</code> 回车即可。</p>
+<p>或者使用 <code>thefuck</code> ，不仅可以补全 sudo ，也可以更正输入错误的命令。（不知道为什么使用 <code>thefuck</code> 反应速度很慢。。。）</p>
 
     </div>
 
@@ -307,7 +293,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://wicsp.top/Recover-Removed-Files-on-Linux/" title="Recover Removed Files on Linux">https://wicsp.top/Recover-Removed-Files-on-Linux/</a>
+      <a href="https://wicsp.top/Add-Sudo-Quickly.html" title="Add Sudo Quickly">https://wicsp.top/Add-Sudo-Quickly.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -317,19 +303,20 @@
 
           <div class="post-tags">
               <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/Tips/" rel="tag"># Tips</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/Add-Sudo-Quickly/" rel="prev" title="Add Sudo Quickly">
-                  <i class="fa fa-angle-left"></i> Add Sudo Quickly
+                <a href="/Translate-Words-in-Commandline.html" rel="prev" title="Translate Words in Commandline">
+                  <i class="fa fa-angle-left"></i> Translate Words in Commandline
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/CG-CTF-Web-1/" rel="next" title="CG CTF Web #1">
-                  CG CTF Web #1 <i class="fa fa-angle-right"></i>
+                <a href="/Recover-Removed-Files-on-Linux.html" rel="next" title="Recover Removed Files on Linux">
+                  Recover Removed Files on Linux <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -423,7 +410,7 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline.wicsp.top","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"无需登录·请留下邮箱以接收回复·来说两句吧~"},"avatar":"mm","meta":["nick","mail"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","login":"enable","el":"#waline","comment":true,"path":"/Recover-Removed-Files-on-Linux/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline.wicsp.top","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"无需登录·请留下邮箱以接收回复·来说两句吧~"},"avatar":"mm","meta":["nick","mail"],"pageSize":10,"visitor":true,"comment_count":true,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","login":"enable","el":"#waline","comment":true,"path":"/Add-Sudo-Quickly.html"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {

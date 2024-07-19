@@ -1,10 +1,10 @@
 https://wicsp.top/2024/07/20/Hexo-issues-#1/
+https://wicsp.top/2020/07/26/Hugo-Mathjax-Support/
 https://wicsp.top/2020/02/10/An-Arctic-North-Bluish-Color-Palette/
 https://wicsp.top/2020/01/21/Add-Sudo-Quickly/
 https://wicsp.top/tags/index.html
 https://wicsp.top/categories/index.html
 https://wicsp.top/404/index.html
-https://wicsp.top/2020/07/26/Hugo-Mathjax-Support/
 https://wicsp.top/2019/03/27/aria2/
 https://wicsp.top/2019/02/17/Create-a-Personal-Blog-with-WordPress/
 https://wicsp.top/2020/11/30/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux/
@@ -46,6 +46,7 @@ https://wicsp.top/tags/i3WM/
 https://wicsp.top/tags/Tools/
 https://wicsp.top/tags/Vim/
 https://wicsp.top/tags/Blog/
+https://wicsp.top/tags/Hexo/
 https://wicsp.top/categories/Tools/
 https://wicsp.top/categories/Penetration/
 https://wicsp.top/categories/Machine-Learning/

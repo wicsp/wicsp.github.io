@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://wicsp.top/2020/07/26/Hugo-Mathjax-Support/</loc>
+    
+    <lastmod>2024-07-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wicsp.top/2020/02/10/An-Arctic-North-Bluish-Color-Palette/</loc>
     
     <lastmod>2024-07-19</lastmod>
@@ -48,15 +57,6 @@
   
   <url>
     <loc>https://wicsp.top/404/index.html</loc>
-    
-    <lastmod>2024-07-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wicsp.top/2020/07/26/Hugo-Mathjax-Support/</loc>
     
     <lastmod>2024-07-19</lastmod>
     
@@ -382,6 +382,13 @@
   
   <url>
     <loc>https://wicsp.top/tags/Blog/</loc>
+    <lastmod>2024-07-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/tags/Hexo/</loc>
     <lastmod>2024-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

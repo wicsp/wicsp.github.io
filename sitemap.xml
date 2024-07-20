@@ -276,7 +276,7 @@
   </url>
   
   <url>
-    <loc>https://wicsp.top/tags/SQL-Injection/</loc>
+    <loc>https://wicsp.top/tags/CTC/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -297,13 +297,6 @@
   </url>
   
   <url>
-    <loc>https://wicsp.top/tags/CTC/</loc>
-    <lastmod>2024-07-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wicsp.top/tags/libinput/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -311,14 +304,7 @@
   </url>
   
   <url>
-    <loc>https://wicsp.top/tags/Hugo/</loc>
-    <lastmod>2024-07-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wicsp.top/tags/Mathjax/</loc>
+    <loc>https://wicsp.top/tags/SQL-Injection/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -353,13 +339,6 @@
   </url>
   
   <url>
-    <loc>https://wicsp.top/tags/RSA/</loc>
-    <lastmod>2024-07-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wicsp.top/tags/spider/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -381,6 +360,13 @@
   </url>
   
   <url>
+    <loc>https://wicsp.top/tags/Vim/</loc>
+    <lastmod>2024-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://wicsp.top/tags/i3WM/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -388,7 +374,21 @@
   </url>
   
   <url>
-    <loc>https://wicsp.top/tags/Vim/</loc>
+    <loc>https://wicsp.top/tags/Hugo/</loc>
+    <lastmod>2024-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/tags/Mathjax/</loc>
+    <lastmod>2024-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/tags/RSA/</loc>
     <lastmod>2024-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

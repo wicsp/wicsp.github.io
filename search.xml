@@ -1057,8 +1057,12 @@ bt-tracker=udp://tracker.leechers.paradise.org:6969/announce,udp://:...
 </blockquote>
 <p>并不知道 <code>hexo-generator-searchdb</code> 和 <code>hexo-generator-search</code>的区别。。</p>
 <h2 id="不蒜子本地部署时统计有误"><a href="#不蒜子本地部署时统计有误" class="headerlink" title="不蒜子本地部署时统计有误"></a><code>不蒜子</code>本地部署时统计有误</h2><p>三项统计数据都异常大</p>
+<p><img src="/../uploads/Hexo-issues/image-1.png" alt="文章阅读数"><br><img src="/../uploads/Hexo-issues/image-2.png" alt="博客访问数"></p>
 <p>网上得到的结果是：正常现象，由于本地部署时大家都使用一样的 IP 地址，所以统计数据会出现问题。</p>
 <h2 id="部署时每次都要-Hexo-g-Hexo-d-太麻烦"><a href="#部署时每次都要-Hexo-g-Hexo-d-太麻烦" class="headerlink" title="部署时每次都要 Hexo g &amp; Hexo d 太麻烦"></a>部署时每次都要 Hexo g &amp; Hexo d 太麻烦</h2><p>博客修改后直接使用 <code>hexo d -g</code> 即可。</p>
+<h2 id="VSCode-粘贴图片指定默认路径"><a href="#VSCode-粘贴图片指定默认路径" class="headerlink" title="VSCode 粘贴图片指定默认路径"></a>VSCode 粘贴图片指定默认路径</h2><p>使用 VScode 自带的 markdown copy file 功能，允许将图片直接粘贴进 Markdown 文档，并自动将图片保存在指定目录。</p>
+<p>使用快捷键 <code>Command + ,</code> 打开设置，搜索 <code>markdown</code>，找到 <code>Markdown&gt; Copy Files：Destnation</code>，添加一项 <code>key（项）</code> 为 <code>*</code> , <code> value(值)</code> 为 <code>$&#123;documentWorkspaceFolder&#125;/source/uploads/$&#123;documentBaseName&#125;/</code> 。</p>
+<p>我这里在 source 文件夹下新建了一个 <code>uploads</code> 文件夹，用于存放图片。</p>
 ]]></content>
       <categories>
         <category>Tools</category>

@@ -132,7 +132,7 @@
 <p>获取数据库版本 5.5.52-0ubuntu0.14.04.1</p>
 </li>
 <li><p>构造 <code>index.php?id=1%fe%27and%201=2%20%20union%20select%201,ord(mid(user(),1,1))%23</code></p>
-<p>用户名为 <a href="mailto:&#x73;&#97;&#x65;&#x2d;&#99;&#104;&#x69;&#x6e;&#x61;&#x6c;&#x6f;&#x76;&#101;&#x72;&#64;&#49;&#x32;&#51;&#x2e;&#49;&#50;&#53;&#46;&#50;&#x33;&#x2e;&#x32;&#x31;&#x31;">&#x73;&#97;&#x65;&#x2d;&#99;&#104;&#x69;&#x6e;&#x61;&#x6c;&#x6f;&#x76;&#101;&#x72;&#64;&#49;&#x32;&#51;&#x2e;&#49;&#50;&#53;&#46;&#50;&#x33;&#x2e;&#x32;&#x31;&#x31;</a></p>
+<p>用户名为 <a href="mailto:&#x73;&#97;&#x65;&#x2d;&#x63;&#x68;&#105;&#x6e;&#97;&#108;&#111;&#118;&#x65;&#x72;&#64;&#49;&#x32;&#51;&#46;&#49;&#x32;&#53;&#46;&#50;&#51;&#46;&#x32;&#49;&#49;">&#x73;&#97;&#x65;&#x2d;&#x63;&#x68;&#105;&#x6e;&#97;&#108;&#111;&#118;&#x65;&#x72;&#64;&#49;&#x32;&#51;&#46;&#49;&#x32;&#53;&#46;&#50;&#51;&#46;&#x32;&#49;&#49;</a></p>
 </li>
 <li><p>构造 <code>index.php?id=1%fe%27and%201=2%20%20union%20select%201,group_concat(table_name)%20from%20information_schema.tables%20where%20table_schema=0x7361652d6368696e616c6f766572%23</code></p>
 <p>得到表名 ctf,ctf2,ctf3,ctf4,gbksqli,news</p>
@@ -575,6 +575,45 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo &amp; NexT 部署和使用过程中问题合集/Hexo Issues Set</title>
+    <url>/Hexo-issues.html</url>
+    <content><![CDATA[<h2 id="部署-Hexo-到-GitHub-Page-后，自定义域名（Custom-Domain）-失效"><a href="#部署-Hexo-到-GitHub-Page-后，自定义域名（Custom-Domain）-失效" class="headerlink" title="部署 Hexo 到 GitHub Page 后，自定义域名（Custom Domain） 失效"></a>部署 Hexo 到 GitHub Page 后，自定义域名（Custom Domain） 失效</h2><p>在 <code>source</code> 文件夹下新建 <code>CNAME</code> 文件，其中写入绑定的域名即可。</p>
+<h2 id="部署-Hexo-到-GitHub-Page-后-如何展示自定义的-404-页面"><a href="#部署-Hexo-到-GitHub-Page-后-如何展示自定义的-404-页面" class="headerlink" title="部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面"></a>部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面</h2><span id="more"></span>
+<p>在 <code>source</code> 文件夹下新建 <code>404.md</code> 文件，示例内容如下</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line">permalink: /404.html</span><br><span class="line"><span class="section">comments: false</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span>404 Not Found<span class="language-xml"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">对不起，您所访问的页面不存在或者已删除</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Ref:<br><a href="https://docs.github.com/zh/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site">GitHub Docs</a><br><a href="https://guiblogs.com/hexo30-20/">Gui Blog</a></p>
+</blockquote>
+<h2 id="NexT-主体下-Waline-评论系统暗黑模式"><a href="#NexT-主体下-Waline-评论系统暗黑模式" class="headerlink" title="NexT 主体下 Waline 评论系统暗黑模式"></a>NexT 主体下 Waline 评论系统暗黑模式</h2><blockquote>
+<p>由于 <code>Valine</code> 的 XSS 漏洞，NexT 不再对 <code>Vline</code> 提供原生支持。 Waline 解决了安全性问题，虽然 NexT 展示也没有原生支持 <code>Waline</code>，但是可以通过配置文件进行修改。</p>
+</blockquote>
+<p>在 <code>waline:</code> 下增加  <code>dark: auto</code><br>示例如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">waline:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启</span></span><br><span class="line">  <span class="attr">dark:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="增加-Search-功能"><a href="#增加-Search-功能" class="headerlink" title="增加 Search 功能"></a>增加 Search 功能</h2><blockquote>
+<p>Ref: <a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/advanced/%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1/">Hexo-Next Doc</a></p>
+</blockquote>
+<p>并不知道 <code>hexo-generator-searchdb</code> 和 <code>hexo-generator-search</code>的区别。。</p>
+<h2 id="不蒜子本地部署时统计有误"><a href="#不蒜子本地部署时统计有误" class="headerlink" title="不蒜子本地部署时统计有误"></a><code>不蒜子</code>本地部署时统计有误</h2><p>三项统计数据都异常大</p>
+<p><img src="/../uploads/Hexo-issues/image-1.png" alt="文章阅读数"><br><img src="/../uploads/Hexo-issues/image-2.png" alt="博客访问数"></p>
+<p>网上得到的结果是：正常现象，由于本地部署时大家都使用一样的 IP 地址，所以统计数据会出现问题。</p>
+<h2 id="部署时每次都要-Hexo-g-Hexo-d-太麻烦"><a href="#部署时每次都要-Hexo-g-Hexo-d-太麻烦" class="headerlink" title="部署时每次都要 Hexo g &amp; Hexo d 太麻烦"></a>部署时每次都要 Hexo g &amp; Hexo d 太麻烦</h2><p>博客修改后直接使用 <code>hexo d -g</code> 即可。</p>
+<h2 id="VSCode-粘贴图片指定默认路径"><a href="#VSCode-粘贴图片指定默认路径" class="headerlink" title="VSCode 粘贴图片指定默认路径"></a>VSCode 粘贴图片指定默认路径</h2><p>使用 VScode 自带的 markdown copy file 功能，允许将图片直接粘贴进 Markdown 文档，并自动将图片保存在指定目录。</p>
+<p>使用快捷键 <code>Command + ,</code> 打开设置，搜索 <code>markdown</code>，找到 <code>Markdown&gt; Copy Files：Destnation</code>，添加一项 <code>key（项）</code> 为 <code>*</code> , <code> value(值)</code> 为 <code>$&#123;documentWorkspaceFolder&#125;/source/uploads/$&#123;documentBaseName&#125;/</code> 。</p>
+<p>我这里在 source 文件夹下新建了一个 <code>uploads</code> 文件夹，用于存放图片，并将图片保存在与 markdown 文件同名的文件夹下。</p>
+<p>截图后直接在文档中粘贴，结果如下：</p>
+<p><img src="/../uploads/Hexo-issues/image-3.png" alt="VSCode 粘贴图片展示"></p>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在 Hugo 中使用数学公式</title>
     <url>/Hugo-Mathjax-Support.html</url>
     <content><![CDATA[<blockquote>
@@ -753,6 +792,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Translate Words in Commandline</title>
+    <url>/Translate-Words-in-Commandline.html</url>
+    <content><![CDATA[<p>为了在 Linux 上方便快捷地查询生词，使用了一个 Python 脚本爬取有道词典上的释义，代码更改自<a href="https://www.jianshu.com/p/2d5bcd87594e">此文章</a><br>可以在命令行中通过以下命令查询单词<br><code>fy &lt;word&gt;</code></p>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Use I3 on Arch Linux</title>
     <url>/Use-i3-on-Arch-Linux.html</url>
     <content><![CDATA[<blockquote>
@@ -786,19 +838,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>i3WM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Translate Words in Commandline</title>
-    <url>/Translate-Words-in-Commandline.html</url>
-    <content><![CDATA[<p>为了在 Linux 上方便快捷地查询生词，使用了一个 Python 脚本爬取有道词典上的释义，代码更改自<a href="https://www.jianshu.com/p/2d5bcd87594e">此文章</a><br>可以在命令行中通过以下命令查询单词<br><code>fy &lt;word&gt;</code></p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>
@@ -1033,45 +1072,6 @@ bt-tracker=udp://tracker.leechers.paradise.org:6969/announce,udp://:...
       </categories>
       <tags>
         <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo &amp; NexT 部署和使用过程中问题合集/Hexo Issues Set</title>
-    <url>/Hexo-issues.html</url>
-    <content><![CDATA[<h2 id="部署-Hexo-到-GitHub-Page-后，自定义域名（Custom-Domain）-失效"><a href="#部署-Hexo-到-GitHub-Page-后，自定义域名（Custom-Domain）-失效" class="headerlink" title="部署 Hexo 到 GitHub Page 后，自定义域名（Custom Domain） 失效"></a>部署 Hexo 到 GitHub Page 后，自定义域名（Custom Domain） 失效</h2><p>在 <code>source</code> 文件夹下新建 <code>CNAME</code> 文件，其中写入绑定的域名即可。</p>
-<h2 id="部署-Hexo-到-GitHub-Page-后-如何展示自定义的-404-页面"><a href="#部署-Hexo-到-GitHub-Page-后-如何展示自定义的-404-页面" class="headerlink" title="部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面"></a>部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面</h2><span id="more"></span>
-<p>在 <code>source</code> 文件夹下新建 <code>404.md</code> 文件，示例内容如下</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 404</span><br><span class="line">permalink: /404.html</span><br><span class="line"><span class="section">comments: false</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">center</span>&gt;</span></span>404 Not Found<span class="language-xml"><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">对不起，您所访问的页面不存在或者已删除</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Ref:<br><a href="https://docs.github.com/zh/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site">GitHub Docs</a><br><a href="https://guiblogs.com/hexo30-20/">Gui Blog</a></p>
-</blockquote>
-<h2 id="NexT-主体下-Waline-评论系统暗黑模式"><a href="#NexT-主体下-Waline-评论系统暗黑模式" class="headerlink" title="NexT 主体下 Waline 评论系统暗黑模式"></a>NexT 主体下 Waline 评论系统暗黑模式</h2><blockquote>
-<p>由于 <code>Valine</code> 的 XSS 漏洞，NexT 不再对 <code>Vline</code> 提供原生支持。 Waline 解决了安全性问题，虽然 NexT 展示也没有原生支持 <code>Waline</code>，但是可以通过配置文件进行修改。</p>
-</blockquote>
-<p>在 <code>waline:</code> 下增加  <code>dark: auto</code><br>示例如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">waline:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#是否开启</span></span><br><span class="line">  <span class="attr">dark:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="增加-Search-功能"><a href="#增加-Search-功能" class="headerlink" title="增加 Search 功能"></a>增加 Search 功能</h2><blockquote>
-<p>Ref: <a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/advanced/%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1/">Hexo-Next Doc</a></p>
-</blockquote>
-<p>并不知道 <code>hexo-generator-searchdb</code> 和 <code>hexo-generator-search</code>的区别。。</p>
-<h2 id="不蒜子本地部署时统计有误"><a href="#不蒜子本地部署时统计有误" class="headerlink" title="不蒜子本地部署时统计有误"></a><code>不蒜子</code>本地部署时统计有误</h2><p>三项统计数据都异常大</p>
-<p><img src="/../uploads/Hexo-issues/image-1.png" alt="文章阅读数"><br><img src="/../uploads/Hexo-issues/image-2.png" alt="博客访问数"></p>
-<p>网上得到的结果是：正常现象，由于本地部署时大家都使用一样的 IP 地址，所以统计数据会出现问题。</p>
-<h2 id="部署时每次都要-Hexo-g-Hexo-d-太麻烦"><a href="#部署时每次都要-Hexo-g-Hexo-d-太麻烦" class="headerlink" title="部署时每次都要 Hexo g &amp; Hexo d 太麻烦"></a>部署时每次都要 Hexo g &amp; Hexo d 太麻烦</h2><p>博客修改后直接使用 <code>hexo d -g</code> 即可。</p>
-<h2 id="VSCode-粘贴图片指定默认路径"><a href="#VSCode-粘贴图片指定默认路径" class="headerlink" title="VSCode 粘贴图片指定默认路径"></a>VSCode 粘贴图片指定默认路径</h2><p>使用 VScode 自带的 markdown copy file 功能，允许将图片直接粘贴进 Markdown 文档，并自动将图片保存在指定目录。</p>
-<p>使用快捷键 <code>Command + ,</code> 打开设置，搜索 <code>markdown</code>，找到 <code>Markdown&gt; Copy Files：Destnation</code>，添加一项 <code>key（项）</code> 为 <code>*</code> , <code> value(值)</code> 为 <code>$&#123;documentWorkspaceFolder&#125;/source/uploads/$&#123;documentBaseName&#125;/</code> 。</p>
-<p>我这里在 source 文件夹下新建了一个 <code>uploads</code> 文件夹，用于存放图片，并将图片保存在与 markdown 文件同名的文件夹下。</p>
-<p>截图后直接在文档中粘贴，结果如下：</p>
-<p><img src="/../uploads/Hexo-issues/image-3.png" alt="VSCode 粘贴图片展示"></p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>

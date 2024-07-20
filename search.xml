@@ -1056,8 +1056,7 @@ bt-tracker=udp://tracker.leechers.paradise.org:6969/announce,udp://:...
 <p>Ref: <a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/advanced/%E6%90%9C%E7%B4%A2%E6%9C%8D%E5%8A%A1/">Hexo-Next Doc</a></p>
 </blockquote>
 <p>并不知道 <code>hexo-generator-searchdb</code> 和 <code>hexo-generator-search</code>的区别。。</p>
-<h2 id="不蒜子本地部署时统计有误"><a href="#不蒜子本地部署时统计有误" class="headerlink" title="不蒜子本地部署时统计有误"></a><code>不蒜子</code>本地部署时统计有误</h2><p>三项统计数据都出现问题</p>
-<p><img src="/image.png" alt="alt text"><br><img src="/image-1.png" alt="alt text"></p>
+<h2 id="不蒜子本地部署时统计有误"><a href="#不蒜子本地部署时统计有误" class="headerlink" title="不蒜子本地部署时统计有误"></a><code>不蒜子</code>本地部署时统计有误</h2><p>三项统计数据都异常大</p>
 <p>网上得到的结果是：正常现象，由于本地部署时大家都使用一样的 IP 地址，所以统计数据会出现问题。</p>
 <h2 id="部署时每次都要-Hexo-g-Hexo-d-太麻烦"><a href="#部署时每次都要-Hexo-g-Hexo-d-太麻烦" class="headerlink" title="部署时每次都要 Hexo g &amp; Hexo d 太麻烦"></a>部署时每次都要 Hexo g &amp; Hexo d 太麻烦</h2><p>博客修改后直接使用 <code>hexo d -g</code> 即可。</p>
 ]]></content>

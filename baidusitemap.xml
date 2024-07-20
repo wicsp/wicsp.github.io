@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://wicsp.top/Hexo-issues-1.html</loc>
+    <loc>https://wicsp.top/Hexo-issues.html</loc>
+    <lastmod>2024-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/CG-CTF-Web-2.html</loc>
+    <lastmod>2024-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/CG-CTF-Web-1.html</loc>
     <lastmod>2024-07-19</lastmod>
   </url>
   <url>
@@ -70,14 +78,6 @@
   </url>
   <url>
     <loc>https://wicsp.top/CNN-Basic-Introduction.html</loc>
-    <lastmod>2024-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/CG-CTF-Web-2.html</loc>
-    <lastmod>2024-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/CG-CTF-Web-1.html</loc>
     <lastmod>2024-07-19</lastmod>
   </url>
 </urlset> 

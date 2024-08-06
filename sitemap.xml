@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wicsp.top/Bass-Basic-Practice.html</loc>
+    
+    <lastmod>2024-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wicsp.top/Hexo-issues.html</loc>
     
     <lastmod>2024-08-03</lastmod>
@@ -220,7 +229,7 @@
 
   <url>
     <loc>https://wicsp.top/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -228,161 +237,182 @@
   
   <url>
     <loc>https://wicsp.top/tags/Linux/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Tips/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Design/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/CTF/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Web/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/ML/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/CNN/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/CTC/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/WorldPress/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/libinput/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/SQL-Injection/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Blog/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Hexo/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/LSTM/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/RNN/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/spider/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Python/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Tools/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Vim/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/i3WM/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Hugo/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/Mathjax/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/tags/RSA/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/tags/Bass/</loc>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/tags/Music/</loc>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/tags/Practice/</loc>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -391,28 +421,35 @@
   
   <url>
     <loc>https://wicsp.top/categories/Tools/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/categories/Penetration/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/categories/Machine-Learning/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wicsp.top/categories/Programming/</loc>
-    <lastmod>2024-08-03</lastmod>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wicsp.top/categories/Music/</loc>
+    <lastmod>2024-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

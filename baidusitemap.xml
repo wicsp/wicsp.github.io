@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://wicsp.top/CG-CTF-Web-2.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/Hugo-Mathjax-Support.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/Recover-Removed-Files-on-Linux.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/CG-CTF-Web-1.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/An-Arctic-North-Bluish-Color-Palette.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://wicsp.top/Image-Hosting-Configuration.html</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
     <loc>https://wicsp.top/Bass-Basic-Practice.html</loc>
     <lastmod>2024-10-18</lastmod>
   </url>
   <url>
     <loc>https://wicsp.top/Hexo-issues.html</loc>
-    <lastmod>2024-08-03</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux.html</loc>
-    <lastmod>2024-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/Recover-Removed-Files-on-Linux.html</loc>
-    <lastmod>2024-07-20</lastmod>
+    <lastmod>2024-10-18</lastmod>
   </url>
   <url>
     <loc>https://wicsp.top/Translate-Words-in-Commandline.html</loc>
@@ -51,22 +71,6 @@
   <url>
     <loc>https://wicsp.top/aria2.html</loc>
     <lastmod>2024-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/An-Arctic-North-Bluish-Color-Palette.html</loc>
-    <lastmod>2024-07-20</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/CG-CTF-Web-2.html</loc>
-    <lastmod>2024-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/CG-CTF-Web-1.html</loc>
-    <lastmod>2024-07-19</lastmod>
-  </url>
-  <url>
-    <loc>https://wicsp.top/Hugo-Mathjax-Support.html</loc>
-    <lastmod>2024-07-19</lastmod>
   </url>
   <url>
     <loc>https://wicsp.top/LSTM-Basic-Introduction.html</loc>

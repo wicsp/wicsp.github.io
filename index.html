@@ -21,12 +21,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wicsp.top","root":"/","images":"/images","scheme":"Mist","darkmode":"auto","version":"8.20.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.wicsp.top","root":"/","images":"/images","scheme":"Mist","darkmode":"auto","version":"8.20.0","exturl":false,"sidebar":{"position":"right","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="Life is Brilliant.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="WICSP&#39;s Blog">
-<meta property="og:url" content="https://wicsp.top/index.html">
+<meta property="og:url" content="https://blog.wicsp.top/index.html">
 <meta property="og:site_name" content="WICSP&#39;s Blog">
 <meta property="og:description" content="Life is Brilliant.">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wicsp.top/">
+<link rel="canonical" href="https://blog.wicsp.top/">
 
 
 
@@ -154,7 +154,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -165,7 +165,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -216,7 +216,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Image-Hosting-Configuration.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/Image-Hosting-Configuration.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -244,8 +244,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-10-18 16:13:05" itemprop="dateCreated datePublished" datetime="2024-10-18T16:13:05+08:00">2024-10-18</time>
+      <time title="创建时间：2024-10-18 16:13:05 / 修改时间：22:09:34" itemprop="dateCreated datePublished" datetime="2024-10-18T16:13:05+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -281,8 +282,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
-
+          <p>因为我使用 ArchLinux，使用 Pacman 更新时常常遇到需要在命令前加 sudo
+的情况，每次都需要把光标移到命令首部加 sudo ，经查找可以使用
+<code>sudo !!</code> 获取前一条命令并加上 sudo 。</p>
+<p>如运行 <code>pacman -Syu</code> 报错，使用 <code>sudo !!</code> 生成
+<code>sudo pacman -Syu</code> 回车即可。</p>
+<p>或者使用 <code>thefuck</code> ，不仅可以补全 sudo
+，也可以更正输入错误的命令。（不知道为什么使用 <code>thefuck</code>
+反应速度很慢。。。）</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Image-Hosting-Configuration.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -308,7 +323,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Bass-Basic-Practice.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/Bass-Basic-Practice.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -344,7 +359,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 16:06:06" itemprop="dateModified" datetime="2024-10-18T16:06:06+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -418,7 +433,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Hexo-issues.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/Hexo-issues.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -454,7 +469,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 15:58:16" itemprop="dateModified" datetime="2024-10-18T15:58:16+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -529,7 +544,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/Enable-Tapping-to-Click-with-Libinput-on-Arch-Linux.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -565,7 +580,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 16:20:43" itemprop="dateModified" datetime="2024-10-18T16:20:43+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -630,7 +645,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/TapTap-Spider.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/TapTap-Spider.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -666,7 +681,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-20 17:49:14" itemprop="dateModified" datetime="2024-07-20T17:49:14+08:00">2024-07-20</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -738,7 +753,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Hugo-Mathjax-Support.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/Hugo-Mathjax-Support.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -774,7 +789,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 16:20:46" itemprop="dateModified" datetime="2024-10-18T16:20:46+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -847,7 +862,7 @@ Hugo 中使用 MathJax</a></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/Rsa-by-Hand-Calculation.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/Rsa-by-Hand-Calculation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -883,7 +898,7 @@ Hugo 中使用 MathJax</a></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-20 16:15:57" itemprop="dateModified" datetime="2024-07-20T16:15:57+08:00">2024-07-20</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -963,7 +978,7 @@ n)\)</span></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/An-Arctic-North-Bluish-Color-Palette.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/An-Arctic-North-Bluish-Color-Palette.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -999,7 +1014,7 @@ n)\)</span></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 16:20:12" itemprop="dateModified" datetime="2024-10-18T16:20:12+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1071,7 +1086,7 @@ n)\)</span></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/CG-CTF-Web-2.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/CG-CTF-Web-2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -1107,7 +1122,7 @@ n)\)</span></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 16:20:58" itemprop="dateModified" datetime="2024-10-18T16:20:58+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1179,7 +1194,7 @@ n)\)</span></p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://wicsp.top/CG-CTF-Web-1.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.wicsp.top/CG-CTF-Web-1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/avatar.jpg">
@@ -1215,7 +1230,7 @@ n)\)</span></p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-18 16:20:24" itemprop="dateModified" datetime="2024-10-18T16:20:24+08:00">2024-10-18</time>
+      <time title="修改时间：2024-10-18 21:57:33" itemprop="dateModified" datetime="2024-10-18T21:57:33+08:00">2024-10-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

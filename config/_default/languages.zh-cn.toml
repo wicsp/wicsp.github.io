@@ -2,7 +2,7 @@ disabled = false
 languageCode = "zh-cn"
 languageName = "中文"
 weight = 1
-title = "Blowfish"
+title = "wicsp's blog"
 
 [params]
   displayName = "CN"
@@ -14,19 +14,19 @@ title = "Blowfish"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
 
-# [params.author]
-#   name = "Your name here"
-#   email = "youremail@example.com"
-#   image = "img/blowfish_logo.png"
-#   imageQuality = 96
-#   headline = "I'm only human"
-#   bio = "A little bit about you"
-#   links = [
-#     { email = "mailto:hello@your_domain.com" },
-#     { link = "https://link-to-some-website.com/" },
-#     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
-#     { apple = "https://www.apple.com" },
-#     { blogger = "https://username.blogspot.com/" },
+[params.author]
+  name = "wicsp"
+  email = "wicsp@gmail.com"
+  image = "img/blowfish_logo.png"
+  imageQuality = 96
+  headline = "Life Is Fantastic!"
+  # bio = ""
+  links = [
+    { email = "mailto:wicsp@gmail.com" },
+    { github = "https://github.com/wicsp" },
+    # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+    # { apple = "https://www.apple.com" },
+    # { blogger = "https://username.blogspot.com/" },
 #     { bluesky = "https://bsky.app/profile/username" },
 #     { codepen = "https://codepen.io/username" },
 #     { dev = "https://dev.to/username" },
@@ -70,4 +70,4 @@ title = "Blowfish"
 #     { youtube = "https://youtube.com/username" },
 #     { ko-fi = "https://ko-fi.com/username" },
 #     { codeberg = "https://codeberg.org/username"},
-#   ]
+  ]

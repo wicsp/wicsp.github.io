@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
   data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Authors &middot; Blowfish</title>
-  <meta name="title" content="Authors &middot; Blowfish" />
+  <title>Authors &middot; wicsp&#39;s blog</title>
+  <meta name="title" content="Authors &middot; wicsp&#39;s blog" />
   
   
   
@@ -17,7 +17,7 @@
   
   <link rel="canonical" href="http://localhost:1313/authors/" />
   
-  <link rel="alternate" type="application/rss+xml" href="/authors/index.xml" title="Blowfish" />
+  <link rel="alternate" type="application/rss+xml" href="/authors/index.xml" title="wicsp's blog" />
   
   
   
@@ -67,7 +67,7 @@
   
   
   <meta property="og:url" content="http://localhost:1313/authors/">
-  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:site_name" content="wicsp&#39;s blog">
   <meta property="og:title" content="Authors">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="website">
@@ -80,6 +80,15 @@
   
 
   
+  
+  <meta name="author" content="wicsp" />
+  
+  
+  
+  <link href="mailto:wicsp@gmail.com" rel="me" />
+  
+  
+  <link href="https://github.com/wicsp" rel="me" />
   
   
   
@@ -144,7 +153,7 @@
         <nav class="flex space-x-3">
 
             
-            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Blowfish</a>
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">wicsp&rsquo;s blog</a>
             
 
         </nav>
@@ -262,6 +271,16 @@
 
 
 
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
 
   
   <div class="relative flex flex-col grow">
@@ -330,7 +349,7 @@
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
       2025
-      
+      wicsp
     </p>
     
 

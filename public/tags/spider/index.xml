@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spider on wicsp&#39;s blog</title>
+    <link>http://localhost:1313/tags/spider/</link>
+    <description>Recent content in Spider on wicsp&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
+    <webMaster>wicsp@gmail.com (wicsp)</webMaster>
+    <copyright>© 2025 wicsp</copyright>
+    <lastBuildDate>Tue, 08 Sep 2020 13:35:28 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/spider/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>爬取 TapTap 网站上的游戏排行榜信息</title>
+      <link>http://localhost:1313/posts/taptap-spider/</link>
+      <pubDate>Tue, 08 Sep 2020 13:35:28 +0800</pubDate>
+      <author>wicsp@gmail.com (wicsp)</author>
+      <guid>http://localhost:1313/posts/taptap-spider/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

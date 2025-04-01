@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Blowfish</title>
+    <title>Authors on wicsp&#39;s blog</title>
     <link>http://localhost:1313/authors/</link>
-    <description>Recent content in Authors on Blowfish</description>
+    <description>Recent content in Authors on wicsp&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2025 </copyright>
+    <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
+    <webMaster>wicsp@gmail.com (wicsp)</webMaster>
+    <copyright>© 2025 wicsp</copyright>
     <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>

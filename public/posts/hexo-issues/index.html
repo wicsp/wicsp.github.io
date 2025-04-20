@@ -103,7 +103,7 @@
     "keywords": ["Hexo"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "261"
+    "wordCount": "258"
   }]
   </script>
 
@@ -497,7 +497,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-07-20T01:22:32&#43;00:00">2024-07-20</time><span class="px-2 text-primary-500">&middot;</span><span>261 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2024-07-20T01:22:32&#43;00:00">2024-07-20</time><span class="px-2 text-primary-500">&middot;</span><span>258 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -630,7 +630,141 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#部署-hexo-到-github-page-后自定义域名-custom-domain-失效">部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效</a></li>
+    <li><a href="#部署-hexo-到-github-page-后-如何展示自定义的-404-页面">部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面</a></li>
+    <li><a href="#next-主体下-waline-评论系统调整">NexT 主体下 Waline 评论系统调整</a>
+      <ul>
+        <li><a href="#增加自动暗黑模式">增加自动暗黑模式</a></li>
+        <li><a href="#自定义用户头像风格">自定义用户头像风格</a></li>
+      </ul>
+    </li>
+    <li><a href="#增加-search-功能">增加 Search 功能</a></li>
+    <li><a href="#不蒜子本地部署时统计有误">不蒜子本地部署时统计有误</a></li>
+    <li><a href="#部署时每次都要-hexo-g--hexo-d-太麻烦">部署时每次都要 Hexo g &amp; Hexo d 太麻烦</a></li>
+    <li><a href="#vscode-粘贴图片指定默认路径">VSCode 粘贴图片指定默认路径</a></li>
+    <li><a href="#设置博文在主页展示的长度">设置博文在主页展示的长度</a></li>
+    <li><a href="#mathjax-优化">MathJax 优化</a></li>
+    <li><a href="#使用pangu-优化排版">使用pangu 优化排版</a></li>
+    <li><a href="#favicon-相关">favicon 相关</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#部署-hexo-到-github-page-后自定义域名-custom-domain-失效">部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效</a></li>
+    <li><a href="#部署-hexo-到-github-page-后-如何展示自定义的-404-页面">部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面</a></li>
+    <li><a href="#next-主体下-waline-评论系统调整">NexT 主体下 Waline 评论系统调整</a>
+      <ul>
+        <li><a href="#增加自动暗黑模式">增加自动暗黑模式</a></li>
+        <li><a href="#自定义用户头像风格">自定义用户头像风格</a></li>
+      </ul>
+    </li>
+    <li><a href="#增加-search-功能">增加 Search 功能</a></li>
+    <li><a href="#不蒜子本地部署时统计有误">不蒜子本地部署时统计有误</a></li>
+    <li><a href="#部署时每次都要-hexo-g--hexo-d-太麻烦">部署时每次都要 Hexo g &amp; Hexo d 太麻烦</a></li>
+    <li><a href="#vscode-粘贴图片指定默认路径">VSCode 粘贴图片指定默认路径</a></li>
+    <li><a href="#设置博文在主页展示的长度">设置博文在主页展示的长度</a></li>
+    <li><a href="#mathjax-优化">MathJax 优化</a></li>
+    <li><a href="#使用pangu-优化排版">使用pangu 优化排版</a></li>
+    <li><a href="#favicon-相关">favicon 相关</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+           
+            $(e).removeClass('active').siblings('ul').hide();
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+         
+          $toc.find('a').parent('li').find('ul').hide();
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -645,26 +779,26 @@ hexo-cli: 4.3.2
 NexT: 8.20.0</p></blockquote>
 
 
-<h2 class="relative group">0x00 部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效 
-    <div id="0x00-%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D-custom-domain-%E5%A4%B1%E6%95%88" class="anchor"></div>
+<h2 class="relative group">部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效 
+    <div id="%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D-custom-domain-%E5%A4%B1%E6%95%88" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#0x00-%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D-custom-domain-%E5%A4%B1%E6%95%88" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D-custom-domain-%E5%A4%B1%E6%95%88" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 <p>在 <code>source</code> 文件夹下新建 <code>CNAME</code> 文件，其中写入绑定的域名即可。</p>
 
 
-<h2 class="relative group">0x01 部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面 
-    <div id="0x01-%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E-%E5%A6%82%E4%BD%95%E5%B1%95%E7%A4%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84-404-%E9%A1%B5%E9%9D%A2" class="anchor"></div>
+<h2 class="relative group">部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面 
+    <div id="%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E-%E5%A6%82%E4%BD%95%E5%B1%95%E7%A4%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84-404-%E9%A1%B5%E9%9D%A2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#0x01-%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E-%E5%A6%82%E4%BD%95%E5%B1%95%E7%A4%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84-404-%E9%A1%B5%E9%9D%A2" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E9%83%A8%E7%BD%B2-hexo-%E5%88%B0-github-page-%E5%90%8E-%E5%A6%82%E4%BD%95%E5%B1%95%E7%A4%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84-404-%E9%A1%B5%E9%9D%A2" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -686,13 +820,13 @@ NexT: 8.20.0</p></blockquote>
 <a href="https://guiblogs.com/hexo30-20/" target="_blank">Gui Blog</a></p></blockquote>
 
 
-<h2 class="relative group">0x02 NexT 主体下 Waline 评论系统调整 
-    <div id="0x02-next-%E4%B8%BB%E4%BD%93%E4%B8%8B-waline-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E8%B0%83%E6%95%B4" class="anchor"></div>
+<h2 class="relative group">NexT 主体下 Waline 评论系统调整 
+    <div id="next-%E4%B8%BB%E4%BD%93%E4%B8%8B-waline-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E8%B0%83%E6%95%B4" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#0x02-next-%E4%B8%BB%E4%BD%93%E4%B8%8B-waline-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E8%B0%83%E6%95%B4" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#next-%E4%B8%BB%E4%BD%93%E4%B8%8B-waline-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E8%B0%83%E6%95%B4" aria-label="Anchor">#</a>
     </span>        
     
 </h2>

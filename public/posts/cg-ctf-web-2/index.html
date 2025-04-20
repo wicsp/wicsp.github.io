@@ -631,7 +631,147 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-10">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#0x00-变量覆盖">0x00 <a href="http://chinalover.sinaapp.com/web18/index.php">变量覆盖</a></a></li>
+    <li><a href="#0x01-php-是世界上最好的语言">0x01 <a href="http://way.nuptzj.cn/php/index.php">PHP 是世界上最好的语言</a></a></li>
+    <li><a href="#0x02-伪装者">0x02 <a href="http://chinalover.sinaapp.com/web4/xxx.php">伪装者</a></a></li>
+    <li><a href="#0x03-header">0x03 <a href="http://way.nuptzj.cn/web5/">HEADER</a></a></li>
+    <li><a href="#0x04-上传绕过">0x04 <a href="http://teamxlc.sinaapp.com/web5/21232f297a57a5a743894a0e4a801fc3/index.html">上传绕过</a></a></li>
+    <li><a href="#0x05-sql-注入-1">0x05 <a href="http://chinalover.sinaapp.com/index.php">SQL 注入 1</a></a></li>
+    <li><a href="#0x06-pass-check">0x06 <a href="http://chinalover.sinaapp.com/web21/">pass check</a></a></li>
+    <li><a href="#0x07-起名字真难">0x07 <a href="http://chinalover.sinaapp.com/web12/index.php">起名字真难</a></a></li>
+    <li><a href="#0x08-密码重置">0x08 <a href="http://nctf.nuptzj.cn/web13/index.php?user1=Y3RmdXNlcg==">密码重置</a></a></li>
+    <li><a href="#0x09-sql-injection">0x09 <a href="http://chinalover.sinaapp.com/web15/index.php">SQL Injection</a></a></li>
+    <li><a href="#0x0a-综合题">0x0a <a href="http://teamxlc.sinaapp.com/web3/b0b0ad119f425408fc3d45253137d33d/index.php">综合题</a></a></li>
+    <li><a href="#0x0b-sql-注入-2">0x0b <a href="http://4.chinalover.sinaapp.com/web6/index.php">SQL 注入 2</a></a></li>
+    <li><a href="#0x0c-综合题-2">0x0c <a href="http://cms.nuptzj.cn/">综合题 2</a></a>
+      <ul>
+        <li><a href="#一个很有意思的网站先收集一下信息">一个很有意思的网站，先收集一下信息。</a></li>
+        <li><a href="#尝试通过-aboutphp-获取其他文件内容">尝试通过 about.php 获取其他文件内容。</a></li>
+        <li><a href="#尝试对-sophp-进行-sql-注入">尝试对 so.php 进行 sql 注入</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#0x00-变量覆盖">0x00 <a href="http://chinalover.sinaapp.com/web18/index.php">变量覆盖</a></a></li>
+    <li><a href="#0x01-php-是世界上最好的语言">0x01 <a href="http://way.nuptzj.cn/php/index.php">PHP 是世界上最好的语言</a></a></li>
+    <li><a href="#0x02-伪装者">0x02 <a href="http://chinalover.sinaapp.com/web4/xxx.php">伪装者</a></a></li>
+    <li><a href="#0x03-header">0x03 <a href="http://way.nuptzj.cn/web5/">HEADER</a></a></li>
+    <li><a href="#0x04-上传绕过">0x04 <a href="http://teamxlc.sinaapp.com/web5/21232f297a57a5a743894a0e4a801fc3/index.html">上传绕过</a></a></li>
+    <li><a href="#0x05-sql-注入-1">0x05 <a href="http://chinalover.sinaapp.com/index.php">SQL 注入 1</a></a></li>
+    <li><a href="#0x06-pass-check">0x06 <a href="http://chinalover.sinaapp.com/web21/">pass check</a></a></li>
+    <li><a href="#0x07-起名字真难">0x07 <a href="http://chinalover.sinaapp.com/web12/index.php">起名字真难</a></a></li>
+    <li><a href="#0x08-密码重置">0x08 <a href="http://nctf.nuptzj.cn/web13/index.php?user1=Y3RmdXNlcg==">密码重置</a></a></li>
+    <li><a href="#0x09-sql-injection">0x09 <a href="http://chinalover.sinaapp.com/web15/index.php">SQL Injection</a></a></li>
+    <li><a href="#0x0a-综合题">0x0a <a href="http://teamxlc.sinaapp.com/web3/b0b0ad119f425408fc3d45253137d33d/index.php">综合题</a></a></li>
+    <li><a href="#0x0b-sql-注入-2">0x0b <a href="http://4.chinalover.sinaapp.com/web6/index.php">SQL 注入 2</a></a></li>
+    <li><a href="#0x0c-综合题-2">0x0c <a href="http://cms.nuptzj.cn/">综合题 2</a></a>
+      <ul>
+        <li><a href="#一个很有意思的网站先收集一下信息">一个很有意思的网站，先收集一下信息。</a></li>
+        <li><a href="#尝试通过-aboutphp-获取其他文件内容">尝试通过 about.php 获取其他文件内容。</a></li>
+        <li><a href="#尝试对-sophp-进行-sql-注入">尝试对 so.php 进行 sql 注入</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+           
+            $(e).removeClass('active').siblings('ul').hide();
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+         
+          $toc.find('a').parent('li').find('ul').hide();
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         

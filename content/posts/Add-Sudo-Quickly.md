@@ -12,4 +12,4 @@ categories:
 
 如运行 `pacman -Syu` 报错，使用 `sudo !!` 生成 `sudo pacman -Syu` 回车即可。
 
-或者使用 `thefuck` ，不仅可以补全 sudo ，也可以更正输入错误的命令。（不知道为什么使用 `thefuck` 反应速度很慢。。。）
+或者使用 `thefuck` ，不仅可以补全 sudo ，也可以更正输入错误的命令。

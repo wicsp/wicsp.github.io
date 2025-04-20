@@ -1,12 +1,12 @@
 disabled = false
-languageCode = "zh-cn"
-languageName = "中文"
+languageCode = "en"
+languageName = "English"
 weight = 1
 title = "wicsp's blog"
 
 [params]
-  displayName = "CN"
-  isoCode = "zh-cn"
+  displayName = "EN"
+  isoCode = "en"
   rtl = false
   dateFormat = "2006-01-02"
   # logo = "img/logo.png"

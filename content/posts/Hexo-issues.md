@@ -7,14 +7,12 @@ categories:
   - Tools
 ---
 
-![](https://static.wicsp.top/vFfG0tb4mX1l.png)
 本文介绍了我在部署和使用 Hexo 和NexT的过程中遇到的问题和解决方法，仅供参考
 
 > hexo: 7.3.0
 > hexo-cli: 4.3.2
 > NexT: 8.20.0
 
-<!-- more -->
 
 ## 0x00 部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效
 

@@ -10,7 +10,7 @@ categories:
 
 对于图像应用，我们经常在神经网络上使用卷积（Convolutional Neural Network），通常缩写为 CNN。
 
-<!-- more -->
+
 
 下图为 CNN 的基本模型:
 ![](https://pic3.zhimg.com/v2-7a147703c5181ff9737b41afa6ea6bce_1200x500.jpg)

@@ -5,11 +5,41 @@
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on wicsp&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
     <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
     <webMaster>wicsp@gmail.com (wicsp)</webMaster>
     <copyright>© 2025 wicsp</copyright>
-    <lastBuildDate>Fri, 18 Oct 2024 16:13:05 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Mar 2025 18:52:55 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blowfish</title>
+      <link>http://localhost:1313/tags/blowfish/</link>
+      <pubDate>Mon, 31 Mar 2025 18:52:55 +0800</pubDate>
+      <author>wicsp@gmail.com (wicsp)</author>
+      <guid>http://localhost:1313/tags/blowfish/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Mon, 31 Mar 2025 18:52:55 +0800</pubDate>
+      <author>wicsp@gmail.com (wicsp)</author>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>http://localhost:1313/tags/math/</link>
+      <pubDate>Mon, 31 Mar 2025 18:52:55 +0800</pubDate>
+      <author>wicsp@gmail.com (wicsp)</author>
+      <guid>http://localhost:1313/tags/math/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Hexo</title>
@@ -87,26 +117,6 @@
       <pubDate>Tue, 08 Sep 2020 13:35:28 +0800</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
       <guid>http://localhost:1313/tags/spider/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
-      <pubDate>Sun, 26 Jul 2020 18:52:55 +0800</pubDate>
-      <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/tags/hugo/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Mathjax</title>
-      <link>http://localhost:1313/tags/mathjax/</link>
-      <pubDate>Sun, 26 Jul 2020 18:52:55 +0800</pubDate>
-      <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/tags/mathjax/</guid>
       <description></description>
       
     </item>

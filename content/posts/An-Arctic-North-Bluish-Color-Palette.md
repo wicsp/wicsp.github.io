@@ -13,8 +13,6 @@ categories:
 
 一个好看的配色方案
 
-<!-- more -->
-
 > An arctic,  north-bluish color palette.
 >
 > A total of sixteen, carefully selected, dimmed pastel colors for a eye-comfortable, but yet colorful ambiance.

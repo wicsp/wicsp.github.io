@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/hexo/</link>
     <description>Recent content in Hexo on wicsp&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
     <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
     <webMaster>wicsp@gmail.com (wicsp)</webMaster>
     <copyright>© 2025 wicsp</copyright>
@@ -23,10 +23,10 @@
     
     <item>
       <title>Hexo &amp; NexT 部署和使用过程中问题合集/Hexo Issues Set</title>
-      <link>http://localhost:1313/posts/hexo-issues/hexo-issues/</link>
+      <link>http://localhost:1313/posts/hexo-issues/</link>
       <pubDate>Sat, 20 Jul 2024 01:22:32 +0000</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/posts/hexo-issues/hexo-issues/</guid>
+      <guid>http://localhost:1313/posts/hexo-issues/</guid>
       <description></description>
       
     </item>

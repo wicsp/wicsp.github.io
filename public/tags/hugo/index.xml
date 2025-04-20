@@ -5,18 +5,18 @@
     <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on wicsp&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en</language>
     <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
     <webMaster>wicsp@gmail.com (wicsp)</webMaster>
     <copyright>© 2025 wicsp</copyright>
-    <lastBuildDate>Sun, 26 Jul 2020 18:52:55 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Mar 2025 18:52:55 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>在 Hugo 中使用数学公式</title>
-      <link>http://localhost:1313/posts/hugo-mathjax-support/</link>
-      <pubDate>Sun, 26 Jul 2020 18:52:55 +0800</pubDate>
+      <title>在 Blowfish@Hugo 中使用数学表达式</title>
+      <link>http://localhost:1313/posts/blowfishhugo-math-support/</link>
+      <pubDate>Mon, 31 Mar 2025 18:52:55 +0800</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/posts/hugo-mathjax-support/</guid>
+      <guid>http://localhost:1313/posts/blowfishhugo-math-support/</guid>
       <description></description>
       
     </item>

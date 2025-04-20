@@ -12,7 +12,7 @@ categories:
 
 浏览器中按 F12 查看网页元素即可获得 Flag。
 
-<!-- more -->
+
 
 ## 0x01 [md5 collision](http://chinalover.sinaapp.com/web19/)
 

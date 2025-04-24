@@ -6,3 +6,5 @@ title = 'Restart With Hugo'
 
 
 
+
+{{< ref "CG-CTF-Web-1" >}}

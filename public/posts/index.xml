@@ -9,7 +9,17 @@
     <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
     <webMaster>wicsp@gmail.com (wicsp)</webMaster>
     <copyright>© 2025 wicsp</copyright>
-    <lastBuildDate>Tue, 01 Apr 2025 14:22:04 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Apr 2025 09:59:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adding Interactive Marimo Code Examples to Your Blog</title>
+      <link>http://localhost:1313/posts/adding-interactive-marimo-code-examples-to-your-blog/</link>
+      <pubDate>Mon, 21 Apr 2025 09:59:26 +0800</pubDate>
+      <author>wicsp@gmail.com (wicsp)</author>
+      <guid>http://localhost:1313/posts/adding-interactive-marimo-code-examples-to-your-blog/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>在 Blowfish@Hugo 中使用数学表达式</title>

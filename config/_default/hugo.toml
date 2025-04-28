@@ -73,4 +73,13 @@ googleAnalytics = "G-C3X2QLHQ9M"
   [caches.images]
     dir = ':cacheDir/images'
 
-
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+        [markup.goldmark.extensions.passthrough]
+            enable = true
+            [markup.goldmark.extensions.passthrough.delimiters]
+            block = [["\\[", "\\]"], ["$$", "$$"]]
+            # using $ as the inline-delimiter (optional, maybe)
+            inline = [["\\(", "\\)"], ["$", "$"]]

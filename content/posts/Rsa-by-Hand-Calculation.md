@@ -66,7 +66,7 @@ $$e \times d - n \times k =1$$
 
 ### 2. k 系数为 1 的情况
 
-原式: $20\times d mod 2000001 = 1$,求 d;
+原式: $20\times d \mod 2000001 = 1$,求 d;
 
 用辗转相除法可转换为下列式子：
 
@@ -90,18 +90,18 @@ $$e \times d - n \times k =1$$
 
 $$
 \begin{equation}\begin{split}
-        15^{27}\mod 33 & = (15 \times 15^{26})\mod 33 \\
-        & = (15 \times (15^2)^{13}) \mod 33 \\
-        & = (15 \times 27 ^{13} )\mod 33 \\
-        & = (15 \times 27 \times 27 ^{12}) \mod 33 \\
-        & = (9 \times 27^{12}) \mod 33 \\
-        & = (9 \times (27^2)^6) \mod 33 \\
-        & = (9 \times 3 ^6  )\mod 33 \\
-        & = (9\times (3^2)^3 )\mod 33 \\
-        & = (9 \times 9^3 )\mod 33 \\
-        & = (9\times 9\times 9^2)\mod 33 \\
-        & =(15 \times 15 )\mod 33 \\
-        & = 27 \mod 33 \\
+        15^{27}\mod 33 & = (15 \times 15^{26})\mod 33 \newline
+        & = (15 \times (15^2)^{13}) \mod 33 \newline
+        & = (15 \times 27 ^{13} )\mod 33 \newline
+        & = (15 \times 27 \times 27 ^{12}) \mod 33 \newline
+        & = (9 \times 27^{12}) \mod 33 \newline
+        & = (9 \times (27^2)^6) \mod 33 \newline
+        & = (9 \times 3 ^6  )\mod 33 \newline
+        & = (9\times (3^2)^3 )\mod 33 \newline
+        & = (9 \times 9^3 )\mod 33 \newline
+        & = (9\times 9\times 9^2)\mod 33 \newline
+        & =(15 \times 15 )\mod 33 \newline
+        & = 27 \mod 33 \newline
         & = 27
 \end{split}\end{equation}
 $$

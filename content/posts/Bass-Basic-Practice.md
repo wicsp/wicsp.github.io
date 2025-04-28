@@ -10,9 +10,10 @@ categories: Music
 
 ![](https://static.wicsp.top/yYIKzGkbZTED.png)
 
-{% cq %}
+{{< lead >}}
 练习是提高技能的唯一途径。
-{% endcq %}
+{{< /lead >}}
+
 
 
 ## 0x00 基本功练习

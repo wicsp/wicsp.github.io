@@ -30,7 +30,7 @@ This code will add support for `$` and `$$` as the inline delimiters, and you ca
 
 In additon to that, when you write some multi-line math, you need to use `\\\\` to start a new line. You can add the following code to your `config/_default/hugo.toml` or `config/_default/config.toml` file to support this:
 
-```markdown
+```toml
 [markup]
 
 [markup.goldmark]

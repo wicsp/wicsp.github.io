@@ -22,7 +22,7 @@ categories: Tools
 
 在 `source` 文件夹下新建 `404.md` 文件，示例内容如下
 
-```markdown
+```md
 ---
 title: 404
 permalink: /404.html

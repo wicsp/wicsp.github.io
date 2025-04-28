@@ -4,13 +4,11 @@ date: 2019-02-20T21:46:25+08:00
 tags:
   - Vim
   - Tools
-categories:
-  - Tools
+categories: Tools
 ---
 
 > ref: [Vim Cheat Sheet](http://example.com/).
 
-<!-- more -->
 
 ### 命令模式：
 
@@ -33,7 +31,6 @@ categories:
 - [Ctrl]+r 重做上一个动作
 - y 复制游标所在的那一行(常用)
 - n n 为数字，复制光标所在的向下 n 行
-<!-- more -->
 
 ### 输入模式
 

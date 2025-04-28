@@ -4,8 +4,7 @@ date: 2020-02-07T22:35:36+08:00
 tags:
   - CTF
   - Web
-categories:
-  - Penetration
+categories: Penetration
 ---
 
 ## 0x00 [变量覆盖](http://chinalover.sinaapp.com/web18/index.php)
@@ -25,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ```
 
-<!-- more -->
 
 其中重要的是这一句 `if ($pass == $thepassword_123)` ，题目名叫变量覆盖，猜想需要传入这两个变量覆盖默认的变量。
 

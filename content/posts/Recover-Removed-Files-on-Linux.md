@@ -3,8 +3,7 @@ title: Recover Removed Files on Linux
 date: 2020-01-22T22:01:47+08:00
 tags:
   - Linux
-categories:
-  - Tools
+categories: Tools
 ---
 
 # 0x00 确定删除文件所在分区
@@ -12,8 +11,6 @@ categories:
 ```sh
 df <被删除文件所在文件夹>
 ```
-
-<!-- more -->
 
 # 0x01 进入 debugfs 工具
 

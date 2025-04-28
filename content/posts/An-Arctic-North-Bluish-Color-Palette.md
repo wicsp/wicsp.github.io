@@ -3,8 +3,7 @@ title: An Arctic, North Bluish Color Palette
 date: 2020-02-10T11:50:44+08:00
 tags:
   - Design
-categories:
-  - Tools
+categories: Tools
 ---
 
 ![](https://static.wicsp.top/image-20241018161841478qq5cBI.png)
@@ -12,6 +11,7 @@ categories:
 ## [Nord](https://github.com/arcticicestudio/nord)
 
 一个好看的配色方案
+
 
 > An arctic,  north-bluish color palette.
 >

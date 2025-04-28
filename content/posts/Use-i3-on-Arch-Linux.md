@@ -4,13 +4,11 @@ date: 2020-01-13T12:17:55+08:00
 tags:
   - i3WM
   - Linux
-categories:
-  - Tools
+categories: Tools
 ---
 
 > i3 is a tiling window manager, completely written from scratch. The target platforms are GNU/Linux and BSD operating systems, our code is Free and Open Source Software (FOSS) under the BSD license. i3 is primarily targeted at advanced users and developers.
 
-<!-- more -->
 
 # 0x00 i3 的安装与启动
 

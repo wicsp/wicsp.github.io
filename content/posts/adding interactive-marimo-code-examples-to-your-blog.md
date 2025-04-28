@@ -1,8 +1,10 @@
-+++
-date = '2025-04-21T09:59:26+08:00'
-title = 'Adding Interactive Marimo Code Examples to Your Blog'
-+++
-
+---
+date: 2025-04-21
+title: Adding Interactive Marimo Code Examples to Your Blog
+tags:
+  - blog
+  - Python
+---
 
 
 ## marimo-snippets

@@ -3,20 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/adding-interactive-marimo-code-examples-to-your-blog/</loc>
-    <lastmod>2025-04-21T09:59:26+08:00</lastmod>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-04-21T09:59:26+08:00</lastmod>
+    <loc>http://localhost:1313/posts/use--as-the-inline-delimiters-in-hugokatex/</loc>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-21T09:59:26+08:00</lastmod>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/adding-interactive-marimo-code-examples-to-your-blog/</loc>
+    <lastmod>2025-04-21T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,8 +51,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/enable-tapping-to-click-with-libinput-on-arch-linux/</loc>
-    <lastmod>2020-11-30T10:39:33+08:00</lastmod>
+    <loc>http://localhost:1313/posts/how-to-disable-system-integrity-protection/</loc>
+    <lastmod>2023-05-23T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -58,7 +64,7 @@
   </url>
   <url>
     <loc>http://localhost:1313/posts/rsa-by-hand-calculation/</loc>
-    <lastmod>2020-07-26T16:10:51+08:00</lastmod>
+    <lastmod>2020-07-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -107,24 +113,6 @@
   <url>
     <loc>http://localhost:1313/posts/easy-sql-injection/</loc>
     <lastmod>2019-12-25T21:33:03+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/ctc-loss-basic-introduction/</loc>
-    <lastmod>2019-12-25T21:31:02+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/lstm-basic-introduction/</loc>
-    <lastmod>2019-12-25T21:28:47+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/cnn-basic-introduction/</loc>
-    <lastmod>2019-12-25T21:20:35+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

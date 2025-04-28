@@ -5,8 +5,7 @@ tags:
   - Hugo
   - Blowfish
   - Math
-categories:
-  - Tools
+categories: Tools
 ---
 
 > 本文为测试页面，介绍了在 Blowfish@Hugo 中使用数学表达式的方法。

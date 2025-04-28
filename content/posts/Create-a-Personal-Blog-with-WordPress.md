@@ -3,16 +3,13 @@ title: Create a Personal Blog with WordPress
 date: 2019-02-17T10:16:11+08:00
 tags:
   - WorldPress
-categories:
-  - Tools
+categories: Tools
 ---
 
 #### 前期准备
 
 - 一台 vps
 - 一枚域名
-
-<!-- more -->
 
 我使用的是 Digital Ocean 的 vps，ubuntu 16.04（github 学生包送了 50 刀），以及 namecheap 的一个 .me 的域名（也是 github 学生包送的）。
 

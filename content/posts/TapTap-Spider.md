@@ -4,13 +4,11 @@ date: 2020-09-08T13:35:28+08:00
 tags:
   - spider
   - Python
-categories:
-  - Programming
+categories: Programming
 ---
 
 > 爬虫小项目代码存档
 
-<!-- more -->
 
 ```python
 import requests

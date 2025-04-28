@@ -3,10 +3,7 @@ title: EASY SQL_Injection
 date: 2019-12-25T21:33:03+08:00
 tags:
   - CTF
-  - SQL
-  - Injection
-categories:
-  - Penetration
+categories: Penetration
 ---
 
 > 以 `mysql` 为例， 不同数据库的特殊情况另行整理
@@ -16,7 +13,6 @@ categories:
 `1 and 1=1` 返回正常， `1 and 1=2` 返回错误说明存在注入点
 (以上为数字型，字符串型应加引号，如 `1'and’1'=‘1`)
 
-<!-- more -->
 
 ## 0x01 判断字段数（列数）
 

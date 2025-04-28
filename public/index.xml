@@ -9,12 +9,22 @@
     <managingEditor>wicsp@gmail.com (wicsp)</managingEditor>
     <webMaster>wicsp@gmail.com (wicsp)</webMaster>
     <copyright>© 2025 wicsp</copyright>
-    <lastBuildDate>Mon, 21 Apr 2025 09:59:26 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Use $ as the inline delimiters in hugo&amp;katex</title>
+      <link>http://localhost:1313/posts/use--as-the-inline-delimiters-in-hugokatex/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <author>wicsp@gmail.com (wicsp)</author>
+      <guid>http://localhost:1313/posts/use--as-the-inline-delimiters-in-hugokatex/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Adding Interactive Marimo Code Examples to Your Blog</title>
       <link>http://localhost:1313/posts/adding-interactive-marimo-code-examples-to-your-blog/</link>
-      <pubDate>Mon, 21 Apr 2025 09:59:26 +0800</pubDate>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
       <guid>http://localhost:1313/posts/adding-interactive-marimo-code-examples-to-your-blog/</guid>
       <description></description>
@@ -62,11 +72,11 @@
     </item>
     
     <item>
-      <title>Arch Linux 允许通过轻触触摸板执行点击</title>
-      <link>http://localhost:1313/posts/enable-tapping-to-click-with-libinput-on-arch-linux/</link>
-      <pubDate>Mon, 30 Nov 2020 10:39:33 +0800</pubDate>
+      <title>How to disable System Integrity Protection?</title>
+      <link>http://localhost:1313/posts/how-to-disable-system-integrity-protection/</link>
+      <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/posts/enable-tapping-to-click-with-libinput-on-arch-linux/</guid>
+      <guid>http://localhost:1313/posts/how-to-disable-system-integrity-protection/</guid>
       <description></description>
       
     </item>
@@ -84,7 +94,7 @@
     <item>
       <title>手算 RSA</title>
       <link>http://localhost:1313/posts/rsa-by-hand-calculation/</link>
-      <pubDate>Sun, 26 Jul 2020 16:10:51 +0800</pubDate>
+      <pubDate>Sun, 26 Jul 2020 00:00:00 +0000</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
       <guid>http://localhost:1313/posts/rsa-by-hand-calculation/</guid>
       <description></description>
@@ -167,36 +177,6 @@
       <pubDate>Wed, 25 Dec 2019 21:33:03 +0800</pubDate>
       <author>wicsp@gmail.com (wicsp)</author>
       <guid>http://localhost:1313/posts/easy-sql-injection/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>CTC Loss: A Basic Introduction</title>
-      <link>http://localhost:1313/posts/ctc-loss-basic-introduction/</link>
-      <pubDate>Wed, 25 Dec 2019 21:31:02 +0800</pubDate>
-      <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/posts/ctc-loss-basic-introduction/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LSTM: A Basic Introduction</title>
-      <link>http://localhost:1313/posts/lstm-basic-introduction/</link>
-      <pubDate>Wed, 25 Dec 2019 21:28:47 +0800</pubDate>
-      <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/posts/lstm-basic-introduction/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>CNN Basic Introduction</title>
-      <link>http://localhost:1313/posts/cnn-basic-introduction/</link>
-      <pubDate>Wed, 25 Dec 2019 21:20:35 +0800</pubDate>
-      <author>wicsp@gmail.com (wicsp)</author>
-      <guid>http://localhost:1313/posts/cnn-basic-introduction/</guid>
       <description></description>
       
     </item>

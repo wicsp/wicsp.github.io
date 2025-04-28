@@ -1,26 +1,28 @@
 ---
 title: 手算 RSA
-date: 2020-07-26T16:10:51+08:00
+date: 2020-07-26
 tags:
-  - RSA
+  - Math
 categories:
   - Programming
-mathjax: true
 ---
+
+{{< katex >}}
 
 按 RSA 算法规定有如下
 
-$p \times q =n$
+$$p \times q =n$$
 
-$(p-1) \times (q-1) = \varphi(n)$
+$$(p-1) \times (q-1) = \varphi(n)$$
 
-任选整数 $e$ 使得 $\gcd(e,\varphi(n))=1$ ,整数 e 用做加密钥（注意：e 的选取是很容易的，例如，所有大于 p 和 q 的素数都可用）。
+任选整数 $e$ 使得 $\gcd(e,\varphi(n))=1$ ,整数 $e$ 用做加密钥（注意：$e$ 的选取是很容易的，例如，所有大于 $p$ 和 $q$ 的素数都可用）。
 
-确定的解密钥 d，满足$e \times d == 1(\mod n)$
+确定的解密钥 $d$，满足
+$$e \times d == 1(\mod n)$$
 
-等价如下 $e \times d - n \times k =1$
+等价如下
+$$e \times d - n \times k =1$$
 
-<!-- more -->
 
 ## 使用辗转相除法计算，分两种情况
 

@@ -3,13 +3,11 @@ title: Wireless Interface Hard-Blocked
 date: 2019-02-17T10:30:33+08:00
 tags:
   - Linux
-categories:
-  - Tools
+categories: Tools
 ---
 
 > 安装 networkmanager 后执行 `$ nmcli dev` , 发现无线网卡 `wlp3s0` 的状态为 `unavailable`
 
-<!-- more -->
 
 执行命令 `$ sudo rekill list` 发现无线网卡状态为
 

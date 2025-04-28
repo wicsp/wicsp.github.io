@@ -3,10 +3,10 @@ title: Hexo & NexT 部署和使用过程中问题合集/Hexo Issues Set
 date: 2024-07-20 01:22:32
 tags:
   - Hexo
-categories:
-  - Tools
+categories: Tools
 ---
 
+![](https://static.wicsp.top/vFfG0tb4mX1l.png)
 本文介绍了我在部署和使用 Hexo 和NexT的过程中遇到的问题和解决方法，仅供参考
 
 > hexo: 7.3.0
@@ -14,11 +14,11 @@ categories:
 > NexT: 8.20.0
 
 
-## 部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效
+## 0x00 部署 Hexo 到 GitHub Page 后，自定义域名 (Custom Domain) 失效
 
 在 `source` 文件夹下新建 `CNAME` 文件，其中写入绑定的域名即可。
 
-## 部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面
+## 0x01 部署 Hexo 到 GitHub Page 后, 如何展示自定义的 404 页面
 
 在 `source` 文件夹下新建 `404.md` 文件，示例内容如下
 
@@ -41,7 +41,7 @@ comments: false
 > [Gui Blog](https://guiblogs.com/hexo30-20/)
 
 
-## NexT 主体下 Waline 评论系统调整
+## 0x02 NexT 主体下 Waline 评论系统调整
 
 {% note warning %}
 Waline 已经更新到了 3.0 版本，但是 NexT 主题的 Waline 仍然使用的是 `client@v2`，因此在使用时可能会出现一些问题。

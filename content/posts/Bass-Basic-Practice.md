@@ -4,8 +4,8 @@ date: 2024-08-06 22:35:02
 tags:
   - Bass
   - Music
-categories:
-  - Music
+  - Todo
+categories: Music
 ---
 
 ![](https://static.wicsp.top/yYIKzGkbZTED.png)
@@ -14,7 +14,6 @@ categories:
 练习是提高技能的唯一途径。
 {% endcq %}
 
-<!-- more -->
 
 ## 0x00 基本功练习
 

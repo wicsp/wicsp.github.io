@@ -43,8 +43,11 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.b6411b5d4cd56c0068d34c4acbce043846adad56b824e3d486a06d3459aed2eb7f7413874b7871cc2c822c8c8834cbed944022918bcc8cca710a962167c36d32.js"
-    integrity="sha512-tkEbXUzVbABo00xKy84EOEatrVa4JOPUhqBtNFmu0ut/dBOHS3hxzCyCLIyINMvtlEAikYvMjMpxCpYhZ8NtMg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.3ad74b33440334ca29f8801ec6dac1f314951cf580e503d49631816b48d1f28d03543275f92b651565b48045b90731f47595b1396214b8b6aa11c6990f867f7e.js"
+    integrity="sha512-OtdLM0QDNMop&#43;IAextrB8xSVHPWA5QPUljGBa0jR8o0DVDJ1&#43;StlFWW0gEW5BzH0dZWxOWIUuLaqEcaZD4Z/fg==" data-copy="" data-copied=""></script>
   
   
   
@@ -801,8 +804,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="nv">$theflag</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="cp">?&gt;</span><span class="err">
-</span></span></span></code></pre></div><!-- more -->
-<p>其中重要的是这一句 <code>if ($pass == $thepassword_123)</code> ，题目名叫变量覆盖，猜想需要传入这两个变量覆盖默认的变量。</p>
+</span></span></span></code></pre></div><p>其中重要的是这一句 <code>if ($pass == $thepassword_123)</code> ，题目名叫变量覆盖，猜想需要传入这两个变量覆盖默认的变量。</p>
 <p>在本地终端运行 <code>curl http://chinalover.sinaapp.com/web18/index.php -X POST -d &quot;pass=1&amp;thepassword_123=1&quot;</code></p>
 <p>成功取得 Flag</p>
 

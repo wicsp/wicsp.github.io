@@ -4,8 +4,7 @@ date: 2020-02-07T15:47:52+08:00
 tags:
   - CTF
   - Web
-categories:
-  - Penetration
+categories: Penetration
 ---
 
 ## 0x00 [签到题](http://chinalover.sinaapp.com/web1/)

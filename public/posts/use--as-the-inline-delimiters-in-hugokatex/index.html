@@ -106,7 +106,7 @@
     "keywords": ["blog"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "258"
+    "wordCount": "264"
   }]
   </script>
 
@@ -500,7 +500,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-04-28T00:00:00&#43;00:00">2025-04-28</time><span class="px-2 text-primary-500">&middot;</span><span>258 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2025-04-28T00:00:00&#43;00:00">2025-04-28</time><span class="px-2 text-primary-500">&middot;</span><span>264 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
@@ -746,6 +746,106 @@
 
         <div class="article-content max-w-prose mb-20">
           <p>When using KaTeX, the default delimiters for inline math are <code>\(</code> and <code>\)</code>. And due to the markdown rendering engine, you need to use <code>\\(</code> and <code>\\)</code> actually when writing blog posts, which can be cumbersome. For example, to write <code>\(\alpha\)</code>, you need to write <code>\\(\alpha\\)</code> in your markdown file.</p>
+
+<section class="space-y-10 w-full">
+    
+    
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap article " href="/posts/add-sudo-quickly/">
+    <div class=" mt-3 md:mt-0">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/add-sudo-quickly/">Add Sudo Quickly</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2020-01-21T12:21:44&#43;00:00">2020-01-21</time><span class="px-2 text-primary-500">&middot;</span><span>26 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+    
+</section>
 <p>To make it more convenient, some additional adjustments can provide a more complete support for LaTeX features we need.</p>
 <p>First, find the <code>renderMathInElement</code> function in your blog theme files, it&rsquo;s usually in the <code>layouts/partials/vendor.html</code>, You can find it by searching for <code>renderMathInElement</code>.</p>
 <p>Then, replace the original <code>renderMathInElement(document.body);</code> with the following code:</p>

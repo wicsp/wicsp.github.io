@@ -8,8 +8,6 @@ zkcode: "202504281955"
 ---
 When using KaTeX, the default delimiters for inline math are `\(` and `\)`. And due to the markdown rendering engine, you need to use `\\(` and `\\)` actually when writing blog posts, which can be cumbersome. For example, to write `\(\alpha\)`, you need to write `\\(\alpha\\)` in your markdown file. 
 
-In additon to that, when you write some multi-line math, you need to use `\\\\` to start a new line. 
-
 To make it more convenient, some additional adjustments can provide a more complete support for LaTeX features we need.
 
 First, find the `renderMathInElement` function in your blog theme files, it's usually in the `layouts/partials/vendor.html`, You can find it by searching for `renderMathInElement`. 
@@ -25,7 +23,37 @@ renderMathInElement(document.body,
 );
 ```
 
+If you use the theme as a git submodule, it is recommended to copy the `vendor.html` file to your `layouts/partials` folder, and then modify it. This way, you can avoid losing your changes when updating the theme.
+
 This code will add support for `$` and `$$` as the inline delimiters, and you can use them directly in your markdown files.
+
+
+In additon to that, when you write some multi-line math, you need to use `\\\\` to start a new line. You can add the following code to your `config/_default/hugo.toml` or `config/_default/config.toml` file to support this:
+
+```markdown
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+
+unsafe = true
+
+[markup.goldmark.extensions.passthrough]
+
+enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+
+block = [["\\[", "\\]"], ["$$", "$$"]]
+
+# using $ as the inline-delimiter (optional, maybe)
+
+inline = [["\\(", "\\)"], ["$", "$"]]
+```
+
+
+
 
 ---
 ## References

@@ -37,7 +37,14 @@
 {{ $katexRenderJS := resources.Get "lib/katex/auto-render.min.js" }}
 {{ $katexRenderJS := $katexRenderJS | resources.Fingerprint "sha512" }}
 <script defer src="{{ $katexRenderJS.RelPermalink }}" integrity="{{ $katexRenderJS.Data.Integrity }}"
-  onload="renderMathInElement(document.body);"></script>
+  onload='renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false},
+    ],
+  });'></script>
 {{ $katexFonts := resources.Match "lib/katex/fonts/*" }}
 {{ range $katexFonts }}
 <!-- {{ .RelPermalink }} -->
